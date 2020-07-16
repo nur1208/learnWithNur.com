@@ -1,0 +1,119 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Type Casting</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Type Casting</h1>
+        <div>
+            <a href="java_data_types" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_operators" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Type Casting</h2>
+            <p id="question" class ="mb-0 text-danger" >What is type casting in Java?</p>
+            <p id="answer">Type casting is when you assign a value of one primitive data type to another type.</p>
+            <p id="normal">In Java, there are two types of casting:</p>
+            <ul>
+                <li><b>Widening Casting</b> (automatically) - converting a smaller type to a larger type size
+                    <code class="code_span_type">byte</code> -> <code class="code_span_type">short</code> -> <code class="code_span_type">char</code> -> <code class="code_span_type">int</code> -> <code class="code_span_type">long</code> -> <code class="code_span_type">float</code> -> <code class="code_span_type">double</code></li>
+                <li>Narrowing Casting (manually) - converting a larger type to a smaller size type
+                    <code class="code_span_type">double</code> -> <code class="code_span_type">float</code> -> <code class="code_span_type">long</code> -> <code class="code_span_type">int</code> -> <code class="code_span_type">char</code> -> <code class="code_span_type">short</code> -> <code class="code_span_type">byte</code></li>   
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Widening Casting</h2>
+          <p id="question" class ="mb-0 text-danger" >What is widening Casting in Java?</p>
+          <p id="answer">Widening casting is done automatically when passing a smaller size type to a larger size type:</p>    
+          <!-- example -->
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-int">int</span> myInt <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-double">double</span> myDouble <span class="token operator">=</span> myInt<span class="token punctuation">;</span> <span class="token comment">// Automatic casting: int to double</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInt<span class="token punctuation">)</span><span class="token punctuation">;</span>      
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myDouble<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+9
+9.0
+              </pre>
+          </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Narrowing Casting</h2>
+        <p id="question" class="mb-0 text-danger">What is Narrowing Casting  in Java?</p>
+        <p id="answer">Narrowing casting must be done manually by placing the type in parentheses in front of the value:</p>
+      <!-- example -->
+      <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-double">double</span> myDouble <span class="token operator">=</span> <span class="token number">9.78</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-int">int</span> myInt <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span> myDouble<span class="token punctuation">;</span> <span class="token comment">// Manual casting: double to int</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myDouble<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myInt<span class="token punctuation">)</span><span class="token punctuation">;</span>      
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+      </pre>
+      </div>
+      <div class="result-code-container">
+          <h3 class="result-title">Result</h3>
+          <pre class="pre-result-code">
+9.78
+9
+          </pre>
+      </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_data_types" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_operators" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

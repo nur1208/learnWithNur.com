@@ -1,0 +1,131 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java else Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java else Keyword</h1>
+        <div>
+            <a href="ref_keyword_double" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_enum" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Use the <code class="code_span_keyword" >else</code> statement to specify a block of code to be executed if the condition is <code class="code_span_keyword" >false</code>.</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> time <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>time <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good day."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good evening."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Good evening.
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a double  keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >else</code> statement specifies a block of Java code to be executed if a condition is <code class="code_span_keyword" >false</code> in an <code class="code_span_keyword" >if</code> statement.</p>
+            <p id="normal">Java has the following conditional statements:</p>
+            <ul>
+                <li>Use <code class="code_span_keyword" >if</code> to specify a block of code to be executed, if a specified condition is true</li>
+                <li>Us<code class="code_span_keyword" >else</code> to specify a block of code to be executed, if the same condition is false</li>
+                <li>Use <code class="code_span_keyword" >else if</code> to specify a new condition to test, if the first condition is false</li>
+                <li>Use <code class="code_span_keyword" >switch</code> to specify many alternative blocks of code to be executed</li>
+              </ul>
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >More Examples</h2>
+            <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Use the <code class="code_span_keyword" >else if</code> statement to specify a new condition <code class="code_span_keyword" >if</code> the first condition is <code class="code_span_keyword" >false</code>.</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> time <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>time <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good morning."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>time <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good day."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Good evening."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Good evening.
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_4 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal">Read more about conditions in our <a href="java_conditions.asp">Java If...Else Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_double" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_enum" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

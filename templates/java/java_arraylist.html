@@ -1,0 +1,486 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java ArrayList</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java ArrayList</h1>
+        <div>
+            <a href="java_date" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_hashmap" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java ArrayList</h2>
+            <p id="question" class ="mb-0 text-danger">what is ArrayList in java?</p>
+            <p id="answer">The <code class="code_span_class_name" >ArrayList</code> class is a resizable <a href="java_arrays" target="_blank">array</a>, which can be found in the <code class= "code_span_namespace" >java<span class="punctuation" >.</span>util</code> package.</p>
+            <P id="normal">The difference between a built-in array and an <code class="code_span_class_name" >ArrayList</code> in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an <code class="code_span_class_name" >ArrayList</code> whenever you want. The syntax is also slightly different:</P>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p  class="p-answer" >Create an <code class="code_span_class_name" >ArrayList</code> object called <b>cars</b> that will store strings:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span> <span class=" comment">// import the ArrayList class</span>
+
+<span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Create an ArrayList object</span>
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="normal">If you don't know what a package is, read our <a href="java_packages"  target="_blank">Java Packages Tutorial</a>.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Add Items</h2>
+          <p id="normal">The <code class="code_span_class_name" >ArrayList</code> class has many useful methods. For example, to add elements to the <code class="code_span_class_name" >ArrayList</code>, use the <code class="code_span_method" >add<span class="punctuation" >()</span></code> method:</p>
+          <!-- example -->
+         
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+[Volvo, BMW, Ford, Mazda]
+                    </pre>
+                </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Access an Item</h2>
+          <p id="question" class ="mb-0 text-danger">how to access an element in the ArrayList?</p>
+            <p id="answer">To access an element in the <code class="code_span_class_name" >ArrayList</code>, use the <code class="code_span_method" >get<span class="punctuation" >()</span></code> method and refer to the index number:</p>
+            <!-- example -->
+           
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+<pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(cars<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span><span class=" number">0</span><span class=" punctuation">))</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Volvo
+                </pre>
+            </div>
+           
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Change an Item</h2>
+          <p id="question" class ="mb-0 text-danger">how to modify an element in the ArrayList?</p>
+            <p id="answer">To modify an element, use the <code class="code_span_method" >set<span class="punctuation" >()</span></code> method and refer to the index number:</p>
+           <!-- example -->
+          
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(cars<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span><span class=" number">0</span><span class=" punctuation">))</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">set</span><span class=" punctuation">(</span><span class=" number">0</span><span class=" punctuation">,</span> <span class=" string">"Opel"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(cars<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span><span class=" number">0</span><span class=" punctuation">))</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+               </pre>
+           </div>
+           <div class="result-code-container">
+               <h3 class="result-title">Result</h3>
+               <pre class="pre-result-code">
+Volvo
+Opel"
+               </pre>
+           </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Remove an Item</h2>
+          <p id="question" class ="mb-0 text-danger">how to remove an element in the ArrayList?</p>
+            <p id="answer">To remove an element, use the <code class="code_span_method" >remove<span class="punctuation" >()</span></code> method and refer to the index number:</p>
+            <!-- example -->
+           
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span> 
+    <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">remove</span><span class=" punctuation">(</span><span class=" number">0</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span> 
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+[BMW, Ford, Mazda]
+                </pre>
+            </div>
+            
+            <p id="question" class ="mb-0 text-danger">how to remove all the element in the ArrayList?</p>
+            <p id="answer">To remove all the elements in the <code class="code_span_class_name" >ArrayList</code>, use the <code class="code_span_method" >remove<span class="punctuation" >()</span></code> method:</p>
+            <!-- example -->
+           
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span> 
+    <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">clear</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span> 
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+[]
+                </pre>
+            </div>
+           
+      </div>
+      </section>
+      <hr class="bg-dark" />
+      <!-- part_6 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >ArrayList Size</h2>
+            <p id="question" class ="mb-0 text-danger">how to find how many elements in the ArrayList?</p>
+              <p id="answer">To find out how many elements an <code class="code_span_class_name" >ArrayList</code> have, use the <code class="code_span_method" >remove<span class="punctuation" >()</span></code> method:</p>
+              <!-- example -->
+              
+              <div class="example-code-container">
+                  <h3 class="example-title">Example</h3>
+                  <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span> 
+  <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+      <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">.</span><span class=" function">size</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+  <span class=" punctuation">}</span> 
+<span class=" punctuation">}</span>
+                  </pre>
+              </div>
+              <div class="result-code-container">
+                  <h3 class="result-title">Result</h3>
+                  <pre class="pre-result-code">
+4
+                  </pre>
+              </div>
+             
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_7 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Loop Through an ArrayList</h2>
+            <p id="question" class ="mb-0 text-danger">how can you loop through the elements of an ArrayList in java?</p>
+              <p id="answer">you can Loop through the elements of an <code class="code_span_class_name" >ArrayList</code> with a for loop, and use the <code class="code_span_method" >size<span class="punctuation" >()</span></code> method to specify how many times the loop should run:</p>
+              <!-- example -->
+              
+              <div class="example-code-container">
+                  <h3 class="example-title">Example</h3>
+                  <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;</span> cars<span class=" punctuation">.</span><span class=" function">size</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> i<span class=" operator">++</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                  </pre>
+              </div>
+              <div class="result-code-container">
+                  <h3 class="result-title">Result</h3>
+                  <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+                  </pre>
+              </div>
+             <P id="normal">You can also loop through an <code class="code_span_class_name" >ArrayList</code> with the <b>for-each</b> loop:</P>
+             <!-- example -->
+             
+             <div class="example-code-container">
+                 <h3 class="example-title">Example</h3>
+                 <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> cars<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                 </pre>
+             </div>
+             <div class="result-code-container">
+                 <h3 class="result-title">Result</h3>
+                 <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+                 </pre>
+             </div>
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_8 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Other Types</h2>
+            <p id="question" class ="mb-0 text-danger">how can you loop through the elements of an ArrayList in java?</p>
+              <p id="answer">you can Loop through the elements of an <code class="code_span_class_name" >ArrayList</code> with a for loop, and use the <code class="code_span_method" >size<span class="punctuation" >()</span></code> method to specify how many times the loop should run:</p>
+              <!-- example -->
+              
+              <div class="example-code-container">
+                  <h3 class="example-title">Example</h3>
+                  <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;</span> cars<span class=" punctuation">.</span><span class=" function">size</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> i<span class=" operator">++</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                  </pre>
+              </div>
+              <div class="result-code-container">
+                  <h3 class="result-title">Result</h3>
+                  <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+                  </pre>
+              </div>
+             <P id="normal">You can also loop through an <code class="code_span_class_name" >ArrayList</code> with the <b>for-each</b> loop:</P>
+             <!-- example -->
+             
+             <div class="example-code-container">
+                 <h3 class="example-title">Example</h3>
+                 <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> cars<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                 </pre>
+             </div>
+             <div class="result-code-container">
+                 <h3 class="result-title">Result</h3>
+                 <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+                 </pre>
+             </div>
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_9 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Sort an ArrayList</h2>
+            <p id="normal">Another useful class in the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package is the <code class="code_span_class_name">Collections</code> class, which include the  <code class="code_span_method" >sort<span class="punctuation" >()</span></code> method for sorting lists alphabetically or numerically:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p  id="normal" >Sort an <code class="code_span_class_name">ArrayList</span> of <span class="code_span_class_name">Strings</code>:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Collections</span><span class=" punctuation">;</span>  <span class=" comment">// Import the Collections class</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" class-name">Collections</span><span class=" punctuation">.</span><span class=" function">sort</span><span class=" punctuation">(</span>cars<span class=" punctuation">)</span><span class=" punctuation">;</span>  <span class=" comment">// Sort cars</span>
+    <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> cars<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+BMW
+Ford
+Mazda
+Volvo
+                </pre>
+            </div>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+                    <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Collections</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> myNumbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">34</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>myNumbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">:</span> myNumbers<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+8
+12
+15
+20
+33
+34
+                </pre>
+            </div>
+        </div>
+        </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_date" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_hashmap" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

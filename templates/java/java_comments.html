@@ -1,0 +1,90 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Comments</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Comments</h1>
+        <div>
+          <a href="java_syntax" class="btn btn-danger"> < Previous</a>
+
+          <a href="java_variables" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+        <hr class="bg-danger" />
+        <div>
+            <h2 class = "subtitle" >Java Comments </h2>
+            <p class="mb-0 text-danger" id="question">why we use Comments in java?</p>
+            <P id="answer">Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</P>
+            <p class="mb-0 text-danger" id="question">What single-line comments start with?</p>
+            <P id="answer">Single-line comments start with two forward slashes (<code class="code-span-punctuation">//</code>).</P>
+            <P id="normal">Any text between <code class="code-span-punctuation">//</code> and the end of the line is ignored by Java (will not be executed).</P>
+            <P id="normal">This example uses a single-line comment before a line of code:</P>
+           <!-- example -->
+        <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="token comment">// This is a comment</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          </pre>
+        </div>
+        <P id="normal">This example uses a single-line comment at the end of a line of code:</P>
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// This is a comment</span>
+            </pre>
+          </div>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle"  id="subtitle">Java Multi-line Comments</h2>
+        <p class="mb-0 text-danger" id="question">Multi-line comments start with what and ends with what?</p>
+        <p id="answer">Multi-line comments start with <code class="code-span-punctuation">/*</code> and ends with <code class="code-span-punctuation">*/</code>.</p>
+        <p id="normal">Any text between <code class="code-span-punctuation">/*</code> and <code class="code-span-punctuation">*/</code> will be ignored by Java.</p>
+        <p id="normal">This example uses a multi-line comment (a comment block) to explain the code:</p>
+       <!-- example -->
+       <div class="example-code-container">
+         <h3 class="example-title">Example</h3>
+         <pre class="pre-example-code">
+<span class="token comment">/* The code below will print the words Hello World
+to the screen, and it is amazing */</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+         </pre>
+       </div>
+       <div class="note-container">
+           <p id="normal">Single or multi-line comments?</p>
+           <p id="normal">It is up to you which you want to use. Normally, we use <code class="code-span-punctuation">//</code> for short comments, and <code class="code-span-punctuation">/* */</code> for longer.</p>
+       </div>
+      </div>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="http://127.0.0.1:8000/java/exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_syntax" class="btn btn-danger"> < Previous</a>
+  
+            <a href="java_variables" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

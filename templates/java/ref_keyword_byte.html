@@ -1,0 +1,86 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java byte Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java byte Keyword</h1>
+        <div>
+            <a href="ref_keyword_break" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_case" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">byte</span> myNum <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myNum<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+100
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a byte keyword?</p>
+            <p id="answer">The <code class="code_span_type" >byte</code> keyword is a data type that can store whole numbers from -128 to 127.</p>
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal">Read more about data types in our <a href="java_data_types">Java Data Types Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_break" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_case" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

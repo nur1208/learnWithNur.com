@@ -1,0 +1,128 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Read Files</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Read Files</h1>
+        <div>
+            <a href="java_files_create" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files_delete" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Read a File</h2>
+            <p id="normal">In the previous chapter, you learned how to create and write to a file.</p>
+            <p id="normal">In the following example, we use the <code class="code_span_class_name" >Scanner</code> class to read the contents of the text file we created in the previous chapter:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">File</span><span class="token punctuation">;</span>  <span class="token comment">// Import the File class</span>
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">FileNotFoundException</span><span class="token punctuation">;</span>  <span class="token comment">// Import this class to handle errors</span>
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Scanner</span><span class="token punctuation">;</span> <span class="token comment">// Import the Scanner class to read text files</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ReadFile</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-try">try</span> <span class="token punctuation">{</span>
+            <span class="token class-name">File</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"filename.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">Scanner</span> myReader <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>myObj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword keyword-while">while</span> <span class="token punctuation">(</span>myReader<span class="token punctuation">.</span><span class="token function">hasNextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> data <span class="token operator">=</span> myReader<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            myReader<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-catch">catch</span> <span class="token punctuation">(</span><span class="token class-name">FileNotFoundException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"An error occurred."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Files in Java might be tricky, but it is fun enough!
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Get File Information</h2>
+          <p id="question" class ="mb-0 text-danger">how to get more information about a file in java?</p>
+          <p id="answer">To get more information about a file, use any of the <code class="code_span_class_name" >File</code> methods:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io</span><span class="token punctuation">.</span><span class="token class-name">File</span><span class="token punctuation">;</span>  <span class="token comment">// Import the File class</span>
+
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">GetFileInfo</span> <span class="token punctuation">{</span> <br>  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">File</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"filename.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>myObj<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Absolute path: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">getAbsolutePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Writeable: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">canWrite</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Readable "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">canRead</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"File size in bytes "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The file does not exist."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <P id="normal">The output will be:</P>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+File name: filename.txt
+Absolute path: C:\Users\MyName\filename.txt
+Writeable: true
+Readable: true
+File size in bytes: 0
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id = "normal"><strong>Note:</strong> There are many available classes in the Java API that can be used to read and write files in Java: <code class="code_span_class_name">FileReader, BufferedReader, Files, Scanner, FileInputStream, FileWriter, BufferedWriter, FileOutputStream</code>, etc. Which one to use depends on the Java version you're working with and whether you need to read bytes or characters, and the size of the file/lines etc.</p>
+                <p id = "normal" ><strong>Tip:</strong> To delete a file, read out <a href="java_files_delete">Java Delete Files</a> chapter.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_files_create" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files_delete" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

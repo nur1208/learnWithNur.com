@@ -1,0 +1,114 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="{%static '/styles/bootstrap4/bootstrap.min.css'%}"
+    />
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="{%static '/js/all.js'%}" />
+    <script
+      src="https://kit.fontawesome.com/387d09eada.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Bitter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="{%static '/styles/java/main_nur.css'%}" />
+    <title></title>
+  </head>
+  <body>
+    <header class="bg-danger">
+      <div class="container-flued">
+        <div class="row">
+          <!-- loge -->
+          <div class="display-loge col-4">
+            <h1 class="text-dark pl-3">learnWithNur.com</h1>
+          </div>
+          <!-- navbar content -->
+          <div class="col">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+              <!-- <a class="navbar-brand text-danger" href="#">Navbar</a> -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link text-danger" href="java/java_home"
+                      >Java <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                  <input
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn btn-outline-danger my-2 my-sm-0"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-flued">
+        <div class="row">
+          <div class="col-sm-2 col-0"></div>
+          <div class="col">
+            <section class="bg-sliver">
+              <div class="container-flued">
+                <div
+                  class="row px-5 height align-items-center d-flex justify-content-center"
+                >
+                  <div class="card text-center bg-dark" style="width: 18rem;">
+                    <i class="fab fa-java fa-5x text-danger"> </i>
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Java</h5>
+                      <p class="card-text text-light">
+                        Java is a powerful and versatile programming language for developing software
+                        running on mobile devices, desktop computers, and servers.
+                      </p>
+                      <a href="java/java_home" class="btn btn-outline-danger">Learn Java</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-sm-2 col-0"></div>
+        </div>
+      </div>
+    </main>
+    <!-- jquery js -->
+    <script src="{%static '/js/jquery-3.2.1.min.js'%}"></script>
+    <!-- bootstrap js -->
+    <script src="{%static '/styles/bootstrap4/popper.js'%}"></script>
+    <script src="{%static '/styles/bootstrap4/bootstrap.min.js'%}"></script>
+  </body>
+</html>

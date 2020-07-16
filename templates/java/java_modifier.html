@@ -1,0 +1,303 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Modifiers</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Modifiers</h1>
+        <div>
+            <a href="java_constructors" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_encapsulation" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Modifiers</h2>
+            <p id="normal">By now, you are quite familiar with the <code class="code_span_keyword" >public</code> keyword that appears in almost all of our examples:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public"><strong>public</strong></span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span>
+                </pre>
+            </div>
+            
+            <p class="p-question" >what is the <code class="code_span_keyword" >public</code> keyword?</p>
+            <p class="p-answer" >The <code class="code_span_keyword" >public</code> keyword is an <b>access modifier</b>, meaning that it is used to set the access level for classes, attributes, methods and constructors.</p>
+            <p class="p-question" >What are the types of access modifiers in java?</p>
+            <p class="p-answer" >We divide modifiers into two groups:</p>
+            <ul>
+                <li><b>Access Modifiers</b> - controls the access level</li>
+                <li><b>Non-Access Modifiers</b> - do not control access level, but provides other functionality</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Access Modifiers</h2>
+          <p id="normal">For <b>classes</b>, you can use either <code class="code_span_keyword" >public</code> or default:</p>
+          <!-- table -->
+          <table class="all_table_element">
+            <tbody>
+                <tr>
+                <th style="width:20%">Modifier</th>
+                <th style="width:80%">Description</th>
+            </tr>
+            <tr>
+                <td> <code class="code_span_keyword" >public</code></td>
+                <td>The class is accessible by any other class</td>
+            </tr>
+            <tr>
+                <td><em>default</em></td>
+                <td>The class is only accessible by 
+                classes in the same package. This is used when you don't specify a modifier. You will learn more about packages in the <a href="java_packages" target="_blank">Packages chapter</a></td>
+            </tr>                                   
+        </tbody>
+    </table>
+    <p id="normal">For <b>attributes, methods and constructors</b>, you can use the one of the following:</p>
+    <!-- table -->
+    <table class="all_table_element">
+        <tbody>
+            <tr>
+                <th style="width:20%">Modifier</th>
+                <th style="width:80%">Description</th>
+            </tr>
+            <tr>
+                <td><code class="code_span_keyword" >public</code></td>
+                <td>The code is accessible for all classes</td>
+            </tr>
+            <tr>
+                <td><code class="code_span_keyword">private</code></td>
+                <td>The code is only accessible within the declared class</td>
+            </tr>
+            <tr>
+                <td><em>default</em></td>
+                <td>The code is only accessible in the same package. This is used when you don't specify a modifier. You will learn more about packages in the <a href="java_packages">Packages chapter</a></td>
+            </tr>
+            <tr>
+                <td><code class="code_span_keyword">protected</code></td>
+                <td>The code is accessible in the same package and <strong>subclasses</strong>. You will learn more about subclasses and 
+                superclasses in the <a href="java_inheritance">Inheritance chapter</a></td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Non-Access Modifiers</h2>
+          <p id="normal">For <B>classes</B>, you can use either <code class="code_span_keyword" >final</code> or <code class="code_span_keyword" >abstract</code>:</p>
+          <table class="all_table_element">
+            <tbody>
+                <tr>
+                    <th style="width:20%">Modifier</th>
+                    <th style="width:80%">Description</th>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">final</code></td>
+                    <td>The class cannot be inherited by other classes (You will learn more about inheritance in the <a href="java_inheritance">Inheritance chapter</a>)</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">abstract</code></td>
+                    <td>The class cannot be used to create objects (To access an abstract class, it must be inherited from another class. You will learn more about inheritance and abstraction in the <a href="java_inheritance">Inheritance</a> and <a href="java_abstract">Abstraction</a> chapters)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="normal">For <b>attributes and methods</b>, you can use the one of the following:</p>
+        <table class="all_table_element">
+            <tbody>
+                <tr>
+                    <th style="width:20%">Modifier</th>
+                    <th style="width:80%">Description</th>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword" >final</code></td>
+                    <td>Attributes and methods cannot be overridden/modified</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">static</code></td>
+                    <td>Attributes and methods belongs to the class, rather than an object</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">abstract</code></td>
+                    <td>Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example 
+                    <strong>abstract void run();</strong>. The body is provided by the 
+                    subclass (inherited from). You will learn more about inheritance and abstraction in the <a href="java_inheritance">Inheritance</a> and <a href="java_abstract">Abstraction</a> chapters</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">transient</code></td>
+                    <td>Attributes and methods are skipped when serializing the object containing them</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">synchronized</code></td>
+                    <td>Methods can only be accessed by one thread at a time</td>
+                </tr>
+                <tr>
+                    <td><code class="code_span_keyword">volatile</code></td>
+                    <td>The value of an attribute is not cached thread-locally, and is always read from the "main memory"</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Final</h2>
+          <p id="question" class ="mb-0 text-danger" >when is final used for?</p>
+          <p id="answer">If you don't want the ability to override existing attribute values, declare attributes as <code class = "code_span_keyword">final</code>:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-final"><strong>final</strong></span> <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">10</span><span class=" punctuation">;</span>
+    <span class=" keyword keyword-final"><strong>final</strong></span> <span class=" keyword keyword-double">double</span> PI <span class=" operator">=</span> <span class=" number">3.14</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        myObj<span class=" punctuation">.</span>x <span class=" operator">=</span> <span class=" number">50</span><span class=" punctuation">;</span> <span class=" comment">// will generate an error: cannot assign a value to a <strong>final</strong> variable</span>
+        myObj<span class=" punctuation">.</span>PI <span class=" operator">=</span> <span class=" number">25</span><span class=" punctuation">;</span> <span class=" comment">// will generate an error: cannot assign a value to a <strong>final</strong> variable</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+MyClass.java:7: error: cannot assign a value to final variable x
+myObj.x = 50;
+     ^
+MyClass.java:8: error: cannot assign a value to final variable PI
+myObj.PI = 25;
+      ^ 
+2 errors
+              </pre>
+          </div>
+          
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Static</h2>
+          <p id="question" class ="mb-0 text-danger" >what is static method?</p>
+          <p id="answer">A <code class = "code_span_keyword">static</code> method means that it can be accessed without creating an object of the class, unlike <code class = "code_span_keyword">public</code>:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <p class="p-answer" >An example to demonstrate the differences between <code class = "code_span_keyword">static</code> and <code class = "code_span_keyword">public</code> methods:</p>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" comment">// Static method</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myStaticMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Static methods can be called without creating objects"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Public method</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">myPublicMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Public methods must be called by creating objects"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Main method</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span> <span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" function">myStaticMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Call the static method</span>
+        <span class=" comment">// myPublicMethod(); This would output an error</span>
+
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Create an object of MyClass</span>
+        myObj<span class=" punctuation">.</span><span class=" function">myPublicMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Call the public method</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+Static methods can be called without creating objects
+Public methods must be called by creating objects
+              </pre>
+          </div>
+          <hr class="hr-example">
+          
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_6 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Abstract</h2>
+          <p id="question" class ="mb-0 text-danger" >what is abstract method?</p>
+          <p id="answer">An <code class = "code_span_keyword">abstract</code> method belongs to an <code class = "code_span_keyword">abstract</code> class, and it does not have a body. The body is provided by the subclass:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <p class="p-answer" >An example to demonstrate the differences between <code class = "code_span_keyword">static</code> and <code class = "code_span_keyword">public</code> methods:</p>
+              <pre class="pre-example-code">
+<span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// create an object of the Student class (which inherits attributes and methods from Person)</span>
+        <span class="token class-name">Student</span> myObj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>fname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Graduation Year: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>graduationYear<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myObj<span class="token punctuation">.</span><span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// call abstract method</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+Name: John
+Age: 24
+Graduation Year: 2018
+Studying all day long
+              </pre>
+          </div>
+          <hr class="hr-example">
+          
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_constructors" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_encapsulation" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

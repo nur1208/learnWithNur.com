@@ -1,0 +1,104 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java default Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java default Keyword</h1>
+        <div>
+            <a href="ref_keyword_continue" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_do" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Specify some code to run if there is no case match in a switch block:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> day <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>day<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">6</span><span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Today is Saturday"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">7</span><span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Today is Sunday"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Looking forward to the Weekend"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Looking forward to the Weekend
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a default keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >default</code> keyword the default block of code in a <code class="code_span_keyword" >switch</code> statement.</p>
+            <p id="answer">The <code class="code_span_keyword" >default</code> keyword specifies some code to run if there is no case match in the <code class="code_span_keyword" >switch</code>.</p>
+            <div class="note-container">
+                <p><strong>Note:</strong> if the <code class="code_span_keyword" >default</code> keyword is used 
+                    as the last statement in a switch block, it does not need a <code class="code_span_keyword" >break</code>.</p>
+            </div>
+           
+
+            
+        </div>
+    </section>
+    
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p>Read more about the switch statement in our <a href="java_switch">Java Switch Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_continue" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_do" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

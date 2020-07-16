@@ -1,0 +1,249 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java String Methods</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java String Methods</h1>
+        <div>
+          <a href="java_ref_keyword" class="btn btn-danger"> < Previous</a>
+
+          <a href="java_ref_math" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+          <h2 class = "subtitle" >All String Methods</h2>
+          <p id="normal"></p>
+          <table class="all_table_element" style="margin:0">
+            <tbody><tr>
+              <th style="width:22%">Method</th>
+              <th style="width:62%">Description</th>
+              <th style="width:16%">Return Type</th>
+            </tr>
+            <tr>
+              <td><a href="ref_string_charat"><code class="code_span_method">charAt<span class="punctuation">()</span></code></a></td>
+              <td>Returns the character at the specified index (position)</td>
+              <td><code class="code_span_type">char</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_codepointat"><code class="code_span_method">codePointAt<span class="punctuation">()</span></code></a></td>
+              <td>Returns the Unicode of the character at the specified index</td>
+              <td><code class="code_span_type">int</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_codepointbefore"><code class="code_span_method">codePointBefore<span class="punctuation">()</span></code></a></td>
+              <td>Returns the Unicode of the character before the specified index</td>
+              <td><code class="code_span_type">int</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_codepointcount"><code class="code_span_method">codePointCount<span class="punctuation">()</span></code></a></td>
+              <td>Returns the Unicode in the specified text range of this String</td>
+              <td><code class="code_span_type">int</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_compareto"><code class="code_span_method">compareTo<span class="punctuation">()</span></code></a></td>
+              <td>Compares two strings lexicographically</td>
+              <td><code class="code_span_type">int</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_comparetoignorecase"><code class="code_span_method">compareToIgnoreCase<span class="punctuation">()</span></code></a></td>
+              <td>Compares two strings lexicographically, ignoring case differences</td>
+               <td><code class="code_span_type">int</code></td>
+           </tr>
+            <tr>
+              <td><a href="ref_string_concat"><code class="code_span_method">concat<span class="punctuation">()</span></code></a></td>
+              <td>Appends a string to the end of another string</td>
+              <td><code class = "code_span_class_name">String</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_contains"><code class="code_span_method">contains<span class="punctuation">()</span></code></a></td>
+              <td>Checks whether a string contains a sequence of characters</td>
+              <td><code class="code_span_boolean">boolean</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_contentequals"><code class="code_span_method">contentEquals<span class="punctuation">()</span></code></a></td>
+              <td>Checks whether a string contains the exact same sequence of characters 
+              of the specified CharSequence or StringBuffer</td>
+              <td><code class="code_span_boolean">boolean</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_copyvalueof"><code class="code_span_method">copyValueOf<span class="punctuation">()</span></code></a></td>
+              <td>Returns a String that represents the characters of the character array</td>
+               <td><code class = "code_span_class_name">String</code></td>
+           </tr>
+            <tr>
+              <td><a href="ref_string_endswith"><code class="code_span_method">endsWith<span class="punctuation">()</span></code></a></td>
+              <td>Checks whether a string ends with the specified character(s)</td>
+               <td><code class="code_span_boolean">boolean</code></td>
+           </tr>
+            <tr>
+              <td><a href="ref_string_equals"><code class="code_span_method">equals<span class="punctuation">()</span></code></a></td>
+              <td>Compares two strings. Returns true if the strings are equal, and false 
+              if not</td>
+              <td><code class="code_span_boolean">boolean</code></td>
+            </tr>
+            <tr>
+              <td><a href="ref_string_equalsignorecase"><code class="code_span_method">equalsIgnoreCase<span class="punctuation">()</span></code></a></td>
+              <td>Compares two strings, ignoring case considerations</td>
+               <td><code class="code_span_boolean">boolean</code></td>
+           </tr>
+            <tr>
+              <td><code class="code_span_method">format<span class="punctuation">()</span></code></td>
+              <td>Returns a formatted string using the specified locale, format string, and arguments</td>
+               <td><code class = "code_span_class_name">String</code></td>
+           </tr>
+            <tr>
+              <td><code class="code_span_method">getBytes<span class="punctuation">()</span></code></td>
+              <td>Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array</td>
+               <td><code class = "code_span_type">byte<span class="punctuation">[]</span></code></td>
+           </tr>
+            <tr>
+              <td><code class="code_span_method">getChars<span class="punctuation">()</span></code></td>
+              <td>Copies characters from a string to an array of chars</td>
+               <td><code class="code_span_keyword">void</code></td>
+           </tr>
+            <tr>
+              <td><a href="ref_string_hashcode"><code class="code_span_method">hashCode<span class="punctuation">()</span></code></a></td>
+              <td>Returns the hash code of a string</td>
+                <td><code class="code_span_type">int</code></td>
+          </tr>
+          <tr>
+            <td><a href="ref_string_indexOf"><code class="code_span_method">indexOf<span class="punctuation">()</span></code></a></td>
+            <td>Returns the position of the first found occurrence of specified characters in a string</td>
+              <td><code class="code_span_type">int</code></td>
+        </tr>
+        <tr>
+          <td><code class="code_span_method">intern<span class="punctuation">()</span></code></td>
+          <td>Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index</td>
+            <td><code class="code_span_type">String</code></td>
+      </tr>
+      <tr>
+        <td><a href="ref_string_isEmpty"><code class="code_span_method">isEmpty<span class="punctuation">()</span></code></a></td>
+        <td>Checks whether a string is empty or not</td>
+          <td><code class="code_span_type">boolean</code></td>
+    </tr>
+    <tr>
+      <td><a href="ref_string_lastIndexOf"><code class="code_span_method">lastIndexOf<span class="punctuation">()</span></code></a></td>
+      <td>Returns the position of the last found occurrence of specified characters in a string</td>
+        <td><code class="code_span_type">int</code></td>
+  </tr>
+  <tr>
+    <td><a href="ref_string_length"><code class="code_span_method">length<span class="punctuation">()</span></code></a></td>
+    <td>Returns the length of a specified string</td>
+      <td><code class="code_span_type">int</code></td>
+</tr>
+ <tr>
+    <td><code class="code_span_method">matches<span class="punctuation">()</span></code></td>
+    <td>Searches a string for a match against a regular expression, and returns the matches</td>
+      <td><code class="code_span_type">boolean</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">offsetByCodePoints<span class="punctuation">()</span></code></td>
+  <td>	Returns the index within this String that is offset from the given index by codePointOffset code points</td>
+    <td><code class="code_span_type">int</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">regionMatches<span class="punctuation">()</span></code></td>
+  <td>Tests if two string regions are equal</td>
+    <td><code class="code_span_type">boolean</code></td>
+</tr>
+ <tr>
+    <td><a href="ref_string_replace"><code class="code_span_method">replace<span class="punctuation">()</span></code></a></td>
+    <td>	Searches a string for a specified value, and returns a new string where the specified values are replaced</td>
+      <td><code class="code_span_type">String</code></td>
+</tr>
+ <tr>
+    <td><code class="code_span_method">replaceFirst()<span class="punctuation">()</span></code></td>
+    <td>Replaces the first occurrence of a substring that matches the given regular expression with the given replacement</td>
+      <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">replaceAll()<span class="punctuation">()</span></code></td>
+  <td>Replaces each substring of this string that matches the given regular expression with the given replacement</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+ <tr>
+    <td><code class="code_span_method">split<span class="punctuation">()</span></code></td>
+    <td>Splits a string into an array of substrings</td>
+      <td><code class="code_span_type">String[]</code></td>
+</tr>
+ <tr>
+    <td><a href="ref_string_startsWith"><code class="code_span_method">startsWith<span class="punctuation">()</span></code></a></td>
+    <td>Checks whether a string starts with specified characters</td>
+      <td><code class="code_span_type">boolean</code></td>
+</tr>
+ <tr>
+    <td><code class="code_span_method">subSequence<span class="punctuation">()</span></code></td>
+    <td>Returns a new character sequence that is a subsequence of this sequence</td>
+      <td><code class="code_span_type">CharSequence</code></td>
+</tr>
+ <tr>
+    <td><code class="code_span_method">substring<span class="punctuation">()</span></code></td>
+    <td>Extracts the characters from a string, beginning at a specified start position, and through the specified number of character</td>
+      <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">toCharArray<span class="punctuation">()</span></code></td>
+  <td>Converts a string to lower case letters</td>
+    <td><code class="code_span_type">char[]</code></td>
+</tr>
+<tr>
+  <td><a href="ref_string_toLowerCase"><code class="code_span_method">toLowerCase<span class="punctuation">()</span></code></a></td>
+  <td>Converts this string to a new character array</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">toString<span class="punctuation">()</span></code></td>
+  <td>Returns the value of a String object</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><a href="ref_string_toUpperCase"><code class="code_span_method">toUpperCase<span class="punctuation">()</span></code></a></td>
+  <td>Converts a string to upper case letters</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><a href="ref_string_trim"><code class="code_span_method">trim<span class="punctuation">()</span></code></a></td>
+  <td>Removes whitespace from both ends of a string</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+<tr>
+  <td><code class="code_span_method">valueOf<span class="punctuation">()</span></code></td>
+  <td>Returns the primitive value of a String object</td>
+    <td><code class="code_span_type">String</code></td>
+</tr>
+            </tbody>
+        </table>
+        
+        
+        </div>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_ref_keyword" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_ref_math" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

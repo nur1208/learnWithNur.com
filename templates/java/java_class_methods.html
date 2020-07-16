@@ -1,0 +1,268 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Class Methods</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Class Methods</h1>
+        <div>
+            <a href="java_class_attributes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_constructors" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Class Methods</h2>
+            <p id="normal">You learned from the <a href="java_methods" target="_blank" >Java Methods chapter</a> that methods are declared within a class, and that they are used to perform certain actions:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p class="p-answer" >Create a method named <code class="code_span_method" >myMethod<span class="span_inside_class_name_punctuation">()</span></code> in MyClass:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Hello World!"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Hello World!
+                </pre>
+            </div>
+            <p id="normal"><code class="code_span_method" >myMethod<span class="span_inside_class_name_punctuation">()</span></code>  prints a text (the action), when it is <strong>called</strong>. To call a method, write the method's name followed by two parentheses <code class="code_span_method" ><span class="span_inside_class_name_punctuation">()</span></code> and a semicolon<b>;</b></p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p class="p-answer" >Inside <code class="code_span_method" >main</code>, call <code class="code_span_method" >myMethod<span class="span_inside_class_name_punctuation">()</span></code>:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Hello World!"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>    
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Hello World!
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Static vs. Non-Static</h2>
+          <p id="normal">You will often see Java programs that have either <code class="code_span_method" >static</code> or <code class="code_span_method" >public</code> attributes and methods.</p>
+          <p id="question" class ="mb-0 text-danger" >what is static method and what is public method?</p>
+          <p id="answer">In the example above, we created a  <code class="code_span_method" >static</code> method, which means that it can be accessed without creating an object of the class, unlike  <code class="code_span_method" >public</code>, which can only be accessed by objects:</p>
+         <!-- example -->
+         
+         <div class="example-code-container">
+             <h3 class="example-title">Example</h3>
+             <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" comment">// Static method</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myStaticMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Static methods can be called without creating objects"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Public method</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">myPublicMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Public methods must be called by creating objects"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Main method</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" function">myStaticMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Call the static method</span>
+        <span class=" comment">// myPublicMethod(); This would compile an error</span>
+
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Create an object of MyClass</span>
+        myObj<span class=" punctuation">.</span><span class=" function">myPublicMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Call the public method on the object</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+             </pre>
+         </div>
+         <div class="result-code-container">
+             <h3 class="result-title">Result</h3>
+             <pre class="pre-result-code">
+Static methods can be called without creating objects
+Public methods must be called by creating objects
+             </pre>
+         </div>
+         <div class="note-container">
+            <p class="p-answer" ><b>Note</b>: You will learn more about these keywords (called modifiers) in the <a href="java_modifier"  target="_blank" >Java Modifiers chapter</a>.</p>
+         </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Access Methods With an Object</h2>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <P class="p-answer" >Create a Car object named <code class="code_span_method normal" >myCar</code>. Call the <code class= "code_span_method">fullThrottle<span class="punctuation">()</span></code> and <code class= "code_span_method">speed<span class="punctuation">()</span></code> methods on the <code class="code_span_method normal" >myCar</code> object, and run the program:</P>
+            <pre class="pre-example-code">
+<span class=" comment">// Create a Car class</span>
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">Car</span> <span class=" punctuation">{</span>
+
+    <span class=" comment">// Create a fullThrottle() method</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">fullThrottle</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The car is going as fast as it can!"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Create a speed() method and add a parameter</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">speed</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> maxSpeed<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Max speed is: "</span> <span class=" operator">+</span> maxSpeed<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Inside main, call the methods on the myCar object</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">Car</span> myCar <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">Car</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>     <span class=" comment">// Create a myCar object</span>
+    myCar<span class=" punctuation">.</span><span class=" function">fullThrottle</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>      <span class=" comment">// Call the fullThrottle() method</span>
+    myCar<span class=" punctuation">.</span><span class=" function">speed</span><span class=" punctuation">(</span><span class=" number">200</span><span class=" punctuation">)</span><span class=" punctuation">;</span>          <span class=" comment">// Call the speed() method</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+
+<span class=" comment">// The car is going as fast as it can!</span>
+<span class=" comment">// Max speed is: 200</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+The car is going as fast as it can!
+Max speed is: 200
+            </pre>
+        </div>
+        <p id = "normal" >1)We created a custom <code class= "code_span_class_name">Car</code> class with the <code class = "code_span_keyword">class</code> keyword.</p>
+        <p id = "normal" >2) We created the <code class= "code_span_method">fullThrottle<span class="punctuation">()</span></code> and <code class= "code_span_method">speed<span class="punctuation">()</span></code> methods in the <code class= "code_span_class_name">Car</code> class.</p>
+        <p id = "normal" >3) The <code class= "code_span_method">fullThrottle<span class="punctuation">()</span></code> method and the <code class= "code_span_method">speed<span class="punctuation">()</span></code> method will print out some text, when they are called./p>
+        <p id = "normal" >4) The<code class= "code_span_method">speed<span class="punctuation">()</span></code> method accepts an <code class="code_span_type">int</code> parameter called maxSpeed - we will use this in 8).</p>
+        <p id = "normal" >5) In order to use the <code class= "code_span_class_name">Car</code> class and its methods, we need to create an <b>object</b> of the <code class= "code_span_class_name">Car</code> Class</p>
+        <p id = "normal" >6) Then, go to the <code class= "code_span_method">main<span class="punctuation">()</span></code> method, which you know by now is a built-in Java method that runs your program (any code inside main is executed).</p>
+        <p id = "normal" >7) By using the <code class = "code_span_keyword">new</code> keyword we created a <code class= "code_span_class_name">Car</code> object with the name <code class= "code_span_class_name normal ">myCar</code>.</p>
+        <p id="normal">8) Then, we call the <code class= "code_span_method">fullThrottle<span class="punctuation">()</span></code> and<code class= "code_span_method">speed<span class="punctuation">()</span></code> methods on the myCar object, and run the program using the name of the object (myCar), followed by a dot (.), followed by the name of the method (<code class= "code_span_method">fullThrottle<span class="punctuation">()</span></code>; and <code class= "code_span_method">speed<span class="punctuation">(<span class="code_span_class_number">200</span>)</span></code>;). Notice that we add an int parameter of 200 inside the <code class= "code_span_method">speed<span class="punctuation">()</span></code>;) method.</p>
+        <div class="note-container">
+            <p id="normal">The dot (<code class="code-span-punctuation">.</code>) is used to access the object's attributes and methods.</p>
+            <p id="normal">To call a method in Java, write the method name followed by a set of parentheses <strong>()</strong>, followed by a semicolon (<code class="code-span-punctuation">;</code>).</p>
+            <p id="normal">A class must have a matching filename (<code class= "code_span_class_name">Car</code> and <strong>Car.java</strong>).</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Using Multiple Classes</h2>
+        <p id="normal">Like we specified in the <a href="java_classes">Classes chapter</a>, it is 
+            a good practice to create an object of a class and access it in another class.</p>
+        <p id="normal">Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory:</p>
+        <ul>
+            <li>Car.java</li>
+            <li>OtherClass.java</li>
+        </ul>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Car.java</h3>
+            <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">fullThrottle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The car is going as fast as it can!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">speed</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> maxSpeed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Max speed is: "</span> <span class="token operator">+</span> maxSpeed<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+        </pre>
+        </div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">OtherClass.java</h3>
+            <pre class="pre-example-code">
+<span class="token keyword keyword-class">class</span> <span class="token class-name">OtherClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Car</span> myCar <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// Create a myCar object</span>
+        myCar<span class="token punctuation">.</span><span class="token function">fullThrottle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// Call the fullThrottle() method</span>
+        myCar<span class="token punctuation">.</span><span class="token function">speed</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// Call the speed() method</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+        </pre>
+        </div>
+        <p id="normal">When both files have been compiled:</p>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+C:\Users\Your Name>javac Car.java
+C:\Users\Your Name>javac OtherClass.java
+            </pre>
+        </div>
+        <p id="normal">Run the OtherClass.java file:</p>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+C:\Users\Your Name>java OtherClass
+            </pre>
+        </div>
+        <p id="normal">And the output will be:</p>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+The car is going as fast as it can!
+Max speed is: 200
+            </pre>
+        </div>
+        
+        
+        
+    </div>
+    </section>
+    
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_class_attributes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_constructors" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

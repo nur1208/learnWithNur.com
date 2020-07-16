@@ -1,0 +1,107 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Delete Files</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Delete Files</h1>
+        <div>
+            <a href="java_files_read" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_ref_keyword" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Delete a File</h2>
+            <p id="question" class ="mb-0 text-danger">how to delete a file in java?</p>
+            <p id="answer">To delete a file in Java, use the <code class="code_span_method" >delete<span class = "punctuation">()</span></code> method:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>io</span><span class=" punctuation">.</span><span class=" class-name">File</span><span class=" punctuation">;</span>  <span class=" comment">// Import the File class</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">DeleteFile</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+        <span class=" class-name">File</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">File</span><span class=" punctuation">(</span><span class=" string">"filename.txt"</span><span class=" punctuation">)</span><span class=" punctuation">;</span> 
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span>myObj<span class=" punctuation">.</span><span class=" function">delete</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Deleted the file: "</span> <span class=" operator">+</span> myObj<span class=" punctuation">.</span><span class=" function">getName</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-else">else</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Failed to delete the file."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> 
+    <span class=" punctuation">}</span> 
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+~Deleted the file: filename.txt
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Delete a Folder</h2>
+          <p id="normal">You can also delete a folder. However, it must be empty:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>io</span><span class=" punctuation">.</span><span class=" class-name">File</span><span class=" punctuation">;</span> 
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">DeleteFolder</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+        <span class=" class-name">File</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">File</span><span class=" punctuation">(</span><span class=" string">"C:\\Users\\MyName\\Test"</span><span class=" punctuation">)</span><span class=" punctuation">;</span> 
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span>myObj<span class=" punctuation">.</span><span class=" function">delete</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span> <span class=" punctuation">{</span> 
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Deleted the folder: "</span> <span class=" operator">+</span> myObj<span class=" punctuation">.</span><span class=" function">getName</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-else">else</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Failed to delete the folder."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> 
+    <span class=" punctuation">}</span> 
+<span class=" punctuation">}</span> 
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+Deleted the folder: Test
+              </pre>
+          </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_files_read" class="btn btn-danger"> < Previous</a>
+
+          <a href="java_ref_keyword" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

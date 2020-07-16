@@ -1,0 +1,133 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java while Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java while Keyword</h1>
+        <div>
+             <a href="ref_keyword_void" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_ref_string" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container red">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">In the example below, the code in the loop will run, over and over again, as long as a variable i is less than 5:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container red">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+1
+2
+3
+4
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a while keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >while</code> loop loops through a block of code as long as a specified condition is <code class="code_span_keyword" >true</code>.</p>
+            <P id="normal"><strong>Note</strong>: Do not forget to increase the variable used in the condition, otherwise the loop will never end!</P>
+           
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >More Examples</h2>
+            <p ID  = "normal" >The <code class="code_span_keyword" >do/while</code> loop is a variant of the <code class="code_span_keyword" >while</code> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true:</p>
+            <!-- example -->
+        
+        <div class="example-code-container red">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">do</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                  
+            </pre>
+        </div>
+        <div class="result-code-container red">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+1
+2
+3
+4
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Related Pages</h2>
+        <p id = "normal" >Read more about while loops in our <a href="java_while_loop">Java While Loop Tutorial</a>.</p>
+    </div>
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_void" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_ref_string" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

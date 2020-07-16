@@ -1,0 +1,114 @@
+{% extends "layoutPage.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'styles/java/java_syntax.css'%}">
+    <script src="https://kit.fontawesome.com/cb90fc824a.js" ></script>
+   <script src="https:https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ruby&amp;skin=sunburst"></script> 
+    <title></title>
+    {% endblock %}
+    
+</head>
+<body>
+    
+            {% block content %}
+                <div class="main-leader-board" >
+
+                
+            </div>
+            <h1 class="main-title">Java Syntax</h1>
+            
+            <div class="next-prev-container">
+                <!--delete the home button-->
+                <a class="left btn"  href="http://127.0.0.1:8000/java/java_get_started">< Previous</a>
+                <a class="right btn"  href="http://127.0.0.1:8000/java/java_comments">next ></a>
+            </div>
+            <!-- part_1 -->
+            <div class="NUR-panel NUR-iinfo intro">
+                <h2 class="subtitle">Java Syntax</h2>
+                <p class="p-answer">In the previous chapter, we created a Java file called MyClass.java, and we used the following code to print "Hello World" to the screen:</p>
+                <!-- i add example: -->
+                <h3 class="example-title">Example:<span class="example-title-span"> MyClass.java</span></h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class="class-name"> System</span><span class="punctuation">.</span>out<span class="punctuation">.</span><span class="function">println</span><span class="punctuation">(</span><span class="string">"Hello Wordl"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                </pre>
+                <h3>Example explained</h3>
+                <p class="p-question">where should Every line of code that runs in Java must be?</p>
+                <p class="p-answer">Every line of code that runs in Java must be inside a <code class="code_span_keyword">class</code>.In our example, we named the class <b>MyClass</b>. A class should always start with an uppercase first letter</p>
+                </div><p class="p-answer"><b>Note:</b> Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+                <p class="p-answer">The name of the java file <b>must match</b> the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the <a href="http://127.0.0.1:8000/java/java_get_started" target="_blank" class="a_word">Get Started Chapter</a> for how to install Java. The output should be:</p>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result: <span class="example-title-span"> MyClass.java</span></h3>
+                    <pre class="pre-result-code">
+<span class="string">Hello World</span>
+                    </pre>
+                </div>
+            </div>
+            <hr class="hr-not-home-page">
+            <!-- part_2 -->
+            <div class="NUR-panel NUR-iinfo intro">
+                <h2 class="subtitle">The main Method</h2>
+                <p class="p-answer">The <span class="code_span_method">main()</span> method is required and you will see it in every Java program:</p>
+                <pre class="pre-example-code">
+<span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+                </pre>
+                <p class="p-answer">Any code inside the <span class="code_span_method">main()</span> method will be executed. You don't have to understand the keywords before and after main. You will get to know them bit by bit while reading this tutorial.</p>
+                <p class="p-answer">For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the <span class="code_span_method">main()</span> method.</p>
+            </div>
+            
+            <hr class="hr-not-home-page">
+            <!-- part_3 -->
+            <div class="NUR-panel NUR-iinfo intro">
+                <h2 class="subtitle">System.out.println()</h2>
+                <p class="p-answer">Inside the <span class="code_span_method">main()</span> method, we can use the<span class="code_span_method">println()</span> method to print a line of text to the screen:</p>
+                <pre class="pre-example-code">
+<span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+    <span class="class-name"> System</span><span class="punctuation">.</span>out<span class="punctuation">.</span><span class="function">println</span><span class="punctuation">(</span><span class="string">"Hello Wordl"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+                </pre>
+                <p class="p-answer"><b>Note:</b> The curly braces <span class="code_span_punctuation">{}</span> marks the beginning and the end of a block of code.</p>
+                <p class="p-answer"><b>Note:</b> Each code statement must end with a semicolon.</p>
+            </div>
+            
+            <hr class="hr-not-home-page">
+        <!-- exersice -->
+        <div class="exersice_container">
+          <form action="exersice_1" class="exersice_form" method="POST">
+            <div class="exersice-window">
+              <h3 class="result-title">Exercise</h3>
+              <p class="p-question-exersice">Insert the missing part of the code below to output "Hello World".</p>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">Myclass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <input type="text" name="ex_1" class="ex_1" maxlength="6"><span class="punctuation">.</span><input type="text" name="ex_2" class="ex_2" maxlength="3"><span class="punctuation">.</span><input type="text" name="ex_3" class="ex_3"><span class="punctuation">(</span><span class="string">"Hello Wordl"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+              </pre>
+            </div>
+            <br>
+            <button type = "submit" class="submit-button">Submit Answer >></button>
+        </form>
+      </div>
+            
+            
+            
+            <div class="next-prev-container">
+                <!--delete the home button-->
+                <a class="left btn"  href="http://127.0.0.1:8000/java/java_get_started">< Previous</a>
+                <a class="right btn"  href="http://127.0.0.1:8000/java/java_comments">next ></a>
+            </div>
+            
+            {% endblock %}
+            
+        
+    
+        
+    <script src="https://co

@@ -1,0 +1,147 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java continue Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java continue Keyword</h1>
+        <div>
+            <a href="ref_keyword_class" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_default" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Skip the iteration if the variable i is 4, but continue with the next iteration:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+1
+2
+3
+5
+6
+7
+8
+9
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a continue   keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >continue</code> keyword is used to end the current iteration in a <code class="code_span_keyword" >for</code> loop (or a <code class="code_span_keyword" >while</code> loop), and continues to the next iteration.</p>
+           
+
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_4 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >More Examples</h2>
+            <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Use the continue keyword in a while loop</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+1
+2
+3
+5
+6
+7
+8
+9
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_4 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal">Use the <code class="code_span_keyword" ><a href="ref_keyword_break">break</a></code>
+                keyword to break out of a loop.</p>
+                <p id = "normal">Read more about for loops in our <a href="java_for_loop">Java For Loops Tutorial</a>.</p>
+                <p id = "normal" >Read more about while loops in our <a href="java_while_loop">Java While Loops Tutorial</a>.</p>
+                <p id = "normal">Read more about break and continue in our <a href="java_break">Java Break Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_class" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_default" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

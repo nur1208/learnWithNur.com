@@ -1,0 +1,140 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Math asin() Method</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Math asin() Method</h1>
+        <div>
+            <a href="ref_math_abs" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_examples" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Return the arc cosine of different numbers:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">0.64</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">0.4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0.8762980611683406
+1.9823131728623846
+1.5707963267948966
+0.0
+3.141592653589793
+NaN
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a acos() method?</p>
+            <p id="answer">The <code class="code_span_method" > acos()</code> method returns the arc cosine value of a number.</p>
+            <p id="normal"><strong>Tip</strong>: acos(-1) returns the value of PI.</p>
+           
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Syntax</h2>
+            <p id="normal">One of the following:</p>
+            
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-double">double</span> <span class="token function">acos</span><span class="token punctuation">(</span><span class="token keyword keyword-double">double</span> <em>number</em><span class="token punctuation">)</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Parameter Values</h2>
+        <table class="all_table_element"> 
+        <tbody><tr>
+            <th style="width:21%">Parameter</th>
+            <th>Description</th>
+          </tr>  
+            <tr>
+            <td><em>number</em></td>
+            <td>Required. A number to find the arc cosine of, in the range -1 to 1. If 
+            the value is outside -1 to 1, it returns NaN (Not a Number).</td>
+            </tr>
+        </tbody>
+          </table>
+    </div>
+</section>
+<hr class="bg-danger" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Technical Details</h2>
+        <table class="all_table_element">
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>A <code class="code_span_type">double</code> value, representing the arc cosine of a number</td>
+               </tr>
+               </tbody>
+            </table>
+    </div>
+            
+               
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_math_abs" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_examples" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

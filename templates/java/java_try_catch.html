@@ -1,0 +1,223 @@
+
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Exceptions - Try...Catch</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Exceptions - Try...Catch</h1>
+        <div>
+            <a href="java_wrapper_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Exceptions</h2>
+            <p id="normal">When executing Java code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.</p>
+            <p id="normal">When an error occurs, Java will normally stop and generate an error message. The technical term for this is: Java will throw an <b>exception</b> (throw an error).</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Java try and catch</h2>
+            <p id="question" class ="mb-0 text-danger">what is try keyword in java?</p>
+            <p id="answer">The <code class="code_span_keyword" >try</code> keyword allows you to define a block of code to be tested for errors while it is being executed.</p>
+            <p id="question" class ="mb-0 text-danger">what is catch keyword in java?</p>
+            <p id="answer">The <code class="code_span_keyword" >catch </code> keyword allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+            <p id="normal">The <code class="code_span_keyword" >try</code> and <code class="code_span_keyword" >catch </code> keywords come in pairs:</p>
+            <!-- Syntax -->
+            <div class="example-code-container">
+                <h3 class="example-title">Syntax</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-try">try</span> <span class=" punctuation">{</span>
+<span class=" comment">//  </span><em><span class=" comment">Block of code to try</span>
+</em><span class=" punctuation">}</span>
+<span class=" keyword keyword-catch">catch</span><span class=" punctuation">(</span><span class=" class-name">Exception</span> <em>e</em><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+<span class=" comment">//  </span><em><span class=" comment">Block of code to handle errors</span>
+</em><span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <p id="normal">Consider the following example:</p>
+            <!-- example -->
+            <div class="example-code-container red">
+                <h3 class="example-title">Example</h3>
+                <p class="p-answer" >This will generate an error, because <B>myNumbers[10]</B> does not exist.</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span> <span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-int">int</span><span class=" punctuation">[</span><span class=" punctuation">]</span> myNumbers <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" number">1</span><span class=" punctuation">,</span> <span class=" number">2</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNumbers<span class=" punctuation">[</span><span class=" number">10</span><span class=" punctuation">]</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// error!</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container red">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Exception in thread "main" 
+java.lang.ArrayIndexOutOfBoundsException: 10
+    at MyClass.main(MyClass.java:4)
+                </pre>
+            </div>
+            <p id="normal">If an error occurs, we can use <code class="code_span_keyword" >try</code>...<code class="code_span_keyword" >catch</code> to catch the error and execute some code to handle it:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span> <span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-try">try</span> <span class=" punctuation">{</span>
+            <span class=" keyword keyword-int">int</span><span class=" punctuation">[</span><span class=" punctuation">]</span> myNumbers <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" number">1</span><span class=" punctuation">,</span> <span class=" number">2</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNumbers<span class=" punctuation">[</span><span class=" number">10</span><span class=" punctuation">]</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-catch">catch</span> <span class=" punctuation">(</span><span class=" class-name">Exception</span> e<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Something went wrong."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Something went wrong.
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+            <!-- part_3 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Java try and catch</h2>
+            <p id="question" class ="mb-0 text-danger">what is finally keyword in java?</p>
+            <p id="answer">The <code class="code_span_keyword" >finally</code> keyword lets you execute code, after <code class="code_span_keyword" >try</code>...<code class="code_span_keyword" >catch</code>, regardless of the result:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-try">try</span> <span class=" punctuation">{</span>
+            <span class=" keyword keyword-int">int</span><span class=" punctuation">[</span><span class=" punctuation">]</span> myNumbers <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" number">1</span><span class=" punctuation">,</span> <span class=" number">2</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNumbers<span class=" punctuation">[</span><span class=" number">10</span><span class=" punctuation">]</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-catch">catch</span> <span class=" punctuation">(</span><span class=" class-name">Exception</span> e<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Something went wrong."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-finally">finally</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The 'try catch' is finished."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Something went wrong.
+The 'try catch' is finished.
+                </pre>
+            </div>
+            
+          
+      </div>
+      </section> 
+      <hr class="bg-dark" />
+      <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >The throw keyword</h2>
+            <p id="question" class ="mb-0 text-danger">what is throw keyword in java?</p>
+            <p id="answer">The <code class="code_span_keyword" >throw</code> statement allows you to create a custom error.</p>
+            <p id="normal">The <code  class="code_span_keyword">throw</code> statement is used together with an <b>exception type</b>. There are many exception types available in Java: <code class="code_span_class_name" >ArithmeticException</code>, <code class="code_span_class_name" >FileNotFoundException</code>, <code class="code_span_class_name" >ArrayIndexOutOfBoundsException</code>, <code class="code_span_class_name" >SecurityException</code>, etc:</p>
+            <hr class="hr-example">
+            <div class="example-code-container red">
+                <h3 class="example-title">Example</h3>
+                <p id="normal" >Throw an exception if <b>age</b> is below 18 (print "Access denied"). If age is 18 or older, print "Access granted":</p>
+                    <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArithmeticException</span><span class="token punctuation">(</span><span class="token string">"Access denied - You must be at least 18 years old."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Access granted - You are old enough!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> 
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+                    </pre>
+            </div>
+            <div class="result-code-container red">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Something went wrong.
+The 'try catch' is finished.
+                </pre>
+            </div>
+            <p id="normal">If age was 20, you would not get an exception:</p>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p id="normal" >Throw an exception if <b>age</b> is below 18 (print "Access denied"). If age is 18 or older, print "Access granted":</p>
+                    <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArithmeticException</span><span class="token punctuation">(</span><span class="token string">"Access denied - You must be at least 18 years old."</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Access granted - You are old enough!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> 
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+                          
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Access granted - You are old enough!
+                </pre>
+            </div>
+
+            
+            
+          
+      </div>
+      </section> 
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_wrapper_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

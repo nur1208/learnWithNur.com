@@ -1,0 +1,144 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Wrapper Classes</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Wrapper Classes</h1>
+        <div>
+            <a href="java_hashmap" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_try_catch" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Wrapper Classes</h2>
+            <p id="question" class ="mb-0 text-danger">what are wrapper classes in java?</p>
+            <p id="answer">Wrapper classes provide a way to use primitive data types (<code class="code_span_type" >int</code>, <code class="code_span_type" >boolean</code>, etc..) as objects</p>
+            <p id="normal">The table below shows the primitive type and the equivalent wrapper class:</p>
+            <table class="all_table_element">
+                <tbody>
+                    <tr>
+                        <th style="width:50%">Primitive Data Type</th>
+                        <th>Wrapper Class</th>
+                    </tr>
+                    <tr>
+                        <td>byte</td>
+                        <td>Byte</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>Short</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>Integer</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>Long</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>Float</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>Double</td>
+                    </tr>
+                    <tr>
+                        <td>boolean</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>Character</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="normal">Sometimes you must use wrapper classes, for example when working with Collection objects, such as ArrayList, where primitive types cannot be used (the list can only store objects):</p>
+            <!-- example -->
+            
+            <div class="example-code-container  red">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" keyword keyword-int">int</span><span class=" punctuation">&gt;</span></span> myNumbers <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" keyword keyword-int">int</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Invalid</span>
+                </pre>
+            </div>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">Integer</span><span class=" punctuation">&gt;</span></span> myNumbers <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">Integer</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Valid</span>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Creating Wrapper Objects</h2>
+            <p id="question" class ="mb-0 text-danger">how to create a wrapper object?</p>
+            <p id="answer">To create a wrapper object, use the wrapper class instead of the primitive type.</p>
+            <p id="question" class ="mb-0 text-danger">how to get the value of a wrapper object?</p>
+            <p id="answer">To get the value, you can just print the object:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">Integer</span> myInt <span class=" operator">=</span> <span class=" number">5</span><span class=" punctuation">;</span>
+        <span class=" class-name">Double</span> myDouble <span class=" operator">=</span> <span class=" number">5.99</span><span class=" punctuation">;</span>
+        <span class=" class-name">Character</span> myChar <span class=" operator">=</span> <span class=" string">'A'</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myInt<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myDouble<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myChar<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+5
+5.99
+A
+                </pre>
+            </div>
+
+          
+      </div>
+      </section> 
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p ID="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_hashmap" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_try_catch" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

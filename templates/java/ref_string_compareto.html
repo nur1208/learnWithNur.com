@@ -1,0 +1,142 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java String compareTo() Method</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java String compareTo() Method</h1>
+        <div>
+             <a href="ref_string_codepointcount" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_comparetoignorecase" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Compare two strings:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> myStr1 <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> myStr2 <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myStr1<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>myStr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Returns 0 because they are equal</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a compareTo() method?</p>
+            <p id="answer">The <code class="code_span_method" >compareTo()</code>  method compares two strings lexicographically.</p>
+            <P id="normal">The comparison is based on the Unicode value of each character in the strings.</P>
+         
+            <p id="normal">The method returns 0 if the string is equal to the other string. A value less than 0 is returned if the string is less than the other string (less characters) and a value greater than 0 if the string is greater than the other string (more characters).</p>
+            <p id = "normal"><strong>Tip:</strong> Use <a href="ref_string_comparetoignorecase">
+                compareToIgnoreCase()</a> to compare two strings lexicographyically, ignoring 
+                lower case and upper case differences.</p>
+            <p id = "normal" ><strong>Tip:</strong> Use the <a href="ref_string_equals">equals()</a> method to compare two strings without consideration of Unicode values.</p>
+           
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Syntax</h2>
+            
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">compareTo</span><span class="token punctuation">(</span><span class="token class-name">String</span> <em>string2</em><span class="token punctuation">)</span>
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">compareTo</span><span class="token punctuation">(</span><span class="token class-name">Object</span> <em>object</em><span class="token punctuation">)</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Parameter Values</h2>
+        <table class="all_table_element"> 
+        <tbody><tr>
+            <th style="width:21%">Parameter</th>
+            <th>Description</th>
+          </tr>  
+            <tr>
+            <td><em>string2</em></td>
+            <td>A <code class="code_span_type">String</code>, representing the other string to be compared</td>
+            </tr>
+            <tr>
+            <td><em>object</em></td>
+            <td>An <code class="code_span_type">Object</code>, representing an object to be compared</td>
+            </tr>
+        </tbody>
+          </table>
+    </div>
+</section>
+<hr class="bg-danger" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Technical Details</h2>
+        <table class="all_table_element">
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>An <code class="code_span_type">int</code> value: 0 if the string is equal to the other string.<br>
+                 &lt; 0 if the string is lexicographically less than the other string 
+                 <br>&gt; 0 if the string is lexicographically greater than the other string 
+                 (more characters)</td>
+               </tr>
+               </tbody>
+            </table>
+    </div>
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_string_codepointcount" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_comparetoignorecase" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

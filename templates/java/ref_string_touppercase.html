@@ -1,0 +1,133 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java String toUpperCase() Method</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java String toUpperCase() Method</h1>
+        <div>
+            <a href="ref_string_startswith" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_touppercase" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Convert a string to upper case and lower case letters:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> txt <span class="token operator">=</span> <span class="token string">"Hello World"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>txt<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>txt<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+HELLO WORLD
+hello world
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a toUpperCase() method?</p>
+            <p id="answer">The <code class="code_span_method" >toUpperCase()</code> method converts a string to upper case letters.</p>
+            <p id = "normal"><strong>Note:</strong> The <a href="ref_string_tolowercase">toLowerCase()</a> method converts a string to lower case letters.</p>
+          
+
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Syntax</h2>
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Parameter Values</h2>
+        <!-- <table class="all_table_element"> 
+            <tbody><tr>
+                <th style="width:21%">Parameter</th>
+                <th>Description</th>
+              </tr>  
+                <tr>
+                <td><em>chars</em></td>
+                <td>A <code class="code_span_type">String</code>, representing the character(s) to check for</td>
+                </tr>
+            </tbody>
+          </table> -->
+
+          <p id="normal">None.</p>
+          
+    </div>
+</section>
+<hr class="bg-danger" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Technical Details</h2>
+        <table class="all_table_element">
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>A <code class="code_span_class_name">String</code> value, representing the new string converted to upper case</td>
+               </tr>
+               </tbody>
+            </table>
+            
+    </div>
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_string_startswith" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_touppercase" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

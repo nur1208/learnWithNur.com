@@ -1,0 +1,141 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java String replace() Method</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java String replace() Method</h1>
+        <div>
+            <a href="ref_string_length" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_startswith" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Return a new string where all "l" characters are replaced with "p" characters:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> myStr <span class="token operator">=</span> <span class="token string">"Hello"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myStr<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'l'</span><span class="token punctuation">,</span> <span class="token string">'p'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Heppo
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a replace() method?</p>
+            <p id="answer">The <code class="code_span_method" >replace()</code> method searches a string for a specified character, and returns a new string where the specified character(s) are replaced.</p>
+          
+
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Syntax</h2>
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+<span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> <span class="token function">replace</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> <em>searchChar</em><span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <em>newChar</em><span class="token punctuation">)</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Parameter Values</h2>
+        <table class="all_table_element"> 
+            <tbody><tr>
+                <th style="width:21%">Parameter</th>
+                <th>Description</th>
+              </tr>  
+                <tr>
+                <td><em>searchChar</em></td>
+                <td>A <code class="code_span_type">char</code>, representing the character that 
+                will be replaced by the new character</td>
+                </tr>
+                <tr>
+                <td><em>newChar</em></td>
+                <td>A <code class="code_span_type">char</code>, representing the character to 
+                replace the <em>searchChar</em> with</td>
+                </tr>
+            </tbody>
+          </table>
+
+          
+    </div>
+</section>
+<hr class="bg-danger" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Technical Details</h2>
+        <table class="all_table_element">
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>An <code class="code_span_type">int</code> value, representing the index of the first occurrence of the 
+                 character in the string, or -1 if it never occurs</td>
+               </tr>
+               </tbody>
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>A new <code class="code_span_class_name">String</code>, where the specified character has been replaced by the new character(s)</td>
+               </tr>
+               </tbody>
+            </table>
+            
+    </div>
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_string_length" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_startswith" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,201 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Math</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Math</h1>
+        <div>
+            <a href="java_strings" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_booleans" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <p id = "normal" >The Java Math class has many methods that allows you to perform mathematical tasks on numbers.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Math.max(x,y)</h2>
+          <p id="question" class ="mb-0 text-danger" >what Math.max(x,y) used for?</p>
+          <p id="answer">The <code class="code_span_class_name" >Math<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method">max</span><span class="span_inside_class_name_punctuation" >(</span><span class= "normal">x</span><span class="span_inside_class_name_punctuation" >,</span><span class= "normal">y</span><span class="span_inside_class_name_punctuation" >)</span></code> method can be used to find the highest value of x and y:</p>    
+          <!-- example -->
+                <hr class="hr-example">
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">Math</span><span class=" punctuation">.</span><span class=" function">max</span><span class=" punctuation">(</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">10</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+10
+                    </pre>
+                </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Math.min(x,y)</h2>
+        <p id="question" class="mb-0 text-danger">what Math.min(x,y) used for?</p>
+        <p id="answer">The <code class="code_span_class_name" >Math<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method">min</span><span class="span_inside_class_name_punctuation" >(</span><span class= "normal">x</span><span class="span_inside_class_name_punctuation" >,</span><span class= "normal">y</span><span class="span_inside_class_name_punctuation" >)</span></code> method can be used to find the lowest value of of x and y:</p>
+     <!-- example -->
+                <hr class="hr-example">
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">Math</span><span class=" punctuation">.</span><span class=" function">min</span><span class=" punctuation">(</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">10</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+5
+                    </pre>
+                </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Math.sqrt(x)</h2>
+        <p id="question" class="mb-0 text-danger">what Math.sqrt(x) used for?</p>
+        <p id="answer">The <code class="code_span_class_name" >Math<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method">sqrt</span><span class="span_inside_class_name_punctuation" >(</span><span class= "normal">x</span><span class="span_inside_class_name_punctuation" >)</span></code> method returns the square root of x:</p>
+     <!-- example -->
+                <hr class="hr-example">
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+8.0
+                    </pre>
+                </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Math.abs(x)</h2>
+        <p id="question" class="mb-0 text-danger">what Math.abs(x) used for?</p>
+        <p id="answer">The <code class="code_span_class_name" >Math<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method">abs</span><span class="span_inside_class_name_punctuation" >(</span><span class= "normal">x</span><span class="span_inside_class_name_punctuation" >)</span></code> method returns the absolute (positive) value of x:</p>
+     <!-- example -->
+                <hr class="hr-example">
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4.7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+4.7
+                    </pre>
+                </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Random Numbers</h2>
+        <p id="question" class="mb-0 text-danger">what Math.random() used for?</p>
+        <p id="answer"><code class="code_span_class_name" >Math<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method">random</span><span class="punctuation" >(</span><span class="punctuation" >)</span></code> returns a random number between 0.0 (inclusive), and 1.0 (exclusive):</p>
+     <!-- example -->
+                <hr class="hr-example">
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+<script>
+document.write(Math.random());
+</script>
+                    </pre>
+                </div>
+                 <p id="normal">To get more control over the random number, e.g. you only want a random number between 0 and 100, you can use the following formula:</p>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+<span class="token keyword keyword-int">int</span> randomNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 0 to 100</span>
+                    </pre>
+                </div>
+
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_6 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Complete Math Reference</h2>
+        <p id = "normal" >For a complete reference of Math methods, go to our <a href="java_ref_math">Java Math Methods Reference</a>.</p>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_data_types" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_operators" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

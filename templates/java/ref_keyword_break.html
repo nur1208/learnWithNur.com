@@ -1,0 +1,133 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Break Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Break Keyword</h1>
+        <div>
+            <a href="ref_keyword_boolean" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_byte" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p class="p-answer">End the loop when <code class="code_span_type normal" >i</code> is equal to 4:</p>
+            <pre class="pre-example-code">
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword">for</span> <span class=" punctuation">(</span><span class=" keyword">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;</span> <span class=" number">10</span><span class=" punctuation">;</span> i<span class=" operator">++</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" keyword">if</span> <span class=" punctuation">(</span>i <span class=" operator">==</span> <span class=" number">4</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+                <span class=" keyword">break</span><span class=" punctuation">;</span>
+            <span class=" punctuation">}</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>  
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+1
+2
+3
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a break keyword?</p>
+            <p id="answer">The <code class="code_span_type" >break</code> keyword is used to <code class="code_span_type" >break</code> out a <code class="code_span_type" >for</code> loop, a <code class="code_span_type" >while</code> loop or a <code class="code_span_type" >switch</code> block.</p>
+            
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >More Examples</h2>
+            <!-- example -->
+                
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <p class="p-answer" >Break out of a while loop:</p>
+                    <pre class="pre-example-code">
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span>
+        <span class=" keyword">while</span> <span class=" punctuation">(</span>i <span class=" operator">&lt;</span> <span class=" number">10</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+            i<span class=" operator">++</span><span class=" punctuation">;</span>
+            <span class=" keyword">if</span> <span class=" punctuation">(</span>i <span class=" operator">==</span> <span class=" number">4</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+                <span class=" keyword">break</span><span class=" punctuation">;</span>
+            <span class=" punctuation">}</span>
+        <span class=" punctuation">}</span>  
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                    </pre>
+                </div>
+                <div class="result-code-container">
+                    <h3 class="result-title">Result</h3>
+                    <pre class="pre-result-code">
+0
+1
+2
+3
+                    </pre>
+                </div>
+                
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_4 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id="normal" >Use the <span><a href="ref_keyword_continue">continue</a></span> keyword to end the current iteration in a loop, but continue with the next.</p>
+            <p id="normal" >Read more about for loops in our <a href="java_while_loop">Java For Loops Tutorial</a>.</p>
+            <p id="normal" >Read more about while loops in our <a href="java_while_loop">Java While Loops Tutorial</a>.</p>
+            <p id="normal" >Read more about break and continue in our <a href="java_break">Java Break Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_boolean" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_byte" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

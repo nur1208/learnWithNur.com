@@ -1,0 +1,117 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Polymorphism</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Polymorphism</h1>
+        <div>
+            <a href="java_inheritance" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_inner_classes" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Polymorphism</h2>
+            <p id="question" class ="mb-0 text-danger">what is Polymorphism in Java?</p>
+            <p id="answer">Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
+            <p id="normal">Like we specified in the previous chapter; <a href="java_inheritance" target="_blank">Inheritance</a> lets us inherit attributes and methods from another class. <b>Polymorphism</b> uses those methods to perform different tasks. This allows us to perform a single action in different ways.</p>
+            <p id="normal">For example, think of a superclass called <code class="code_span_class_name" >Animal</code> that has a method called <code class="code_span_method" >animalSound<span class="punctuation" >()</span></code>. Subclasses of <code class="code_span_class_name" >Animals</code> could be <code class="code_span_class_name" >Pigs</code>, <code class="code_span_class_name" >Cats</code>, <span code="code_span_class_name" >Dogs</code>, <code class="code_span_class_name" >Birds</code> - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-class">class</span> <span class=" class-name">Animal</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">animalSound</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The animal makes a sound"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+
+<span class=" keyword keyword-class">class</span> <span class=" class-name">Pig</span> <span class=" keyword keyword-extends">extends</span> <span class=" class-name">Animal</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">animalSound</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The pig says: wee wee"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+
+<span class=" keyword keyword-class">class</span> <span class=" class-name">Dog</span> <span class=" keyword keyword-extends">extends</span> <span class=" class-name">Animal</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">animalSound</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The dog says: bow wow"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="note-container">
+                <P id="normal">Remember from the <a href="java_inheritance" target="_blank">Inheritance chapter</a> that we use the <code class="code_span_keyword" >extends</code> keyword to inherit from a class.</P>
+            </div>
+            <p id="normal">Now we can create <code class="code_span_class_name" >Pig</code> and <code class="code_span_class_name" >Dog</code> objects and call the <code class="code_span_method" >animalSound<span class="punctuation">()</span></code> method on both of them:</p>
+             <!-- example -->
+             <div class="example-code-container">
+                 <h3 class="example-title">Example</h3>
+                 <pre class="pre-example-code">
+<span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The animal makes a sound"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">Pig</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The dog says: bow wow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">MyMainClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Animal</span> myAnimal <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Animal</span> myPig <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Animal</span> myDog <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            
+        myAnimal<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myDog<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                 </pre>
+             </div>
+             <div class="note-container">
+                <p id="normal">- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
+             </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_inheritance" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_inner_classes" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,237 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Booleans</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Booleans</h1>
+        <div>
+            <a href="java_booleans" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_switch" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Booleans</h2>
+            <p id="normal">Java supports the usual logical conditions from mathematics:</p>
+            <ul>
+                <li>Less than: <code class="code_span_operator" ><span class="normal" >a</span> < <span class="normal" >b</span></code></li>
+                <li>Less than or equal to: <code class="code_span_operator" ><span class="normal" >a</span> <= <span class="normal" >b</span></code></li>
+                <li>Greater than: <code class="code_span_operator" ><span class="normal" >a</span> > <span class="normal" >b</span></code></li>
+                <li>Greater than or equal to: <code class="code_span_operator" ><span class="normal" >a</span> >= <span class="normal" >b</span></code></li>
+                <li>Equal to <code class="code_span_operator" ><span class="normal" >a</span> == <span class="normal" >b</span></code></li>
+                <li>Not Equal to: <code class="code_span_operator" ><span class="normal" >a</span> != <span class="normal" >b</span></code></li>
+            </ul>
+            <p id="question" class="mb-0 text-danger">Why do we use the above conditions in java?</p>
+            <p id="answer">You can use these conditions to perform different actions for different decisions.</p>
+            <p id="question" class="mb-0 text-danger">What are the conditional statements in Java?</p>
+            <ul>
+                <li>Use <code class="code_span_keyword" >if</code> to specify a block of code to be executed, if a specified condition is true</li>
+                <li>Use <code class="code_span_keyword" >else</code> to specify a block of code to be executed, if the same condition is false</li>
+                <li>Use <code class="code_span_keyword" >else if</code> to specify a new condition to test, if the first condition is false</li>
+                <li>Use <code class="code_span_keyword" >switch</code>to specify many alternative blocks of code to be executed</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >The if Statement</h2>
+          <p id="question" class="mb-0 text-danger">what if statement used for?</p>
+            <p id="answer">Use the <code class="code_span_keyword" >if</code> statement to specify a block of Java code to be executed if a condition is <code class="code_span_boolean" >true</code>.</p>
+            <!-- Syntax -->
+            <div class="example-code-container">
+                <h3 class="example-title">Syntax</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span><em>condition</em><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" comment"><em>// block of code to be executed if the condition is true</em></span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="normal">Note: that <code class="code_span_keyword" >if</code> is in lowercase letters. Uppercase letters (If or IF) will generate an error.</p>
+            </div>
+            <p id="normal">In the example below, we test two values to find out if 20 is greater than 18. If the condition is <code class="code_span_boolean" >true</code>, print some text:</p>
+            <!-- example -->
+    
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span><span class=" number">20</span> <span class=" operator">&gt;</span> <span class=" number">18</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"20 is greater than 18"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+20 is greater than 18
+                </pre>
+            </div>
+            <p id="normal">We can also test variables:</p>
+            <!-- example -->
+    
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-int">int</span> y <span class=" operator">=</span> <span class=" number">18</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span>x <span class=" operator">&gt;</span> y<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"x is greater than y"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+x is greater than y
+                </pre>
+            </div>
+            <h3>Example explained</h3>
+            <p id="normal">In the example above we use two variables, x and y, to test whether x is greater than y (using the <code class="code_span_operator" >></code> operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle" >The else Statement</h2>
+        <p id="question" class="mb-0 text-danger">what else statement used for?</p>
+        <p id="answer">Use the <code class="code_span_keyword" >else</code> statement to specify a block of code to be executed <code class="code_span_keyword" >if</code> the condition is <code class="code_span_boolean" >false</code>.</p>
+        <!-- Syntax -->
+
+        <div class="example-code-container">
+            <h3 class="example-title">Syntax</h3>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span><em>condition</em><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" comment"><em>// block of code to be executed if the condition is true</em></span>
+<span class=" punctuation">}</span> <span class=" keyword keyword-else">else</span> <span class=" punctuation">{</span>
+    <span class=" comment"><em>// block of code to be executed if the condition is false</em></span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <!-- example -->
+
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> time <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span>time <span class=" operator">&lt;</span> <span class=" number">18</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Good day."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-else">else</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Good evening."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Good evening.
+            </pre>
+        </div>
+        <h3>Example explained</h3>
+        <p id="normal">In the example above, time (22) is greater than 10, so the <b>first condition</b> is <code class="code_span_boolean" >false</code>. The <b>next condition</b>, in the <code class="code_span_keyword" >else if</code> statement, is also <code class="code_span_boolean" >false</code>, so we move on to the <code class="code_span_keyword" >else</code> condition since <b>condition1</b> and <b>condition2</b> is both <code class="code_span_boolean" >false</code> - and print to the screen "Good evening".</p>
+        <p id="normal">However, if the time was 14, our program would print "Good day."</p>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle" >Short Hand If...Else (Ternary Operator)</h2>
+        <p id="normal">There is also a short-hand if else, which is known as the <b> ternary operator</b> because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:</p>
+        <!-- Syntax -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Syntax</h3>
+            <pre class="pre-example-code">
+<em>variable</em> <span class=" operator">=</span> <span class=" punctuation">(</span><em>condition</em><span class=" punctuation">)</span> <span class=" operator">?</span> <em>expressionTrue</em> <span class=" operator">:</span> <em> expressionFalse</em><span class=" punctuation">;</span>
+            </pre>
+        </div>
+        <hr class="hr-example">
+        <p class="p-answer" >Instead of writing:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> time <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-if">if</span> <span class=" punctuation">(</span>time <span class=" operator">&lt;</span> <span class=" number">18</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Good day."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span> <span class=" keyword keyword-else">else</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Good evening."</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <p id="normal">You can simply write:</p>
+         <!-- example -->
+         <hr class="hr-example">
+         <div class="example-code-container">
+             <h3 class="example-title">Example</h3>
+             <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> time <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+    <span class=" class-name">String</span> result <span class=" operator">=</span> <span class=" punctuation">(</span>time <span class=" operator">&lt;</span> <span class=" number">18</span><span class=" punctuation">)</span> <span class=" operator">?</span> <span class=" string">"Good day."</span> <span class=" operator">:</span> <span class=" string">"Good evening."</span><span class=" punctuation">;</span>
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>result<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+         </pre>
+         </div>
+         <div class="result-code-container">
+             <h3 class="result-title">Result</h3>
+             <pre class="pre-result-code">
+Good evening.
+             </pre>
+         </div>
+         <hr class="hr-example">
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle" >Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_booleans" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_switch" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

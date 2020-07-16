@@ -1,0 +1,210 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Inheritance</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Inheritance</h1>
+        <div>
+            <a href="java_packages" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_polymorphism" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Inheritance (Subclass and Superclass)</h2>
+            <p id="normal">In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+            <ul>
+                <li><b>subclass</b> (child) - the class that inherits from another class</li>
+                <li><b>superclass</b> (parent) - the class being inherited from</li>
+            </ul>
+            <p id="question" class ="mb-0 text-danger" >how to inherite from a class?</p>
+            <p id="answer">To inherit from a class, use the <code class="code_span_keyword" >extends</code> keyword.</p>
+            <ul>
+                <li>Built-in Packages (packages from the Java API)</li>
+                <li>User-defined Packages (create your own packages)</li>
+            </ul>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-class">class</span> <span class=" class-name">Vehicle</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-protected">protected</span> <span class=" class-name">String</span> brand <span class=" operator">=</span> <span class=" string">"Ford"</span><span class=" punctuation">;</span>        <span class=" comment">// Vehicle attribute</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">honk</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>                    <span class=" comment">// Vehicle method</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"Tuut, tuut!"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+
+<span class=" keyword keyword-class">class</span> <span class=" class-name">Car</span> <span class=" keyword keyword-extends">extends</span> <span class=" class-name">Vehicle</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-private">private</span> <span class=" class-name">String</span> modelName <span class=" operator">=</span> <span class=" string">"Mustang"</span><span class=" punctuation">;</span>    <span class=" comment">// Car attribute</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+
+        <span class=" comment">// Create a myCar object</span>
+        <span class=" class-name">Car</span> myCar <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">Car</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+
+        <span class=" comment">// Call the honk() method (from the Vehicle class) on the myCar object</span>
+        myCar<span class=" punctuation">.</span><span class=" function">honk</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+
+        <span class=" comment">// Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myCar<span class=" punctuation">.</span>brand <span class=" operator">+</span> <span class=" string">" "</span> <span class=" operator">+</span> myCar<span class=" punctuation">.</span>modelName<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Tuut, tuut!
+Ford Mustang
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="normal">We set the <code class="code_span_keyword normal">brand</code> attribute in <code class="code_span_class_name" >Vehicle</code> to a <code class="code_span_keyword" >protected</code> access modifier. If it was set to <code class="code_span_keyword" >private</code>, the <code class="code_span_class_name" >Car</code> class would not be able to access it.</p>
+                <p id="normal">- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.</p>
+                <p id="normal"><b>Tip</b>: Also take a look at the next chapter, <a href="java_polymorphism" target="_blank">Polymorphism</a>, which uses inherited methods to perform different tasks.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >The final Keyword</h2>
+          <p id="question" class ="mb-0 text-danger" >when do you use final keyword?</p>
+          <p id="answer">If you don't want other classes to inherit from a class, use the <code class="code_span_keyword" >final</code> keyword:</p>
+          <div class="example-code-container red">
+            <p  class="p-answer" >If you try to access a <code class="code_span_keyword" >final</code> class, Java will generate an error:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">Vehicle</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> brand <span class="token operator">=</span> <span class="token string">"Ford"</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">honk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Tuut, tuut!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token keyword">extends</span> <span class="token class-name">Vehicle</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> modelName <span class="token operator">=</span> <span class="token string">"Mustang"</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Car</span> myFastCar <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myFastCar<span class="token punctuation">.</span><span class="token function">honk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myFastCar<span class="token punctuation">.</span>brand <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> myFastCar<span class="token punctuation">.</span>modelName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <p id="normal">The output will be something like this:</p>
+        <div class="result-code-container red">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Car.java:8: error: cannot inherit from final Vehicle
+class Car extends Vehicle {
+                    ^
+1 error)
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Import a Class</h2>
+          <p id="normal">If you find a class you want to use, for example, the <code class = " code_span_class_name ">Scanner</code> class, <b>which is used to get user input</b>, write the following code:</p>
+          <!-- Example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Scanner</span><span class=" punctuation">;</span>
+              </pre>
+          </div>
+          <p id="normal">In the example above, <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> is a package, while <code class = " code_span_class_name ">Scanner</code> is a class of the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Import a Package</h2>
+          <p id="normal">There are many packages to choose from. In the previous example, we used the <code class = " code_span_class_name ">Scanner</code> class from the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package. This package also contains date and time facilities, random-number generator and other utility classes.</p>
+          <p id="normal">To import a whole package, end the sentence with an asterisk sign (<code class="code_span_punctuation" >*</code>). The following example will import ALL the classes in the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package:</p>
+        <!-- Example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Scanner</span><span class=" punctuation">;</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >User-defined Packages</h2>
+          <p id="question" class ="mb-0 text-danger" >how to create your own package?</p>
+          <p id="answer">To create your own package, you need to understand that Java uses a file system directory to store them. Just like folders on your computer:</p>
+        <!-- Example -->
+        
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+└── root
+  └── mypack
+    └── MyPackageClass.java
+                    </pre>
+                </div>
+                <p id="normal">To create a package, use the <code class= "code_span_keyword" >package</code> keyword:</p>
+                 <!-- example -->
+                 
+                 <div class="example-code-container">
+                     <h3 class="example-title">Example</h3>
+                     <pre class="pre-example-code">
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Enter username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">String</span> userName <span class="token operator">=</span> myObj<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Username is: "</span> <span class="token operator">+</span> userName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                     </pre>
+                </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_packages" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_polymorphism" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

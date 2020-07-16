@@ -1,0 +1,138 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java String compareToIgnoreCase() Method</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java String compareToIgnoreCase() Method</h1>
+        <div>
+            <a href="ref_string_compareto" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_concat" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">Compare two strings, ignoring lower case and upper case differences:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> myStr1 <span class="token operator">=</span> <span class="token string">"HELLO"</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> myStr2 <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myStr1<span class="token punctuation">.</span><span class="token function">compareToIgnoreCase</span><span class="token punctuation">(</span>myStr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+0
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a compareToIgnoreCase() method?</p>
+            <p id="answer">The <code class="code_span_method" >compareToIgnoreCase()</code> method compares two strings lexicographically, ignoring lower case and upper case differences.</p>
+            <P id="normal">The comparison is based on the Unicode value of each character in the string converted to lower case.</P>
+         
+            <p id="normal">The method returns 0 if the string is equal to the other string, ignoring case differences. A value less than 0 is returned if the string is less than the other string (less characters) and a value greater than 0 if the string is greater than the other string (more characters).</p>
+            
+           
+        
+            
+        </div>
+    </section>
+    
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Syntax</h2>
+            
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> <span class="token function">compareToIgnoreCase</span><span class="token punctuation">(</span><span class="token class-name">String</span> <em>string2</em><span class="token punctuation">)</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-danger" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Parameter Values</h2>
+        <table class="all_table_element"> 
+        <tbody><tr>
+            <th style="width:21%">Parameter</th>
+            <th>Description</th>
+          </tr>  
+            <tr>
+            <td><em>string2</em></td>
+            <td>A <code class="code_span_type">String</code>, representing the other string to be compared</td>
+            </tr>
+        </tbody>
+          </table>
+    </div>
+</section>
+<hr class="bg-danger" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+        <h2 class = "subtitle" >Technical Details</h2>
+        <table class="all_table_element">
+               <tbody><tr>
+                <th style="width:21%">Returns:</th>
+                 <td>An <code class="code_span_type">int</code> value: 0 if the string is equal to the other string, ignoring case differences.<br>
+                 &lt; 0 if the string is lexicographically less than the other string 
+                 <br>&gt; 0 if the string is lexicographically greater than the other string 
+                 (more characters)</td>
+               </tr>
+               <tr>
+                <th style="width:21%">Java Version:</th>
+                 <td>1.2</td>
+               </tr>
+               </tbody>
+            </table>
+    </div>
+</section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_string_compareto" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_string_concat" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,123 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Method Overloading</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Method Overloading</h1>
+        <div>
+            <a href="java_methods_param" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_oop" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Method Overloading</h2>
+            <p id="question" class ="mb-0 text-danger" >What is method overloading in Java?</p>
+            <p id="answer">With <b>method overloading</b>, multiple methods can have the same name with different parameters:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-int">int</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> x<span class=" punctuation">)</span>
+<span class=" keyword keyword-float">float</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-float">float</span> x<span class=" punctuation">)</span>
+<span class=" keyword keyword-double">double</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-double">double</span> x<span class=" punctuation">,</span> <span class=" keyword keyword-double">double</span> y<span class=" punctuation">)</span>
+                </pre>
+            </div>
+            <hr class="hr-example">
+            <p class="p-answer" >Consider the following example, which have two methods that add numbers of different type:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-static">static</span> <span class=" keyword keyword-int">int</span> <span class=" function">plusMethodInt</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> x<span class=" punctuation">,</span> <span class=" keyword keyword-int">int</span> y<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-return">return</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+
+<span class=" keyword keyword-static">static</span> <span class=" keyword keyword-double">double</span> <span class=" function">plusMethodDouble</span><span class=" punctuation">(</span><span class=" keyword keyword-double">double</span> x<span class=" punctuation">,</span> <span class=" keyword keyword-double">double</span> y<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-return">return</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span>String<span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> myNum1 <span class=" operator">=</span> <span class=" function">plusMethodInt</span><span class=" punctuation">(</span><span class=" number">8</span><span class=" punctuation">,</span> <span class=" number">5</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" keyword keyword-double">double</span> myNum2 <span class=" operator">=</span> <span class=" function">plusMethodDouble</span><span class=" punctuation">(</span><span class=" number">4.3</span><span class=" punctuation">,</span> <span class=" number">6.26</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    System<span class=" punctuation">.</span><span class=" keyword keyword-out">out</span><span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"int: "</span> <span class=" operator">+</span> myNum1<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    System<span class=" punctuation">.</span><span class=" keyword keyword-out">out</span><span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"double: "</span> <span class=" operator">+</span> myNum2<span class=" punctuation">)</span><span class=" punctuation">;</span>
+<span class=" punctuation">}</span></code>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+int: 13
+double: 10.559999999999999
+                </pre>
+            </div>
+            <hr class="hr-example">
+            <P id="normal">Instead of defining two methods that should do the same thing, it is better to overload one.</P>
+            <P id="normal">In the example below, we overload the <code class="code_span_method" >plusMethod</code> method to work for both <code class="code_span_type" >int</code> and <code class="code_span_type" >double</code>:</P>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">plusMethod</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">static</span> <span class="token keyword">double</span> <span class="token function">plusMethod</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">,</span> <span class="token keyword">double</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> myNum1 <span class="token operator">=</span> <span class="token function">plusMethod</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> myNum2 <span class="token operator">=</span> <span class="token function">plusMethod</span><span class="token punctuation">(</span><span class="token number">4.3</span><span class="token punctuation">,</span> <span class="token number">6.26</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"int: "</span> <span class="token operator">+</span> myNum1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"double: "</span> <span class="token operator">+</span> myNum2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+int: 13
+double: 10.559999999999999
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="normal"><strong>Note</strong>: Multiple methods can have the same name as long as the number and/or type of parameters are different.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_methods_param" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_oop" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

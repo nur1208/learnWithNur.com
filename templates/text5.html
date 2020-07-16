@@ -1,0 +1,150 @@
+{% extends "layoutPage.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'styles/java/java_syntax.css'%}">
+    <script src="https://kit.fontawesome.com/cb90fc824a.js" ></script>
+   <script src="https:https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ruby&amp;skin=sunburst"></script> 
+    <title>Java Math Methods</title>
+    {% endblock %}
+    
+</head>
+<body>
+    
+            {% block content %}
+                <div class="main-leader-board" >
+
+                
+            </div>
+            <h1 class="main-title">Java Math Methods</h1>
+            
+            <div class="next-prev-container">
+                <!--delete the home button-->
+                <a class="left btn"  href="java_ref_string">< Previous</a>
+                <a class="right btn"  href="java_examples">next ></a>
+            </div>
+            <!-- part_1 -->
+            <div class="NUR-panel NUR-iinfo intro">
+                <p class="p-answer" >The Java Math class has many methods that allows you to perform mathematical tasks on numbers.</p>
+                
+            </div>
+            <hr class="hr-not-home-page">
+            <!-- part_2 -->
+            <div class="NUR-panel NUR-iinfo intro">
+                <h2 class="subtitle">All Math Methods</h2>
+                <p class="p-answer" >A list of all Math methods can be found in the table below:</p>
+                <table class="all_table_element" style="margin:0">
+                    <tbody><tr>
+                      <th style="width:22%">Method</th>
+                      <th style="width:57%">Description</th>
+                      <th style="width:21%">Return Type</th>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >abs<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the absolute value of x</td>
+                      <td>double|float|int|long</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >acos<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the arccosine of x, in radians</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >asin<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the arcsine of x, in radians</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >atan<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >atan2<span class="punctuation">(y,x)</span></span></td>
+                      <td>Returns the angle theta from the conversion of rectangular coordinates <span class="punc)tuation">(x, y to polar coordinates <span class="punctuat)ion">(r, theta.</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >cbrt<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the cube root of x</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >ceil<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the value of x rounded up to its nearest integer</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >copySign<span class="punctuation">(x, y)</span></span></td>
+                      <td>Returns the first floating point x with the sign of the second floating point y</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >cos<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the cosine of x <span class="punctuation">(x is in radians)</span></span></td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >cosh<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the hyperbolic cosine of a double value</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >exp<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the value of E<sup>x</sup></td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >expm1<span class="punctuation">(x)</span></span></td>
+                      <td>Returns e<sup>x</sup> -1</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >floor<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the value of x rounded down to its nearest integer</td>
+                      <td>double</td>
+                    </tr>
+                    <tr>
+                      <td><span class="code_span_method" >getExponent<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the unbiased exponent used in x</td>
+                       <td>int</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >hypot<span class="punctuation">(x, y)</span></span></td>
+                      <td>Returns sqrt<span class="punctuation">(x<sup>2</sup> )+y<sup>2</sup> without intermediate overflow or underflow</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >IEEEremainder<span class="punctuation">(x, y)</span></span></td>
+                      <td>Computes the remainder operation on x and y as prescribed by the IEEE 754 standard</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >log<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the natural logarithm <span class="punctu)ation">(base E of x</td>
+                        <td>double</td>
+                  </tr>
+                    <tr>
+                      <td><span class="code_span_method" >log10<span class="punctuation">(x)</span></span></td>
+                     <td>Returns the base 10 logarithm of x</td>
+                        <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >log1p<span class="punctuation">(x)</span></span></td>
+                      <td>Returns the natural logarithm <span class="punctu)ation">(base E of the sum of x and 1</td>
+                       <td>double</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >max<span class="punctuation">(x, y)</span></span></td>
+                     <td>Returns the number with the highest value</td>
+                        <td>double|float|int|long</td>
+                   </tr>
+                    <tr>
+                      <td><span class="code_span_method" >min<span class="punctuation">(x, y)</span></span></td>
+                      <td>Returns the number with the lowest value</td>
+                       <td>double|float|int|long</td>
+       

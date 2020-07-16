@@ -1,0 +1,246 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Class Attributes</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Class Attributes</h1>
+        <div>
+            <a href="java_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_class_methods" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Class Attributes</h2>
+            <p id="question" class ="mb-0 text-danger" >what are Attributes in java?</p>
+            <p id="answer">In the previous chapter, we used the term "variable" for x in the example (as shown below). It is actually an <b>attribute</b> of the class. Or you could say that class attributes are variables within a class</p>
+           <!-- example -->
+           
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <p class="p-answer" >Create a class called <code class="code_span_class_name" >MyClass</code> with two attributes: <code class="code_span_class_name" ><span class="normal" >x</span></code> and <code class="code_span_class_name" ><span class="normal" >y</span></code>:</p>
+               <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">5</span><span class=" punctuation">;</span>
+    <span class=" keyword keyword-int">int</span> y <span class=" operator">=</span> <span class=" number">3</span><span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+               </pre>
+           </div>
+           <div class="note-container">
+               <p id="normal"><b>fields</b> is Another term for class attributes.</p>
+           </div>
+            
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Accessing Attributes</h2>
+          <p id="question" class ="mb-0 text-danger" >how can you access attributes?</p>
+          <p id="answer">The following example will create an object of the <code class="code_span_class_name" >MyClass</code> class, with the name <code class="code_span_class_name" ><span class="normal">myObj</span></code>. We use the <code class="code_span_class_name" ><span class="normal" >x</span></code> attribute on the object to print its value:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <p class="p-answer" >Create an object called <code class=" normal code_span_class_name " >myObj</code> and print the value of <code class="code_span_class_name" ><span class="normal" >x</span></code>:</p>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">5</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+5
+              </pre>
+          </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Modify Attributes</h2>
+        <p id="question" class ="mb-0 text-danger" >can you modify Attributes?</p>
+        <p id="answer">You can modify attribute values:</p>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p class="p-answer" >Set the value of <code class="code_span_class_name" ><span class="normal" >x</span></code> to <code class="code_span_number" >40</code>:</p>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> x<span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        myObj<span class=" punctuation">.</span>x <span class=" operator">=</span> <span class=" number">40</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+40
+            </pre>
+        </div>
+        <p id="normal">Or override existing values:</p>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p class="p-answer" >Change the value of <code class="code_span_class_name" ><span class="normal" >x</span></code> to <code class="code_span_number" >25</code>:</p>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">10</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        myObj<span class=" punctuation">.</span>x <span class=" operator">=</span> <span class=" number">25</span><span class=" punctuation">;</span> <span class=" comment">// x is now 25</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+25
+            </pre>
+        </div>
+        <p id="normal">If you don't want the ability to override existing values, declare the attribute as <code class="code_span_keyword" >final</code>:</p>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-final"><strong>final</strong></span> <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">10</span><span class=" punctuation">;</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">MyClass</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">MyClass</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        myObj<span class=" punctuation">.</span>x <span class=" operator">=</span> <span class=" number">25</span><span class=" punctuation">;</span> <span class=" comment">// will generate an error: cannot assign a value to a <strong>final</strong> variable</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+error: cannot assign a value to a <b>final</b> variable</span>
+            </pre>
+        </div>
+        <div class="note-container">
+            <p id="normal">The <code class="code_span_keyword" >final</code> keyword is useful when you want a variable to always store the same value, like PI (3.14159...).</p>
+            <p id="normal">The <code class="code_span_keyword" >final</code> keyword is called a "modifier". You will learn more about these in the <a href="java_modifier" target="_blank">Java Modifiers Chapter</a>.</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Multiple Objects</h2>
+        <p id="normal">If you create multiple objects of one class, you can change the attribute values in one object, without affecting the attribute values in the other:</p>
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">MyClass</span> myObj1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">MyClass</span> myObj2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myObj2<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myObj1<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myObj2<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+5
+25
+            </pre>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Multiple Attributes</h2>
+        <p id="normal">You can specify as many attributes as you want:</p>        
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example: OtherClass.java</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token class-name">String</span> fname <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
+    <span class="token class-name">String</span> lname <span class="token operator">=</span> <span class="token string">"Doe"</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Person</span> myObj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>fname <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>lname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Name: John Doe
+Age: 24
+            </pre>
+        </div>
+        
+        
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_class_methods" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

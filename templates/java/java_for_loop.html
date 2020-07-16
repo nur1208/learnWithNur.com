@@ -1,0 +1,171 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java For Loop</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java For Loop</h1>
+        <div>
+            <a href="java_while_loop" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_break" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java For Loop</h2>
+            <p id="question" class ="mb-0 text-danger" >when is for loop used?</p>
+            <p id="answer">When you know exactly how many times you want to loop through a block of code, use the <code class="code_span_keyword" >for</code> loop instead of a w<code class="code_span_keyword" >while</code> loop:</p>
+            <!-- Syntax -->
+        
+            <div class="example-code-container">
+                <h3 class="example-title">Syntax</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><i>statement <span class=" number">1</span></i><span class=" number"></span><span class=" punctuation">;</span><i> statement <span class=" number">2</span></i><span class=" number"></span><span class=" punctuation">;</span><i> statement <span class=" number">3</span></i><span class=" number"></span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" comment"><i>// code block to be executed</i></span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <p id="normal"><b>Statement 1</b> is executed (one time) before the execution of the code block.</p>
+            <p id="normal"><B>Statement 2</B> defines the condition for executing the code block.</p>
+            <p id="normal"><b>Statement 3</b> is executed (every time) after the code block has been executed.</p>
+            <p id="normal">The example below will print the numbers 0 to 4:</p>
+            <!-- example -->
+        
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;</span> <span class=" number">5</span><span class=" punctuation">;</span> i<span class=" operator">++</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+0
+1
+2
+3
+4
+                </pre>
+            </div>
+            <h3>Example explained</h3>
+            <p id="normal">Statement 1 sets a variable before the loop starts (int i = 0).</p>
+            <p id="normal">Statement 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end.</p>
+            <p id="normal">Statement 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Another Example</h2>
+          <p id="normal">This example will only print even values between 0 and 10:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+            <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;=</span> <span class=" number">10</span><span class=" punctuation">;</span> i <span class=" operator">=</span> i <span class=" operator">+</span> <span class=" number">2</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+0
+2
+4
+6
+8
+10
+              </pre>
+          </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>For-Each Loop</h2>
+        <p id="normal">There is also a <b>"for-each"</b> loop, which is used exclusively to loop through elements in an <b>array</b>:</p>
+         <!-- Syntax -->
+         <div class="example-code-container">
+            <h3 class="example-title">Syntax</h3>
+            <pre class="pre-example-code">
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><em>type</em> <em>variableName</em> <span class="token operator">:</span> <em>arrayName</em><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment"><i>// code block to be executed</i></span>
+<span class="token punctuation">}</span>
+            </pre>
+         </div>
+         <p id="normal">The following example outputs all elements in the cars array, using a "for-each" loop:</p>
+         <!-- example -->
+         <hr class="hr-example">
+         <div class="example-code-container">
+             <h3 class="example-title">Example</h3>
+             <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> cars <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span> <span class="token string">"BMW"</span><span class="token punctuation">,</span> <span class="token string">"Ford"</span><span class="token punctuation">,</span> <span class="token string">"Mazda"</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> i <span class="token operator">:</span> cars<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                  
+             </pre>
+         </div>
+         <div class="result-code-container">
+             <h3 class="result-title">Result</h3>
+             <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+             </pre>
+         </div>
+         <div class="note-container">
+             <p id="normal"><strong>Note:</strong> Don't worry if you don't understand the example above. You will learn more about Arrays in the <a href="java_arrays">Java Arrays chapter</a>.</p>
+         </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_while_loop" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_break" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

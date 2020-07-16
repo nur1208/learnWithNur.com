@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head%}
+
+    {% endblock %}
+    <!-- <link rel="stylesheet" href="{%static 'styles/layoutPage.css'%}"> -->
+    <link rel="stylesheet" href="{%static 'styles/NUR.css'%}">
+  
+</head>
+<body>
+    <div class="suber-contianer">
+        <!-- Header -->
+        <div class="main-content-container" style="overflow: hidden;">
+          
+          {% block content %}
+
+          {% endblock %}
+          <!-- thanks for w3schools -->
+          <div class="NUR-row NUR-margin-bottom">
+            <div class="NUR-col NUR-16 NUR-center" style="padding: 6% 6% 6% 0%;">
+              <h2>Thinks for w3schools.com</h2>
+              <p class="NUR-xlarge NUR-text-dark-grey">ssjflajf;asj;j jsajfal;j sj fj;a f</p>
+              <a href="#" class="NUR-button NUR-dark-grey">visit them</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="header_container collapse-header-container" style="display: none;">
+          <header class="header d-flex flex-row">
+              <div class="header_content d-flex flex-row align-items-center">
+                  <!-- logo -->
+                  
+                  <div class="logo_container">
+                      <div class="logo">
+                          <!--<img src='{%static "images/logo.png"%}' alt="">-->
+                          <p><span>learn</span>with<span>NUR</span>.com</p>
+                          
+                      </div>
+                  </div>
+    
+                  <!-- Main Navigation -->
+                  <nav class="main_nav_container">
+                    <div class="main_nav" >
+                        <ul class="main_nav_list" id="main_nav_list" >
+                            <li class="main_nav_item "><a href="http://127.0.0.1:8000">home</a></li>
+                             <!-- this stand for li in this case -->
+                            <li class="main_nav_item active" ><a href="http://127.0.0.1:8000/java/java_home">Java</a></li>
+                            <li class="main_nav_item" ><a href="#">about us</a></li>
+                            <li class="main_nav_item" ><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+              </div>
+              <div class="header_side d-flex flex-row justify-content-center align-items-center">
+                  
+                  <!-- search button --->
+    
+                  <div class="search-box" >
+                    <input class="search-txt" type="text" name="" placeholder="Type to search">
+                    <a  class="search-small-box-right" href="#"><i class="fas fa-search"></i> </a>
+                  </div>
+              </div>
+        </header>
+      </div>
+      
+        <!-- sidebar -->
+        <div class='NUR-sidebar NUR-collapse' id='side-nav' style= "display: none; top:50px;">
+          <div id='left-menu-inner' style="padding-top: 50px;">
+            <div class='NUR-light-grey' id='left-menu-inner-inner'>
+        <!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+              <h2 class="left"><span class="left_h2">Jave</span> Tutorial</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_home">Java Home</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_intor" >Java Intor</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_get_started">Java Get Started</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_syntax">Java Syntax</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_comments">Java Comments</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_variables">Java Variables</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_data_types">Java Data Types</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_type_casting">Java Type Casting</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_operators">Java Operators</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_strings">Java Strings</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_math">Java Math</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_booleans">Java Booleans</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_conditions">Java If..Else</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_switch">Java Switch</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_while_loop">Java While Loop</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_for_loop">Java For Loop</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_break">Java Break/Continue</a>
+                <a target="_top" href="http://127.0.0.1:8000/java/java_arrays">Java Arrays</a>
+              </div>  
+              <h2 class="left">Java Methods</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_methods">Java Methods</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_methods_param" >Java Method Parameters</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_methods_overloading">Java Methods Overloading</a>
+              </div>
+              <h2 class="left">Java Classes</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_oop">Java OOP</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_classes" >Java Classes\Objects</a>
+                <a target="_top"   href="http://127.0.0.1:8000/java/java_class_attributes">Java Class Attributes</a>
+                <a target="_top"   href="java_class_methods">Java Class Methods</a>
+                <a target="_top"   href="java_constructors">Java Constructors</a>
+                <a target="_top"   href="java_modifier">Java Modifier</a>
+                <a target="_top"   href="java_encapsulation">Java Encapsulation</a>
+                <a target="_top"   href="java_packages">Java Packages / API</a>
+                <a target="_top"   href="java_inheritance">Java Inheritance</a>
+                <a target="_top"   href="java_polymorphism">Java Polymorphism</a>
+                <a target="_top"   href="java_inner_classes">Java Inner Classes</a>
+                <a target="_top"   href="java_abstract">Java Abstraction</a>
+                <a target="_top"   href="java_interface">Java Interface</a>
+                <a target="_top"   href="java_enums">Java Enums</a>
+                <a target="_top"   href="java_user_input">java User Input</a>
+                <a target="_top"   href="java_date">java Date</a>
+                <a target="_top"   href="java_arraylist">Java ArrayList</a>
+                <a target="_top"   href="java_hashmap">Java HashMap</a>
+                <a target="_top"   href="java_wrapper_classes">java Wrapper Classes</a>
+                <a target="_top"   href="java_try_catch">Java Exceptions</a>
+              </div>  
+              <h2 class="left">Java File Handling</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="java_files">Java Files</a>
+                <a target="_top"   href="java_files_create" >Java Create/Write Files</a>
+                <a target="_top"   href="java_files_read">Java Read Files</a>
+                <a target="_top"   href="java_files_delete">Java Delete Files</a>
+              </div>
+              <h2 class="left">Java Hot To</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="java_add_two_numbers">Add Tow Numbers</a>
+              </div>
+              <h2 class="left">Java Reference</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"  id="keywords" >Java Keywords</a>
+                <div class="inner_sidebar_container " id = "keywords_list"style="display: none;" >
+                  <a target="_top"   href="java_ref_keyword" >All Keywords</a>
+                  <a target="_top"   href="ref_keyword_abstract"   >abstract</a>
+                  <a target="_top"   href="ref_keyword_boolean"   >boolean</a>
+                  <a target="_top"   href="ref_keyword_break"   >break</a>
+                  <a target="_top"   href="ref_keyword_byte"   >byte</a>
+                  <a target="_top"   href="ref_keyword_case"   >case</a>
+                  <a target="_top"   href="ref_keyword_catch"   >catch</a>
+                  <a target="_top"   href="ref_keyword_char"   >char</a>
+                  <a target="_top"   href="ref_keyword_class"   >class</a>
+                  <a target="_top"   href="ref_keyword_continue"   >continue</a>
+                  <a target="_top"   href="ref_keyword_default"   >default</a>
+                  <a target="_top"   href="ref_keyword_do"   >do</a>
+                  <a target="_top"   href="ref_keyword_double"   >double</a>
+                  <a target="_top"   href="ref_keyword_else"   >else</a>
+                  <a target="_top"   href="ref_keyword_enum"   >enum</a>
+                  <a target="_top"   href="ref_keyword_extends"   >extends</a>
+                  <a target="_top"   href="ref_keyword_final"   >final</a>
+                  <a target="_top"   href="ref_keyword_finally"   >finally</a>
+                  <a target="_top"   href="ref_keyword_float"   >float</a>
+                  <a target="_top"   href="ref_keyword_for"   >for</a>
+                  <a target="_top"   href="ref_keyword_if"   >if</a>
+                  <a target="_top"   href="ref_keyword_implements"   >implements</a>
+                  <a target="_top"   href="ref_keyword_import"   >import</a>
+                  <a target="_top"   href="ref_keyword_instanceof"   >instanceof</a>
+                  <a target="_top"   href="ref_keyword_int"   >int</a>
+                  <a target="_top"   href="ref_keyword_interface"   >interface</a>
+                  <a target="_top"   href="ref_keyword_long"   >long</a>
+                  <a target="_top"   href="ref_keyword_new"   >new</a>
+                  <a target="_top"   href="ref_keyword_package"   >package</a>
+                  <a target="_top"   href="ref_keyword_private"   >private</a>
+                  <a target="_top"   href="ref_keyword_protected"   >protected</a>
+                  <a target="_top"   href="ref_keyword_public"   >public</a>
+                  <a target="_top"   href="ref_keyword_return"   >return</a>
+                  <a target="_top"   href="ref_keyword_short"   >short</a>
+                  <a target="_top"   href="ref_keyword_static"   >static</a>
+                  <a target="_top"   href="ref_keyword_super"   >super</a>
+                  <a target="_top"   href="ref_keyword_switch"   >switch</a>
+                  <a target="_top"   href="ref_keyword_this"   >this</a>
+                  <a target="_top"   href="ref_keyword_throw"   >throw</a>
+                  <a target="_top"   href="ref_keyword_throws"   >throws</a>
+                  <a target="_top"   href="ref_keyword_try"   >try</a>
+                  <a target="_top"   href="ref_keyword_void"   >void</a>
+                  <a target="_top"   href="ref_keyword_while"   >while</a>
+                </div>
+                <a target="_top"  id="string_methods" >Java String Methods</a>
+                <div class="inner_sidebar_container " id = "string_methods_list"style="display: none;" >
+                  <a target="_top"   href="java_ref_string" >All String Methods</a>
+                  <a target="_top"   href="ref_string_charat" >charAt()</a>
+                  <a target="_top"   href="ref_string_codepointat" >codePointAt()</a>
+                  <a target="_top"   href="ref_string_codepointbefore" >codePointBefore()</a>
+                  <a target="_top"   href="ref_string_codepointcount" >codePointCount()</a>
+                  <a target="_top"   href="ref_string_compareto" >compareTo()</a>
+                  <a target="_top"   href="ref_string_comparetoignorecase" >compareToIgnoreCase()</a>
+                  <a target="_top"   href="ref_string_concat" >concat()</a>
+                  <a target="_top"   href="ref_string_contains" >contains()</a>
+                  <a target="_top"   href="ref_string_contentequals" >contentEquals()</a>
+                  <a target="_top"   href="ref_string_copyvalueof" >copyValueOf()</a>
+                  <a target="_top"   href="ref_string_endswith" >endsWith()</a>
+                  <a target="_top"   href="ref_string_equals" >equals()</a>
+                  <a target="_top"   href="ref_string_equalsignorecase" >equalsIgnoreCase()</a>
+                  <a target="_top"   href="ref_string_hashcode" >hashCode()</a>
+                  <a target="_top"   href="ref_string_indexof" >indexOf()</a>
+                  <a target="_top"   href="ref_string_isempty" >isEmpty()</a>
+                  <a target="_top"   href="ref_string_lastindexof" >lastIndexOf()</a>
+                  <a target="_top"   href="ref_string_length" >length()</a>
+                  <a target="_top"   href="ref_string_replace" >replace()</a>
+                  <a target="_top"   href="ref_string_startswith" >startsWith()</a>
+                  <a target="_top"   href="ref_string_tolowercase" >toLowerCase()</a>
+                  <a target="_top"   href="ref_string_touppercase" >toUpperCase()</a>
+                  <a target="_top"   href="ref_string_trim" >trim()</a>
+                  
+                </div>
+                <a target="_top"   href="java_ref_math">Java Math Methods</a>
+                
+              </div>
+              <h2 class="left">Java Examples</h2>
+              <div Class="sidebar_container" >
+                <a target="_top"   href="java_examples">Java Examples</a>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </div>
+        
+        <!-- replace heaeder -->
+        <div class="replace-heaeder-container" style="display: none;">
+            
+          <div class="replace-header d-flex flex-row align-items-center">
+              <!-- Main Navigation -->
+              <div class="replace-main-nav-container">
+                  <ul class="replace-main-nav-list" id="main_nav_list">
+                    <li class="main_nav_item"><a href="http://127.0.0.1:8000">home</a></li>
+                    <li class="main_nav_item active" ><a href="http://127.0.0.1:8000/java/java_home">Java</a></li>
+                    <li class="main_nav_item"><a href="#">about us</a></li>
+                    <li class="main_nav_item"><a href="contact.html">contact</a></li>
+                  </ul>
+                  
+              </div>
+              
+          </div>
+    
+      </div>
+        <!-- rightside -->
+        <div class="right-side-container" style="display: none;">
+          
+        </div>
+        
+        
+      </div>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" >
+        $(document).on('click', '#main_nav_list li', function(){
+            $(this).addClass('active1').siblings().removeClass('active1')
+        })
+    </script>
+  <script>
+    // active JavaScript.
+    jQuery(function($) {
+      var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+      $('.sidebar_container a').each(function() {
+       if (this.href === path) {
+        $(this).addClass('active');
+       }
+      });
+     });
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $('#keywords').click(function(){
+        $('#keywords_list').toggleClass('display_keyword_list')
+
+       

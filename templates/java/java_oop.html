@@ -1,0 +1,111 @@
+{% extends 'main-page.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java OOP</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java OOP</h1>
+        <div>
+          <a href="java_methods_param" class="btn btn-danger"> < Previous</a>
+
+          <a
+            href="java_classes"
+            class="btn btn-danger next"
+            style="float: right;"
+          >
+            Next ></a
+          >
+        </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+          <h2 class="subtitle">Java - What is OOP?</h2>
+          <p id="question" class="mb-0 text-danger">What is OOP?</p>
+          <p id="answer">OOP stands for Object-Oriented Programming.</p>
+          <p id="normal">
+            Procedural programming is about writing procedures or methods that
+            perform operations on the data, while object-oriented programming is
+            about creating objects that contain both data and methods.
+          </p>
+          <p id="normal">
+            Object-oriented programming has several advantages over procedural
+            programming:
+          </p>
+          <ul>
+            <li>OOP is faster and easier to execute</li>
+            <li>OOP provides a clear structure for the programs</li>
+            <li>
+              OOP helps to keep the Java code DRY "Don't Repeat Yourself", and
+              makes the code easier to maintain, modify and debug
+            </li>
+            <li>
+              OOP makes it possible to create full reusable applications with
+              less code and shorter development time
+            </li>
+          </ul>
+          <p id="normal">
+            Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing
+            the repetition of code. You should extract out the codes that are
+            common for the application, and place them at a single place and
+            reuse them instead of repeating it.
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr class="bg-danger" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <!-- part_2 -->
+        <div>
+          <h2 class="subtitle">Java - What are Classes and Objects?</h2>
+          <p id="normal">
+            Classes and objects are the two main aspects of object-oriented
+            programming.
+          </p>
+          <p id="normal">
+            a class is a template for objects, and an object is an instance of a
+            class.
+          </p>
+          <p id="normal">
+            When the individual objects are created, they inherit all the
+            variables and methods from the class.
+          </p>
+          <p id="normal">
+            You will learn much more about
+            <a href="java_classes.asp">classes and objects</a> in the next
+            chapter.
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_methods_param" class="btn btn-danger"> < Previous</a>
+
+          <a
+            href="java_classes"
+            class="btn btn-danger next"
+            style="float: right;"
+          >
+            Next ></a
+          >
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

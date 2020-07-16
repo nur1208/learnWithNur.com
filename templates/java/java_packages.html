@@ -1,0 +1,149 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Packages</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Packages</h1>
+        <div>
+            <a href="java_encapsulation" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_inheritance" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Packages & API</h2>
+            <p id="question" class ="mb-0 text-danger" >what is package used for in java?</p>
+            <p id="answer">A package in Java is used to group related classes. Think of it as <b>a folder in a file directory</b>. We use packages to avoid name conflicts, and to write a better maintainable code. Packages are divided into two categories:</p>
+            <ul>
+                <li>Built-in Packages (packages from the Java API)</li>
+                <li>User-defined Packages (create your own packages)</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Built-in Packages</h2>
+          <p id="question" class ="mb-0 text-danger" >what is java API?</p>
+          <p id="answer">The Java API is a library of prewritten classes, that are free to use, included in the Java Development Environment.</p>
+          <p id="normal">The library contains components for managing input, database programming, and much much more. The complete list can be found at Oracles website: <a href="https://docs.oracle.com/javase/8/docs/api/" target="_blank">https://docs.oracle.com/javase/8/docs/api/</a>.</p>
+          <p id="normal">The library is divided into <b>packages</b> and <b>classes</b>. Meaning you can either import a single class (along with its methods and attributes), or a whole package that contain all the classes that belong to the specified package.</p>
+          <p id="question" class ="mb-0 text-danger" >how to use a class or a package in java?</p>
+          <p id="answer">To use a class or a package from the library, you need to use the <code class="code_span_keyword" >import</code> keyword:</p>
+          <!-- syntax -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace"><em>package</em><span class=" punctuation">.</span><em>name</em></span><span class=" punctuation">.</span><span class=" class-name"><em>Class</em></span><span class=" punctuation">;</span>   <span class=" comment">// Import a single class</span>
+<span class=" keyword keyword-import">import</span> <span class=" namespace"><em>package</em><span class=" punctuation">.</span><em>name</em></span><span class=" punctuation">.</span>*<span class=" punctuation">;</span>   <span class=" comment">// Import the whole package</span>
+              </pre>
+          </div>
+          
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Import a Class</h2>
+          <p id="normal">If you find a class you want to use, for example, the <code class = "code_span_class_name">Scanner</code> class, <b>which is used to get user input</b>, write the following code:</p>
+          <!-- Example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Scanner</span><span class=" punctuation">;</span>
+              </pre>
+          </div>
+          <p id="normal">In the example above, <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> is a package, while <code class = " code_span_class_name ">Scanner</code> is a class of the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Import a Package</h2>
+          <p id="normal">There are many packages to choose from. In the previous example, we used the <code class = " code_span_class_name ">Scanner</code> class from the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package. This package also contains date and time facilities, random-number generator and other utility classes.</p>
+          <p id="normal">To import a whole package, end the sentence with an asterisk sign (<code class="code_span_punctuation" >*</code>). The following example will import ALL the classes in the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package:</p>
+        <!-- Example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Scanner</span><span class=" punctuation">;</span>
+            </pre>
+        </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >User-defined Packages</h2>
+          <p id="question" class ="mb-0 text-danger" >how to create your own package?</p>
+          <p id="answer">To create your own package, you need to understand that Java uses a file system directory to store them. Just like folders on your computer:</p>
+        <!-- Example -->
+        
+                <div class="example-code-container">
+                    <h3 class="example-title">Example</h3>
+                    <pre class="pre-example-code">
+└── root
+  └── mypack
+    └── MyPackageClass.java
+                    </pre>
+                </div>
+                <p id="normal">To create a package, use the <code class= "code_span_keyword" >package</code> keyword:</p>
+                 <!-- example -->
+                 
+                 <div class="example-code-container">
+                     <h3 class="example-title">Example</h3>
+                     <pre class="pre-example-code">
+<span class="token keyword keyword-import">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Scanner</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Scanner</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Enter username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">String</span> userName <span class="token operator">=</span> myObj<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Username is: "</span> <span class="token operator">+</span> userName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                     </pre>
+                </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_encapsulation" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_inheritance" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

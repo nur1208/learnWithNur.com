@@ -1,0 +1,85 @@
+{% extends 'main-page.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Home</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Tutorial</h1>
+        <div>
+          <a href="http://127.0.0.1:8000/" class="btn btn-danger"> < Home</a>
+
+          <a href="java_intor" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+        <hr class="bg-danger" />
+        <div>
+          <p class="mb-0 text-danger" id="question">what is java?</p>
+          <p id="answer">Java is a programming language.</p>
+          <p class="mb-0 text-danger" id="question">what is java used to?</p>
+          <p id="answer">
+            Java is used to develop mobile apps, web apps, desktop apps, games
+            and much more.
+          </p>
+          <a class="btn btn-danger" href="java_intor">
+            Start learning Java now »
+          </a>
+        </div>
+        <hr class="bg-danger" />
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1>Examples in Each Chapter</h1>
+        <!-- example -->
+        <hr class="bg-danger" />
+        <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+          </pre>
+        </div>
+        <div class="result-code-container">
+          <h3 class="example-title">Result</h3>
+          <pre class="pre-result-code">
+Hello World
+          </pre>
+        </div>
+        <hr class="bg-danger" />
+        <div class="note-container">
+          <p id="normal">
+            We recommend reading this tutorial, in the sequence listed in the
+            left menu.
+          </p>
+          <p id="normal">
+            Java is an object oriented language and some concepts may be new.
+            Take breaks when needed, and go over the examples as many times as
+            needed.
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1>Java Exercises</h1>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="#">Go to Exercises</a>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

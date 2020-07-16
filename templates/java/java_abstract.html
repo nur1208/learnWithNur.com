@@ -1,0 +1,123 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Abstraction</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Abstraction</h1>
+        <div>
+            <a href="java_inner_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_interface" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Abstract Classes and Methods</h2>
+            <p id="question" class ="mb-0 text-danger">what is data abstraction?</p>
+            <p id="answer">Data <b>abstraction</b> is the process of hiding certain details and showing only essential information to the user.</p>
+            <p id="question" class ="mb-0 text-danger">how to achieve abstraction?</p>
+            <p id="answer">Abstraction can be achieved with either <b>abstract classes</b> or <a href="java_interface" target="_blank" ><strong>interfaces</strong></a> (which you will learn more about in the next chapter).</p>
+            <p id="normal">The <code class="code_span_keyword" >abstract</code> keyword is a non-access modifier, used for classes and methods:</p>
+            <ul>
+                <li><b>Abstract class</b>: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class)</li>
+                <li><b>Abstract method</b>: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li>
+            </ul>
+            <p id="normal">An abstract class can have both abstract and regular methods:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <pre class="pre-example-code">
+<span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-void">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Zzz"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <p id="normal">From the example above, it is not possible to create an object of the Animal class:</p>
+            <div class="example-code-container red">
+                <pre class="pre-example-code">
+<span class="token class-name">Animal</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// will generate an error</span>
+                </pre>
+            </div>
+            <p id="normal">To access the abstract class, it must be inherited from another class. Let's convert the Animal class we used in the <a href="java_polymorphism" target="_blank" >Polymorphism chapter</a> to an abstract class:</p>
+            <div class="note-container">
+                <p id="normal" >Remember from the <a href="java_inheritance"  target="_blank">Inheritance chapter</a> that we use the <code class="code_span_keyword" >extends</code> keyword to inherit from a class.</p>
+            </div>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token comment">// Abstract class</span>
+<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Abstract method (does not have a body)</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Regular method</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Zzz"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Subclass (inherit from Animal)</span>
+<span class="token keyword">class</span> <span class="token class-name">Pig</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// The body of animalSound() is provided here</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyMainClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Pig</span> myPig <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Create a Pig object</span>
+        myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myPig<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code ">
+The pig says: wee wee
+Zzz
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="question" class ="mb-0 text-danger">Why And When To Use Abstract Classes and Methods?</p>
+                <p id="answer">To achieve security - hide certain details and only show the important details of an object.</p>
+                <p><strong>Note:</strong> Abstraction can also be achieved with <a href="java_interface">Interfaces</a>, which you will learn more about in the next chapter.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_inner_classes" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_interface" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

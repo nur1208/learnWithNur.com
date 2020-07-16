@@ -1,0 +1,99 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Syntax</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Syntax</h1>
+        <div>
+            <a href="java_get_started" class="btn btn-danger"> < Previous</a>
+  
+            <a href="java_comments" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <div>
+            <h2 class = "subtitle" >Java Syntax</h2>
+            <p id="normal">In the previous chapter, we created a Java file called MyClass.java, and we used the following code to print "Hello World" to the screen:</p>
+           <!-- example -->
+        <hr class="bg-danger" />
+        <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+          </pre>
+        </div>
+        <h3>Example explained</h3>
+        <p id="question" class="text-danger">where should Every line of code that runs in Java must be?</p>
+        <p id="answer">Every line of code that runs in Java must be inside a <code class="code_span_keyword">class</code>.In our example, we named the class <b>MyClass</b>. A class should always start with an uppercase first letter</p>
+        <div class="note-container"><p id="answer"><b>Note:</b> Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p></div>
+        <p id="answer">The name of the java file <b>must match</b> the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the <a href="java_get_started" target="_blank" class="a_word">Get Started Chapter</a> for how to install Java. The output should be:</p>
+        <div class="result-code-container">
+            <h3 class="result-title">Result: <span class="example-title-span"> MyClass.java</span></h3>
+            <pre class="pre-result-code">
+<span class="string">Hello World</span>
+            </pre>
+        </div>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle"  id="subtitle">The main Method</h2>
+       <p id="normal">The <code class="code_span_method">main()</code> method is required and you will see it in every Java program:</p>
+       <pre class="pre-example-code">
+<span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        </pre>
+        <p id="normal">Any code inside the <code class="code_span_method">main()</code> method will be executed. You don't have to understand the keywords before and after main. You will get to know them bit by bit while reading this tutorial.</p>
+        <p id="normal">For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the <code class="code_span_method">main()</code> method.</p>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >System.out.println()</h2>
+        <p id="normal">Inside the <code class="code_span_method">main()</code> method, we can use the<code class="code_span_method">println()</code> method to print a line of text to the screen:</p>
+        <pre class="pre-example-code">
+<span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+    <span class="class-name"> System</span><span class="punctuation">.</span>out<span class="punctuation">.</span><span class="function">println</span><span class="punctuation">(</span><span class="string">"Hello Wordl"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+        </pre>
+        <div class="note-container">
+            <p id="normal"><b>Note:</b> The curly braces <span class="code_span_punctuation">{}</span> marks the beginning and the end of a block of code.</p>
+            <p id="normal"><b>Note:</b> Each code statement must end with a semicolon.</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="#">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_get_started" class="btn btn-danger"> < Previous</a>
+  
+            <a href="java_comments" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

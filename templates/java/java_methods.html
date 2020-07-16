@@ -1,0 +1,327 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Methods</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Methods</h1>
+        <div>
+            <a href="java_arrays" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_methods_param" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Methods</h2>
+            <p id="question" class ="mb-0 text-danger" >what is a method?</p>
+            <p id="answer">A <b>method</b> is a block of code which only runs when it is called.</p>
+            <p id="normal">You can pass data, known as parameters, into a method.</p>
+            <p id="normal">Methods are used to perform certain actions, and they are also known as <b>functions</b>.</p>
+            <p id="question" class ="mb-0 text-danger" >Why to use methods?</p>
+            <p id="answer">To reuse code: define the code once, and use it many times.</p>
+            
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >reate a Method</h2>
+          <p id="question" class ="mb-0 text-danger" >how to create a method?</p>
+          <p id="answer">A method must be declared within a class. It is defined with the name of the method, followed by parentheses <code class="code_span_punctuation">()</code>. Java provides some pre-defined methods, such as <code class="code_span_class_name">System<span class="span_inside_class_name_punctuation" >.</span>out<span class="span_inside_class_name_punctuation" >.</span><span class="span_inside_class_name_method" >println</span><span class="span_inside_class_name_punctuation" >()</span></code>, but you can also create your own methods to perform certain actions:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <p class="p-answer" >Create a method inside MyClass:</p>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" comment">// code to be executed</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <h3>Example Explained</h3>
+                <ul>
+                    <li><code class="code_span_method" >myMethod<span class="span_inside_class_name_punctuation" >()</span></code> is the name of the metho</li>
+                    <li><code class="code_span_keyword">static</code> means that the method belongs to the MyClass class and not an object of the MyClass class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                    <li><code class="code_span_keyword">void</code> means that this method does not have a return value. You will learn more about return values later in this chapter</li>
+                </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Call a Method</h2>
+        <p id="question" class ="mb-0 text-danger" >how to call a method in java?</p>
+        <p id="answer">To change the value of a specific element, refer to the index number:</p>
+        <p id="normal">In the following example, <code class="code_span_method" >myMethod<span class="span_inside_class_name_punctuation" >()</span></code> is used to print a text (the action), when it is called:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"I just got executed!"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+
+        <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class=" punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+I just got executed!
+            </pre>
+        </div>
+        <p id= "normal" >A method can also be called multiple times:</p>
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"I just got executed!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+        <h3 class="result-title">Result</h3>
+        <pre class="pre-result-code">
+I just got executed!
+I just got executed!
+I just got executed!
+        </pre>
+    </div>
+    <div class="note-container">
+        <p id="normal">In the next chapter, Method Parameters, you will learn how to pass data (parameters) into a method.</p>
+    </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Array Length</h2>
+        <p id="question" class ="mb-0 text-danger" >how do you  find how many elements in array in java?</p>
+        <p id="answer">To find out how many elements an array has, use the length property:</p>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> cars <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" string">"Volvo"</span><span class=" punctuation">,</span> <span class=" string">"BMW"</span><span class=" punctuation">,</span> <span class=" string">"Ford"</span><span class=" punctuation">,</span> <span class=" string">"Mazda"</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">.</span>length<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+4
+            </pre>
+        </div>
+        
+        
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Loop Through an Array</h2>
+        <p id="question" class ="mb-0 text-danger" >how to loop through an Array?</p>
+        <p id="answer">You can loop through the array elements with the <code class="code_span_keyword" >for</code> loop, and use the <code class="code_span_method" ><span class="normal">length</span></code> property to specify how many times the loop should run.</p>
+        <p id="normal">The following example outputs all elements in the <b>cars</b> array:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> cars <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" string">"Volvo"</span><span class=" punctuation">,</span> <span class=" string">"BMW"</span><span class=" punctuation">,</span> <span class=" string">"Ford"</span><span class=" punctuation">,</span> <span class=" string">"Mazda"</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+    <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span> i <span class=" operator">&lt;</span> cars<span class=" punctuation">.</span>length<span class=" punctuation">;</span> i<span class=" operator">++</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>cars<span class=" punctuation">[</span>i<span class=" punctuation">]</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+            </pre>
+        </div>
+        
+        
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_6 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Loop Through an Array with For-Each</h2>
+        <p id="question" class ="mb-0 text-danger" >how to loop through an Array?</p>
+        <p id="answer">There is also a <b>"for-each"</b> loop, which is used exclusively to loop through elements in arrays:</p>
+        <!-- Syntax -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <pre class="pre-example-code">
+<span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><em>type</em> <em>variable</em> <span class=" operator">:</span> <em>arrayname</em><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" punctuation">.</span><span class=" punctuation">.</span><span class=" punctuation">.</span>
+<span class=" punctuation">}</span>
+            </pre>
+        </div>
+        <p id="normal">The following example outputs all elements in the <b>cars</b> array, using a <b>"for-each"</b> loop:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> cars <span class=" operator">=</span> <span class=" punctuation">{</span><span class=" string">"Volvo"</span><span class=" punctuation">,</span> <span class=" string">"BMW"</span><span class=" punctuation">,</span> <span class=" string">"Ford"</span><span class=" punctuation">,</span> <span class=" string">"Mazda"</span><span class=" punctuation">}</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> cars<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Volvo
+BMW
+Ford
+Mazda
+            </pre>
+        </div>
+        <P id="normal">The example above can be read like this: <b>for each</b> <code class="code_span_class_name" >String</code> element (called <b>i</b> - as in <b>i</b>ndex) in <b>cars</b>, print out the value of <b>i</b>.</P>
+        <P id="normal">If you compare the <code class="code_span_keyword" >for</code> loop and <b>for-each</b> loop, you will see that the <b>for-each</b> method is easier to write, it does not require a counter (using the length property), and it is more readable.</P>
+
+        
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_7 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Multidimensional Arrays</h2>
+        <p id="question" class ="mb-0 text-danger" >what is Multidimensional Array?</p>
+        <p id="answer">A multidimensional array is an array containing one or more arrays.</p>
+        <p id="question" class ="mb-0 text-danger" >how to create a two-dimensional array? </p>
+        <p id="answer">To create a two-dimensional array, add each array within its own set of <b>curly braces</b>:</p>
+          <!-- Syntax -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+           <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-int">int</span><span class=" punctuation">[</span><span class=" punctuation">]</span><span class=" punctuation">[</span><span class=" punctuation">]</span> myNumbers <span class=" operator">=</span> <span class=" punctuation">{</span> <span class=" punctuation">{</span><span class=" number">1</span><span class=" punctuation">,</span> <span class=" number">2</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">,</span> <span class=" number">4</span><span class=" punctuation">}</span><span class=" punctuation">,</span> <span class=" punctuation">{</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">6</span><span class=" punctuation">,</span> <span class=" number">7</span><span class=" punctuation">}</span> <span class=" punctuation">}</span><span class=" punctuation">;</span>
+              </pre>
+          </div>
+          <p id="normal"><b>myNumbers</b> is now an array with two arrays as its elements.</p>
+          <p id="normal">To access the elements of the <b>myNumbers</b> array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:</p>
+           <!-- example -->
+           <hr class="hr-example">
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span><span class=" punctuation">[</span><span class=" punctuation">]</span><span class=" punctuation">[</span><span class=" punctuation">]</span> myNumbers <span class=" operator">=</span> <span class=" punctuation">{</span> <span class=" punctuation">{</span><span class=" number">1</span><span class=" punctuation">,</span> <span class=" number">2</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">,</span> <span class=" number">4</span><span class=" punctuation">}</span><span class=" punctuation">,</span> <span class=" punctuation">{</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">6</span><span class=" punctuation">,</span> <span class=" number">7</span><span class=" punctuation">}</span> <span class=" punctuation">}</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> myNumbers<span class=" punctuation">[</span><span class=" number">1</span><span class=" punctuation">]</span><span class=" punctuation">[</span><span class=" number">2</span><span class=" punctuation">]</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+               </pre>
+           </div>
+           <div class="result-code-container">
+               <h3 class="result-title">Result</h3>
+               <pre class="pre-result-code">
+7
+               </pre>
+            </div>
+            <hr class="hr-example">
+            <p id="normal">We can also use a <code class="code_span_keyword" >for</code> loop inside another <code class="code_span_keyword" >for</code> loop to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> myNumbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> myNumbers<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> myNumbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myNumbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+1
+2
+3
+4
+5
+6
+7
+                </pre>
+             </div>
+        
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_arrays" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_methods_param" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

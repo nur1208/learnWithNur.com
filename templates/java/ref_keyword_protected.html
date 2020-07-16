@@ -1,0 +1,103 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java protected Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java protected Keyword</h1>
+        <div>
+            <a href="ref_keyword_private" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_public" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">The <code class="code_span_class_name">Student</code> subclass accesses a <code class="code_span_class_name">Person</code> class with <code class="code_span_keyword" >protected</code> attributes:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> fname <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> lname <span class="token operator">=</span> <span class="token string">"Doe"</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token class-name">String</span> email <span class="token operator">=</span> <span class="token string">"john@doe.com"</span><span class="token punctuation">;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> graduationYear <span class="token operator">=</span> <span class="token number">2018</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Student</span> myObj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>fname <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>lname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Email: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>email<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Graduation Year: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>graduationYear<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Name: John Doe
+Email: john@doe.com
+Age: 24
+Graduation Year: 2018
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a protected keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >protected</code> keyword is an access modifier used for attributes, methods and constructors, making them accessible in the same package and subclasses.</p>
+            
+
+           
+            
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal">Read more about modifiers in our <a href="java_modifiers">Java Modifiers Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_private" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_public" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

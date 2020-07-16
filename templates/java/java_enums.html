@@ -1,0 +1,187 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Enums</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Enums</h1>
+        <div>
+            <a href="java_interface" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_user_input" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Enums</h2>
+            <p id="question" class ="mb-0 text-danger">what is enum in java?</p>
+            <p id="answer">An <code class="code_span_method" >enum</code> is a special "class" that represents a group of <b>constants</b> (unchangeable variables, like <code class="code_span_method" >final</code> variables).</p>
+            <p id="question" class ="mb-0 text-danger">how to create an enum?</p>
+            <p id="answer">To create an <code class="code_span_method" >enum</code>, use the <code class="code_span_method" >enum</code> keyword (instead of class or interface), and separate the constants with a comma. Note that they should be in uppercase letters:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-enum">enum</span> <span class=" class-name">Level</span> <span class=" punctuation">{</span>
+    LOW<span class=" punctuation">,</span>
+    MEDIUM<span class=" punctuation">,</span>
+    HIGH
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <p id="question" class ="mb-0 text-danger">how can you access enum constants?</p>
+            <p id="answer">You can access <code class="code_span_method" >enum</code> constants with the <b>dot</b> syntax:</p>
+            <div class="result-code-container">
+                <pre class="pre-result-code">
+Level myVar = Level.MEDIUM;
+                </pre>
+            </div>
+            <div class="note-container">
+                <p class="p-answer" >Enum is short for "enumerations", which means "specifically listed".</p>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Enum inside a Class</h2>
+          <p id="normal">You can also have an <code class="code_span_method" >enum</code> inside a class:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-enum">enum</span> <span class=" class-name">Level</span> <span class=" punctuation">{</span>
+        LOW<span class=" punctuation">,</span>
+        MEDIUM<span class=" punctuation">,</span>
+        HIGH
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">Level</span> myVar <span class=" operator">=</span> <span class=" class-name">Level</span><span class=" punctuation">.</span>MEDIUM<span class=" punctuation">;</span> 
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myVar<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <p id = "normal" >The output will be:</p>
+          <div class="result-code-container">
+              <pre class="pre-result-code">
+MEDIUM
+              </pre>
+          </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Enum in a Switch Statement</h2>
+          <p id="normal">Enums are often used in <code class="code_span_method" >switch</code> statements to check for corresponding values:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="token keyword">enum</span> <span class="token class-name">Level</span> <span class="token punctuation">{</span>
+    LOW<span class="token punctuation">,</span>
+    MEDIUM<span class="token punctuation">,</span>
+    HIGH
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Level</span> myVar <span class="token operator">=</span> <span class="token class-name">Level</span><span class="token punctuation">.</span>MEDIUM<span class="token punctuation">;</span> 
+                    
+        <span class="token keyword">switch</span><span class="token punctuation">(</span>myVar<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> LOW<span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Low level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> MEDIUM<span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Medium level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> HIGH<span class="token operator">:</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"High level"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+              </pre>
+          </div>
+          <p id = "normal" >The output will be:</p>
+          <div class="result-code-container">
+              <pre class="pre-result-code">
+Medium level
+              </pre>
+          </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Loop Through an Enum</h2>
+          <p id="normal">The enum type has a values() method, which returns an array of all enum constants. This method is useful when you want to loop through the constants of an enum:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="token keyword">enum</span> <span class="token class-name">Level</span> <span class="token punctuation">{</span>
+    LOW<span class="token punctuation">,</span>
+    MEDIUM<span class="token punctuation">,</span>
+    HIGH
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Level</span> myVar <span class="token operator">:</span> <span class="token class-name">Level</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>myVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+              </pre>
+          </div>
+          <p id = "normal" >The output will be:</p>
+          <div class="result-code-container">
+              <pre class="pre-result-code">
+LOW
+MEDIUM
+HIGH
+              </pre>
+          </div>
+      </div>
+      </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_interface" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_user_input" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

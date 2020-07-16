@@ -1,0 +1,371 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Operators</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Operators</h1>
+        <div>
+            <a href="java_type_casting" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_strings" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <div>
+            <h2 class = "subtitle" >Java Operators</h2>
+            <p id="question" class="text-danger mb-0">what are operators in Java?</p>
+            <p id="answer">Operators are used to perform operations on variables and values.</p>
+            <p id="normal">In the example below, we use the <code class="code_span_operator" >+</code> operator to add together two values:</p>
+          <!-- example -->
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+  <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token number">50</span><span class="token punctuation">;</span>
+  <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+150
+              </pre>
+          </div>
+          <p id="normal">Although the <code class="code_span_operator" >+</code> operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+  <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+    <span class="token keyword keyword-int">int</span> sum1 <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token number">50</span><span class="token punctuation">;</span>        <span class="token comment">// 150 (100 + 50)</span>
+    <span class="token keyword keyword-int">int</span> sum2 <span class="token operator">=</span> sum1 <span class="token operator">+</span> <span class="token number">250</span><span class="token punctuation">;</span>      <span class="token comment">// 400 (150 + 250)</span>
+    <span class="token keyword keyword-int">int</span> sum3 <span class="token operator">=</span> sum2 <span class="token operator">+</span> sum2<span class="token punctuation">;</span>     <span class="token comment">// 800 (400 + 400)</span>
+
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>sum1<span class=" punctuation">)</span><span class=" punctuation">;</span>         
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>sum2<span class=" punctuation">)</span><span class=" punctuation">;</span>         
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>sum3<span class=" punctuation">)</span><span class=" punctuation">;</span>         
+  <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+150
+400
+800
+            </pre>
+        </div>  
+        <p id="normal">Java divides the operators into the following groups:</p>
+        <ul>
+          <li>Arithmetic operators</li>
+          <li>Assignment operators</li>
+          <li>Comparison operators</li>
+          <li>Logical operators</li>
+          <li>Bitwise operators</li>
+      </ul>
+        </div>
+    </section>
+       <!-- part_2 -->
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle"  id="subtitle">Arithmetic Operators</h2>
+        <p id="question" class="text-danger mb-0">What are the arithmetic operators in Java?</p>
+        <p id="answer">Arithmetic operators are used to perform common mathematical operations.</p>
+        <!-- table -->
+        <div class="table_container">
+            <table class="all_table_element">
+                <tbody>
+                    <tr>
+                        <th style="width:15%">Operator</th>
+                        <th style="width:18%">Name</th>
+                        <th style="width:40%">Description</th>
+                        <th style="width:27%;">Example</th>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >+</code></td>
+                        <td>Addition</td>
+                        <td>Adds together two values</td>
+                        <td>x <code class="code_span_operator" >+</code> y</td>
+
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >-</code></td>
+                        <td>Subtraction</td>
+                        <td>Subtracts one value from another</td>
+                        <td>x <code class="code_span_operator" >-</code> y</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >*</code></td>
+                        <td>Multiplication</td>
+                        <td>Multiplies two values</td>
+                        <td>x <code class="code_span_operator" >*</code> y</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >/</code></td>
+                        <td>Division</td>
+                        <td>Divides one value by another</td>
+                        <td>x <code class="code_span_operator" >/</code> y</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >%</code></td>
+                        <td>Modulus</td>
+                        <td>Returns the division remainder</td>
+                        <td>x <code class="code_span_operator" >%</code> y</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >++</code></td>
+                        <td>Increment</td>
+                        <td>Increases the value of a variable by 1</td>
+                        <td><code class="code_span_operator" >++</code>x</td>
+                    </tr>
+                    <tr>
+                        <td><code class="code_span_operator" >--</code></td>
+                        <td>Decrement</td>
+                        <td>Decreases the value of a variable by 1</td>
+                        <td><code class="code_span_operator" >--</code>x</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </section>
+    <!-- part_3 -->
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle" >Java Assignment Operators</h2>
+        <p id="question" class="text-danger mb-0">What are the arithmetic operators in Java?</p>
+        <p id="answer">Assignment operators are used to assign values to variables.</p>
+        <p id="normal">In the example below, we use the <b>assignment</b> operator (<code class="code_span_operator">=</code>) to assign the value <code class="code_span_number">10</code> to a variable called <code class="code_span_variable" >x</code>:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+10
+            </pre>
+        </div>
+        <p id="normal">The <B>addition assignment</B> operator (<code class = "code_span_operator">+=</code>) adds a value to a variable:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class="token keyword keyword-int">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        x <span class="token operator">+=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+15
+            </pre>
+        </div>
+        <p id="answer">A list of all assignment operators:</p>
+        <!-- table -->
+        <table class="all_table_element">
+            <tbody>
+                <tr>
+                    <th style="width:30%">Operator</th>
+                    <th style="width:35%">Example</th>
+                    <th style="width:35%">Same As</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>x = 5</td>
+                    <td>x = 5</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>x += 3</td>
+                    <td>x = x + 3</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>x -= 3</td>
+                    <td>x = x - 3</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>x *= 3</td>
+                    <td>x = x * 3</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>x /= 3</td>
+                    <td>x = x / 3</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>x %= 3</td>
+                    <td>x = x % 3</td>
+                </tr>
+                <tr>
+                    <td>&amp;=</td>
+                    <td>x &amp;= 3</td>
+                    <td>x = x &amp; 3</td>
+                </tr>
+                <tr>
+                    <td>|=</td>
+                    <td>x |= 3</td>
+                    <td>x = x | 3</td>
+                </tr>
+                <tr>
+                    <td>^=</td>
+                    <td>x ^= 3</td>
+                    <td>x = x ^ 3</td>
+                </tr>
+                <tr>
+                    <td>&gt;&gt;=</td>
+                    <td>x &gt;&gt;= 3</td>
+                    <td>x = x &gt;&gt; 3</td>
+                </tr>
+                <tr>
+                    <td>&lt;&lt;=</td>
+                    <td>x &lt;&lt;= 3</td>
+                    <td>x = x &lt;&lt; 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </section>
+      <!-- part_4 -->
+      <hr class="bg-dark" />
+      <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle" >Java Assignment Operators</h2>
+          <p id="question" class="text-danger mb-0">What are the comparison operators in Java?</p>
+          <p id="answer">Comparison operators are used to compare two values:</p>
+          <!-- table -->
+          <table class="all_table_element">
+            <tbody>
+                <tr>
+                    <th style="width:25%">Operator</th>
+                    <th style="width:40%">Name</th>
+                    <th style="width:35%">Example</th>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>Equal to</td>
+                    <td>x == y</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Not equal</td>
+                    <td>x != y</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater than</td>
+                    <td>x &gt; y</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less than</td>
+                    <td>x &lt; y</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Greater than or equal to</td>
+                    <td>x &gt;= y</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Less than or equal to</td>
+                    <td>x &lt;= y</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      </section>
+      <!-- part_5 -->
+      <hr class="bg-dark" />
+      <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle" >Java Logical Operators</h2>
+          <p id="question" class="text-danger mb-0">What are the logical Operators in Java?</p>
+          <p id="answer">Logical operators are used to determine the logic between variables or values:</p>
+          <!-- table -->
+          <table class="all_table_element">
+            <tbody>
+                <tr>
+                    <th style="width:15%">Operator</th>
+                    <th style="width:20%">Name</th>
+                    <th style="width:45%">Description</th>
+                    <th style="width:20%">Example</th>
+                </tr>
+                <tr>
+                    <td>&amp;&amp;&nbsp;</td>
+                    <td>Logical and</td>
+                    <td>Returns true if both statements are true</td>
+                    <td>x &lt; 5 &amp;&amp;&nbsp; x &lt; 10</td>
+                </tr>
+                <tr>
+                    <td>||&nbsp;</td>
+                    <td>Logical or</td>
+                    <td>Returns true if one of the statements is true</td>
+                    <td>x &lt; 5 || x &lt; 4</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>Logical not</td>
+                    <td>Reverse the result, returns false if the result is true</td>
+                    <td>!(x &lt; 5 &amp;&amp; x &lt; 10)</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_type_casting" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_strings" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section> 
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,125 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Getting Started</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Getting Started</h1>
+        <div>
+          <a href="java_intor" class="btn btn-danger"> < previous</a>
+
+          <a href="java_syntax" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+        <hr class="bg-danger" />
+        <div>
+            <h2 class = "subtitle" >Java Install</h2>
+            <p id="normal">Some PCs might have Java already installed.</p>
+          <p class="mb-0 text-danger" id="question">how to check if java installed on a Windows PC?</p>
+          <p id="answer">To check if you have Java installed on a Windows PC, search in the start bar for Java or type the following in Command Prompt (cmd.exe):</p>
+          <div class="result-code-container">
+            <pre class="pre-result-code">
+C:\Users\YourNamePath>java -version
+            </pre>
+        </div>
+        <!-- I add this line -->
+        <p class="for_example" >for example the following one is mine.</p>
+        <div class="result-code-container">
+            <pre class="pre-result-code">
+C:\Users\DELL\Desktop\program\java\examples>java -version
+            </pre>
+        </div>
+          <p id="normal">If Java is installed, you will see something like the following (depending on version):</p>
+          <div class="result-code-container">
+            <pre class="pre-result-code">
+java version "11.0.1" 2018-10-16 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
+            </pre>
+        </div>
+          <p id="normal">If you do not have Java installed on your computer, you can download it for free from <a href="https://www.oracle.com/technetwork/java/javase/overview/index.html" target="_blank">oracle.com</a>.</p>
+            <div class="note-container"><P id="normal"><b>Note</b>: In this tutorial, we will write Java code in a text editor. However, it is possible to write Java in an Integrated Development Environment, such as IntelliJ IDEA, Netbeans or Eclipse, which are particularly useful when managing larger collections of Java files.</P></div>
+        <hr class="bg-danger" />
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle"  id="subtitle">Setup for Windows</h2>
+        <p id="normal">
+            To install Java on Windows:
+        </p>
+        <ol>
+            <li>Go to "System Properties" (Can be found on Control Panel > System and Security > System > Advanced System Settings)</li>
+            <li>Click on the "Environment variables" button under the "Advanced" tab</li>
+            <li>Then, select the "Path" variable in System variables and click on the "Edit" button</li>
+            <li>Click on the "New" button and add the path where Java is installed, followed by \bin. By default, Java is installed in C:\Program Files\Java\jdk-11.0.1 (If nothing else was specified when you installed it). In that case, You will have to add a new path with: C:\Program Files\Java\jdk-11.0.1\bin
+                Then, click "OK", and save the settings</li>
+            <li>At last, open Command Prompt (cmd.exe) and type java -version to see if Java is running on your machine</li>
+        <!-- i thik like this is better     -->
+        </ol>
+        <!-- <p id="normal" >Show how to install Java step-by-step with images</p> -->
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >Java Quick start</h2>
+        <p ID="normal">In Java, every application begins with a class name, and that class must match the filename.</p>
+        <p id="normal">Let's create our first Java file, called MyClass.java, which can be done in any text editor (like Notepad).</p>
+        <p id="normal">The file should contain a "Hello World" message, which is written with the following code:</p>
+        <!-- example -->
+        <hr class="bg-danger" />
+        <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="token keyword keyword-public">public</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+          </pre>
+        </div>
+        <p id="normal">Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on how to run the code above.</p>
+        <p id="normal">Save the code in Notepad as "MyClass.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type "javac MyClass.java":</p>
+        <div class="result-code-container">
+          <pre class="pre-result-code">
+C:\Users\Your Name>javac MyClass.java
+          </pre>
+        </div>
+        <p id="normal">This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. Now, type "java MyClass" to run the file:</p>
+        <div class="result-code-container">
+          <pre class="pre-result-code">
+C:\Users\Your Name>java MyClass
+          </pre>
+        </div>
+        <p id="normal">The output should read:</p>
+        <div class="result-code-container">
+          <pre class="pre-result-code">
+Hello World
+          </pre>
+        </div>
+        <p id="normal"><strong>Congratulations!</strong> You have written and executed your first Java program.</p>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_intor" class="btn btn-danger"> < previous</a>
+
+          <a href="java_syntax" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

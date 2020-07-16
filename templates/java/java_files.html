@@ -1,0 +1,147 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Files</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Files</h1>
+        <div>
+            <a href="java_try_catch" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files_create" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <p id="normal">File handling is an important part of any application.</p>
+            <p id="normal">Java has several methods for creating, reading, updating, and deleting files.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Java File Handling</h2>
+            <p id="normal">The <code  class="code_span_class_name" >File</code> class from the <code class="code_span_namespace" >java<span class="punctuation" >.</span>io</code> package, allows us to work with files.</p>
+            <p id="question" class ="mb-0 text-danger">how to use the File class?</p>
+            <p id="answer">To use the <code  class="code_span_class_name" >File</code> class, create an object of the class, and specify the filename or directory name:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>io</span><span class=" punctuation">.</span><span class=" class-name">File</span><span class=" punctuation">;</span>  <span class=" comment">// Import the File class</span>
+
+<span class=" class-name">File</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">File</span><span class=" punctuation">(</span><span class=" string">"filename.txt"</span><span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// Specify the filename</span>
+                </pre>
+                <div class="note-container">
+                    <p id="normal" >If you don't know what a package is, read our <a href="java_packages" target="_blank">Java Packages Tutorial</a>.</p>
+                </div>
+                <p id="normal">The <code  class="code_span_class_name" >File</code> class has many useful methods for creating and getting information about files. For example:</p>
+                <table class="all_table_element">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">Method</th>
+                            <th style="width:15%">Type</th>
+                            <th style="width:60%">Description</th>
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">canRead()</code></td>
+                            <td>Boolean</td>
+                            <td>Tests whether the file is readable or not</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">canWrite()</code></td>
+                            <td>Boolean</td>
+                            <td>Tests whether the file is writable or not</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">createNewFile()</code></td>
+                            <td>Boolean</td>
+                            <td>Creates an empty file</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdate">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">delete()</code></td>
+                            <td>Boolean</td>
+                            <td>Deletes a file</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">exists()</code></td>
+                            <td>Boolean</td>
+                            <td>Tests whether the file exists</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                            <td><code class="code_span_class_name">getName()</code></td>
+                            <td>String</td>
+                            <td>Returns the name of the file</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdate">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                        <td><code class="code_span_class_name">getAbsolutePath()</code></td>
+                            <td>String</td>
+                            <td>Returns the absolute pathname of the file</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                        <td><code class="code_span_class_name">length()</code></td>
+                            <td>Long</td>
+                            <td>Returns the size of the file in bytes</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                        <td><code class="code_span_class_name">list()</code></td>
+                            <td>String[]</td>
+                            <td>Returns an array of the files in the directory</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                        <tr>
+                        <td><code class="code_span_class_name">mkdir()</code></td>
+                            <td>Boolean</td>
+                            <td>Creates a directory</td>
+                            <!--<td><a target="_blank" class="w3-btn btnsmall btnsmall" href="showjava.asp?filename=demo_date_localdatetime">Try it &raquo;</a></td>-->
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="normal">You will learn how to create, write, read and delete files in the next chapters:</p>
+                <div class="bar-block">
+                    <a href="java_files_create" class="bar-item">Create/Write Files »</a>
+                    <a href="java_files_read" class="bar-item">Read Files »</a>
+                    <a href="java_files_delete" class="bar-item">Delete Files »</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_try_catch" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_files_create" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

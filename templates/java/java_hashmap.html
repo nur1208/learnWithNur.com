@@ -1,0 +1,435 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java HashMap</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java HashMap</h1>
+        <div>
+            <a href="java_arraylist" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_wrapper_classes" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java HashMap</h2>
+            <p id="normal">You learned from the previous chapter, that Arrays store items as an ordered collection, and you have to access them with an index number (<code class="code_span_type">int</code> type). A <code class="code_span_class_name" >HashMap</code> however, store items in <b>"key/value"</b> pairs, and you can access them by an index of another type (e.g. a <code class="code_span_class_name" >String</code>).</p>
+            <p id="normal">One object is used as a key (index) to another object (value). It can store different types: <code class="code_span_class_name" >String</code> keys and <code class="code_span_class_name" >Integer</code> values, or the same type, like: <code class="code_span_class_name" >String</code> keys and <code class="code_span_class_name" >String</code> values:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p class="p-answer" >Create a <code class="code_span_class_name">HashMap</code> object called <b>capitalCities</b> that will store <code class="code_span_class_name" >String</code> <b>keys</b> and <code class="code_span_class_name" >String</code> <b>values</b>:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span> <span class=" comment">// import the HashMap class</span>
+
+<span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Add Items</h2>
+          <p id="normal">The <code class="code_span_class_name" >HashMap</code> class has many useful methods. For example, to add items to it, use the <code class="code_span_method" >put<span class="punctuation" >()</span></code> method:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" comment">// Import the HashMap class</span>
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+  <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+      <span class=" comment">// Create a HashMap object called capitalCities</span>
+      <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+
+      <span class=" comment">// Add keys and values (Country, City)</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>capitalCities<span class=" punctuation">)</span><span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+{USA=Washington DC, Norway=Oslo, England=London, Germany=Berlin}
+              </pre>
+          </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Access an Item</h2>
+          <p id="question" class ="mb-0 text-danger">how to access a value in the HashMap?</p>
+            <p id="answer">To access a value in the <code class="code_span_class_name" >HashMap</code>, use the <code class="code_span_method" >get<span class="punctuation" >()</span></code> method and refer to its key:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>capitalCities<span class=" punctuation">.</span><span class=" function">get</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+London
+                </pre>
+            </div>
+           
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >Remove an Item</h2>
+          <p id="question" class ="mb-0 text-danger">how to remove an item?</p>
+            <p id="answer">To remove an item, use the <code class="code_span_method" >remove<span class="punctuation" >()</span></code> method and refer to the key:</p>
+           <!-- example -->
+           
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+   <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   capitalCities<span class=" punctuation">.</span><span class=" function">remove</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+   <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>capitalCities<span class=" punctuation">)</span><span class=" punctuation">;</span> 
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+               </pre>
+           </div>
+           <div class="result-code-container">
+               <h3 class="result-title">Result</h3>
+               <pre class="pre-result-code">
+{USA=Washington DC, Norway=Oslo, Germany=Berlin}
+               </pre>
+           </div>
+      </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class = "subtitle" >HashMap Size</h2>
+          <p id="question" class ="mb-0 text-danger">how to remove all the element in the hashMap?</p>
+            <p id="answer">To find out how many items there are, use the <code class="code_span_method" >size<span class="punctuation" >()</span></code> method:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>capitalCities<span class=" punctuation">.</span><span class=" function">size</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+4
+                </pre>
+            </div>
+           
+      </div>
+      </section>
+      <hr class="bg-dark" />
+      <!-- part_6 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Loop Through a HashMap</h2>
+            <p id="question" class ="mb-0 text-danger">how can you loop through the elements of an  HashMap in java?</p>
+              <p id="answer">Loop through the items of a <code class="code_span_class_name" >HashMap</code> with a <b>for-each</b> loop.</p>
+              <div class="note-container">
+                  <p id="normal"><b>Note</b>: Use the <code class="code_span_method" >keySet<span class="punctuation" >()</span></code> method if you only want the keys, and use the <code class="code_span_method" >values<span class="punctuation" >()</span></code> method if you only want the values:</p>
+              </div>
+              <!-- example -->
+              
+              <div class="example-code-container">
+                  <h3 class="example-title">Example</h3>
+                  <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+  <span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+      <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+      
+      <span class=" keyword">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> capitalCities<span class=" punctuation">.</span><span class=" function">keySet</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+          <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+      <span class=" punctuation">}</span>
+  <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+              </div>
+              <div class="result-code-container">
+                  <h3 class="result-title">Result</h3>
+                  <pre class="pre-result-code">
+USA
+Norway
+England
+Germany
+                  </pre>
+              </div>
+              
+             
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_7 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Loop Through a HashMap</h2>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">HashMap</span><span class=" punctuation">;</span>
+
+<span class=" keyword">public</span> <span class=" keyword">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword">public</span> <span class=" keyword">static</span> <span class=" keyword">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> capitalCities <span class=" operator">=</span> <span class=" keyword">new</span> <span class=" class-name">HashMap</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">,</span> <span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"England"</span><span class=" punctuation">,</span> <span class=" string">"London"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Germany"</span><span class=" punctuation">,</span> <span class=" string">"Berlin"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"Norway"</span><span class=" punctuation">,</span> <span class=" string">"Oslo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    capitalCities<span class=" punctuation">.</span><span class=" function">put</span><span class=" punctuation">(</span><span class=" string">"USA"</span><span class=" punctuation">,</span> <span class=" string">"Washington DC"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+
+    <span class=" keyword">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> capitalCities<span class=" punctuation">.</span><span class=" function">values</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Washington DC
+Oslo
+London
+Berlin
+                </pre>
+            </div>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">HashMap</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> capitalCities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        capitalCities<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"England"</span><span class="token punctuation">,</span> <span class="token string">"London"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        capitalCities<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Germany"</span><span class="token punctuation">,</span> <span class="token string">"Berlin"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        capitalCities<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Norway"</span><span class="token punctuation">,</span> <span class="token string">"Oslo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        capitalCities<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"USA"</span><span class="token punctuation">,</span> <span class="token string">"Washington DC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> i <span class="token operator">:</span> capitalCities<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Washington DC
+Oslo
+London
+Berlin
+                </pre>
+            </div>
+
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_8 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Other Types</h2>
+            <p id="normal">Keys and values in a HashMap are actually objects. In the examples above, we used objects of type "String". Remember that a String in Java is an object (not a primitive type). To use other types, such as int, you must specify an equivalent <a href="java_wrapper_classes">wrapper class</a>: <code class="code_span_class_name">Integer</code>. For other primitive types, 
+                use: <code class="code_span_class_name">Boolean</code> for boolean, <code class="code_span_class_name">Character</code> for char, <code class="code_span_class_name">Double</code> for double, 
+                etc:</p>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p id="normal">Create a <code class="code_span_class_name">HashMap</code> object called people that will store <code class="code_span_class_name">String</code> keys and <code class="code_span_class_name">Integer</code> values:</p>
+                <pre class="pre-example-code">
+                    <span class="token comment">// Import the HashMap class</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">HashMap</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// Create a HashMap object called people</span>
+    <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> people <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Add keys and values (Name, Age)</span>
+    people<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    people<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Steve"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    people<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"Angie"</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">String</span> i <span class="token operator">:</span> people<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">" Age: "</span> <span class="token operator">+</span> people<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Name: Angie Age: 33
+Name: Steve Age: 30
+Name: John Age: 32
+                </pre>
+            </div>
+        </div>
+        </section>
+        <hr class="bg-dark" />
+      <!-- part_9 -->
+      <section class="bg-sliver">
+          <div class="container-flued p-5">
+            <h2 class = "subtitle" >Sort an ArrayList</h2>
+            <p id="normal">Another useful class in the <code class="code_span_namespace" >java<span class="punctuation" >.</span>util</code> package is the <code class="code_span_class_name">Collections</code> class, which include the  <code class="code_span_method" >sort<span class="punctuation" >()</span></code> method for sorting lists alphabetically or numerically:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p  id="normal" >Sort an <code class="code_span_class_name">ArrayList</code> of <code class="code_span_class_name">Strings</code>:</p>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">ArrayList</span><span class=" punctuation">;</span>
+<span class=" keyword keyword-import">import</span> <span class=" namespace">java<span class=" punctuation">.</span>util</span><span class=" punctuation">.</span><span class=" class-name">Collections</span><span class=" punctuation">;</span>  <span class=" comment">// Import the Collections class</span>
+
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span> cars <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">ArrayList</span><span class=" generics"><span class=" punctuation">&lt;</span><span class=" class-name">String</span><span class=" punctuation">&gt;</span></span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Volvo"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"BMW"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Ford"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    cars<span class=" punctuation">.</span><span class=" function">add</span><span class=" punctuation">(</span><span class=" string">"Mazda"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" class-name">Collections</span><span class=" punctuation">.</span><span class=" function">sort</span><span class=" punctuation">(</span>cars<span class=" punctuation">)</span><span class=" punctuation">;</span>  <span class=" comment">// Sort cars</span>
+    <span class=" keyword keyword-for">for</span> <span class=" punctuation">(</span><span class=" class-name">String</span> i <span class=" operator">:</span> cars<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+BMW
+Ford
+Mazda
+Volvo
+                </pre>
+            </div>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+                    <span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Collections</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> myNumbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">33</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">34</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myNumbers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>myNumbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">:</span> myNumbers<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+8
+12
+15
+20
+33
+34
+                </pre>
+            </div>
+        </div>
+        </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p ID="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_arraylist" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_wrapper_classes" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

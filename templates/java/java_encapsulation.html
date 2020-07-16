@@ -1,0 +1,140 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Encapsulation</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Encapsulation</h1>
+        <div>
+            <a href="java_modifier" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_packages" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Encapsulation</h2>
+            <p id="question" class ="mb-0 text-danger" >what is <b>encapsulation</b>?</p>
+            <p id="answer">The meaning of <b>encapsulation</b>, is to make sure that "sensitive" data is hidden from users.</p>
+            <p id="question" class ="mb-0 text-danger" >how to achieve <b>encapsulation</b>?</p>
+            <p id="answer">To achieve <b>encapsulation</b>, you must:</p>
+            <ul>
+                <li>declare class variables/attributes as <code class="code_span_keyword" >private</code></li>
+                <li>provide public <b>get</b> and <b>set</b> methods to access and update the value of a <code class="code_span_keyword" >private</code> variable</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Get and Set</h2>
+          <p id="question" class ="mb-0 text-danger" >how to access private method out of its own class?</p>
+          <p id="answer">You learned from the previous chapter that <code class="code_span_keyword" >private</code> variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public get and set methods.</p>
+          <p id="question" class ="mb-0 text-danger" >what is get method and what is set method?</p>
+          <p id="answer">The <code class="code_span_method" >get</code> method returns the variable value, and the <code class="code_span_method" >set</code> method sets the value.</p>
+          <p id="normal">Syntax for both is that they start with either <code class="code_span_method" >get</code> or <code class="code_span_method" >set</code>, followed by the name of the variable, with the first letter in upper case:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">Person</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-private">private</span> <span class=" class-name">String</span> name<span class=" punctuation">;</span> <span class=" comment">// private = restricted access</span>
+
+    <span class=" comment">// Getter</span>
+    <span class=" keyword keyword-public">public</span> <span class=" class-name">String</span> <span class=" function">getName</span><span class=" punctuation">(</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-return">return</span> name<span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" comment">// Setter</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-void">void</span> <span class=" function">setName</span><span class=" punctuation">(</span><span class=" class-name">String</span> newName<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-this">this</span><span class=" punctuation">.</span>name <span class=" operator">=</span> newName<span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <h4>Example explained</h4>
+          <p id="normal">The <code class="code_span_method" >get</code> method returns the value of the variable <code class="code_span_method normal" >name</code>.</p>
+          <p id="normal">The <code class="code_span_method" >set</code> method takes a parameter (<code class="code_span_method normal " >newName</code>) and assigns it to the <code class="code_span_method normal" >name</code> variable. The <code class="code_span_keyword" >this</code> keyword is used to refer to the current object.</p>
+          <p id="normal">However, as the <code class="code_span_method normal" >name</code> variable is declared as <code class="code_span_keyword" >private</code>, we <b>cannot</b> access it from outside this class:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container red">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">Person</span> myObj <span class=" operator">=</span> <span class=" keyword keyword-new">new</span> <span class=" class-name">Person</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        myObj<span class=" punctuation">.</span>name <span class=" operator">=</span> <span class=" string">"John"</span><span class=" punctuation">;</span>  <span class=" comment">// error</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myObj<span class=" punctuation">.</span>name<span class=" punctuation">)</span><span class=" punctuation">;</span> <span class=" comment">// error </span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <p id="normal">If the variable was declared as <code class="code_span_keyword" >public</code>, we would expect the following output:</p>
+          <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+John
+            </pre>
+        </div>
+        <p id="normal">However, as we try to access a <code class="code_span_keyword" >private</code> variable, we get an error:</p>
+        <div class="result-code-container red">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+MyClass.java:4: error: name has private access in Person
+myObj.name = "John";
+           ^
+MyClass.java:5: error: name has private access in Person
+System.out.println(myObj.name);
+                  ^
+2 errors
+            </pre>
+        </div>
+        <p id="normal">Instead, we use the <code class="code_span_method" >getName<span class="punctuation">()</span></code> and <code class="code_span_method" >setName<span class="punctuation">()</span></code> methods to access and update the variable:</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Why Encapsulation?</h2>
+          <ul>
+            <li>Better control of class attributes and methods</li>
+            <li>Class attributes can be made <strong>read-only</strong> (if you only use the <code class="code_span_method" >get</code> method), or <strong>write-only</strong> (if you only use the <code class="code_span_method" >set</code> method)</li>
+            <li>Flexible: the programmer can change one part of the code without affecting other parts</li>
+            <li>Increased security of data</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_modifier" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_packages" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

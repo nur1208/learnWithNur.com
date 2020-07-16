@@ -1,0 +1,237 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Method Parameters</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Method Parameters</h1>
+        <div>
+            <a href="java_methods" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_methods_overloading" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Parameters and Arguments</h2>
+            <p id="normal">Information can be passed to methods as parameter. Parameters act as variables inside the method.</p>
+            <p id="normal">Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.</p>
+            <p id="normal">The following example has a method that takes a <code class="code_span_class_name" >String</code> called <b>fname</b> as parameter. When the method is called, we pass along a first name, which is used inside the method to print the full name:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" class-name">String</span> fname<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>fname <span class=" operator">+</span> <span class=" string">" Refsnes"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Liam"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Jenny"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Anja"</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Liam Refsnes
+Jenny Refsnes
+Anja Refsnes
+                </pre>
+            </div>
+            <hr class="hr-example">
+            <div class="note-container">
+                <p id ="normal">When a <b>parameter</b> is passed to the method, it is called an <b>argument</b>. So, from the example above: <code class="code_span_method"><span class="normal" >fname</span></code> is a <b>parameter</b>, while <code class="code_span_string">Liam</code> , <code class="code_span_string">Jenny</code> and <code class="code_span_string">Anja</code> are <b>arguments</b>.</p>
+            </div>
+        </div>
+        <hr class="hr-not-home-page">
+        <!-- part_2 -->
+        <div class="NUR-panel NUR-iinfo intro">
+            <h2 class="subtitle">Multiple Parameters</h2>
+            <p class="p-answer" >You can have as many parameters as you like:</p>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" class-name">String</span> fname<span class=" punctuation">,</span> <span class=" keyword keyword-int">int</span> age<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>fname <span class=" operator">+</span> <span class=" string">" is "</span> <span class=" operator">+</span> age<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+    
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Liam"</span><span class=" punctuation">,</span> <span class=" number">5</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Jenny"</span><span class=" punctuation">,</span> <span class=" number">8</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" string">"Anja"</span><span class=" punctuation">,</span> <span class=" number">31</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Liam is 5
+Jenny is 8
+Anja is 31
+                </pre>
+            </div>
+            
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Return Values</h2>
+          <p id="question" class ="mb-0 text-danger" >what the void keyword used for?</p>
+          <p id="answer">The <code class="code_span_keyword" >void</code> keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as <code class="code_span_type" >int</code>, <code class="code_span_type" >char</code>, etc.) instead of void, and use the <code class="code_span_keyword" >return</code> keyword inside the method:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-int"><strong>int</strong></span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> x<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-return"><strong>return</strong></span> <span class=" number">5</span> <span class=" operator">+</span> x<span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" number">3</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" comment">// Outputs 8 (5 + 3)</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+8
+              </pre>
+          </div>
+          <p id="normal">This example returns the sum of a method's two parameters:</p>
+           <!-- example -->
+           <hr class="hr-example">
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-int">int</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> x<span class=" punctuation">,</span> <span class=" keyword keyword-int">int</span> y<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-return">return</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" comment">// Outputs 8 (5 + 3)</span>
+               </pre>
+           </div>
+           <div class="result-code-container">
+               <h3 class="result-title">Result</h3>
+               <pre class="pre-result-code">
+8
+               </pre>
+           </div>
+           <p id="normal">You can also store the result in a variable (recommended, as it is easier to read and maintain):</p>
+           <!-- example -->
+           <hr class="hr-example">
+           <div class="example-code-container">
+               <h3 class="example-title">Example</h3>
+               <pre class="pre-example-code">
+<span class=" keyword keyword-public">public</span> <span class=" keyword keyword-class">class</span> <span class=" class-name">MyClass</span> <span class=" punctuation">{</span>
+    <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-int">int</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" keyword keyword-int">int</span> x<span class=" punctuation">,</span> <span class=" keyword keyword-int">int</span> y<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-return">return</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+
+    <span class=" keyword keyword-public">public</span> <span class=" keyword keyword-static">static</span> <span class=" keyword keyword-void">void</span> <span class=" function">main</span><span class=" punctuation">(</span><span class=" class-name">String</span><span class=" punctuation">[</span><span class=" punctuation">]</span> args<span class=" punctuation">)</span> <span class=" punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> z <span class=" operator">=</span> <span class=" function">myMethod</span><span class=" punctuation">(</span><span class=" number">5</span><span class=" punctuation">,</span> <span class=" number">3</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>z<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class=" punctuation">}</span>
+<span class=" punctuation">}</span>
+<span class=" comment">// Outputs 8 (5 + 3)</span>
+           </pre>
+           </div>
+           <div class="result-code-container">
+               <h3 class="result-title">Result</h3>
+               <pre class="pre-result-code">
+8
+               </pre>
+           </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class = "subtitle" >A Method with If...Else</h2>
+        <p id="normal">It is common to use <code class="code_span_keyword" >if...else</code> statements inside methods:</p>
+       <!-- example -->
+       <hr class="hr-example">
+       <div class="example-code-container">
+           <h3 class="example-title">Example</h3>
+           <pre class="pre-example-code">
+<<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// Create a checkAge() method with an integer parameter called age</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+      <span class="token comment">// If age is less than 18, print "access denied"</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Access denied - You are not old enough!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        
+      <span class="token comment">// If age is greater than 18, print "access granted"</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Access granted - You are old enough!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+      <span class="token punctuation">}</span>
+      
+    <span class="token punctuation">}</span> 
+  
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      <span class="token function">checkAge</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Call the checkAge method and pass along an age of 20</span>
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+       </pre>
+       </div>
+       <div class="result-code-container">
+           <h3 class="result-title">Result</h3>
+           <pre class="pre-result-code">
+Access granted - You are old enough!
+           </pre>
+       </div>
+    </div>
+    </section>
+    
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_methods" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_methods_overloading" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

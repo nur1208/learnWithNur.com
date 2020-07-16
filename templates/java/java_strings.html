@@ -1,0 +1,445 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Strings</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Strings</h1>
+        <div>
+            <a href="java_operators" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_math" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Strings</h2>
+            <p id="question" class ="mb-0 text-danger" >What is the use of string in Java?</p>
+            <p id="answer">Strings are used for storing text.</p>
+            <p id="question" class ="mb-0 text-danger" >What is string variable in Java?</p>
+            <p id="answer">A <code class="code_span_class_name" >String</code> variable contains a collection of characters surrounded by double quotes:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p  class="p-answer" >Create a variable of type <code class="code_span_class_name" >String</code> and assign it a value:</p>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> greeting <span class=" operator">=</span> <span class=" string">"Hello"</span><span class=" punctuation">;</span>
+        
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>x<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Hello
+                </pre>
+            </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >String Length</h2>
+          <p id="question" class ="mb-0 text-danger" >How do you find the length of a string?</p>
+          <p id="answer">A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the <code class="code_span_method" >length()</code> method:</p>    
+          <!-- example -->
+
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span><span class=" string">"The length of the txt string is: "</span> <span class=" operator">+</span> txt<span class=" punctuation">.</span><span class=" function">length</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+The length of the txt string is: 26
+              </pre>
+          </div>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle">More String Methods</h2>
+        <p id="question" class="mb-0 text-danger">How do you switch cases in Java?</p>
+        <p id="answer">There are many string methods available, for example <code class="code_span_method" >toUpperCase()</code> and <code class="code_span_method" >toLowerCase()</code>:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"Hello World"</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">.</span><span class=" function">toUpperCase</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>   
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">.</span><span class=" function">toLowerCase</span><span class=" punctuation">(</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>   
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+HELLO WORLD
+hello world
+            </pre>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2 class="subtitle">Finding a Character in a String</h2>
+        <p id="question" class="mb-0 text-danger">how to find character in string in java?</p>
+        <p id="answer">The <code class="code_span_method" >indexOf()</code> method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"Please locate where 'locate' occurs!"</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">.</span><span class=" function">indexOf</span><span class=" punctuation">(</span><span class=" string">"locate"</span><span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span> 
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+7
+            </pre>
+        </div>
+        <div class="note-container">
+            <p id="normal">Java counts positions from zero.</p>
+            <p id="normal">0 is the first position in a string, 1 is the second, 2 is the third ...</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle">String Concatenation</h2>
+          <p id="question" class="mb-0 text-danger">What is string concatenation in java?</p>
+          <p id="answer">The <code class="code_span_operator" >+</code> operator can be used between strings to combine them. This is called <b>concatenation</b>:</p>
+            <!-- example -->
+
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> firstName <span class=" operator">=</span> <span class=" string">"John"</span><span class=" punctuation">;</span>
+        <span class=" class-name">String</span> lastName <span class=" operator">=</span> <span class=" string">"Doe"</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>firstName <span class=" operator">+</span> <span class=" string">" "</span> <span class=" operator">+</span> lastName<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+John Doe
+                </pre>
+            </div>
+            <div class="note-container">
+                <p id="normal">Note: that we have added an empty text (" ") to create a space between firstName and lastName on print.</p>
+            </div>
+            <p id="normal">You can also use the <code class="code_span_method" >concat()</code> method to concatenate two strings:</p>
+            <!-- example -->
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> firstName <span class=" operator">=</span> <span class=" string">"John "</span><span class=" punctuation">;</span>
+        <span class=" class-name">String</span> lastName <span class=" operator">=</span> <span class=" string">"Doe"</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>firstName<span class=" punctuation">.</span><span class=" function">concat</span><span class=" punctuation">(</span>lastName<span class=" punctuation">)</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+John Doe
+                </pre>
+            </div>
+        </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_6 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle">Special Characters</h2>
+          <p id="normal">Because strings must be written within quotes, Java will misunderstand this string, and generate an error:</p>
+            <!-- example -->
+            <div class="example-code-container  red">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"We are the so-called "</span><span class=" class-name">Vikings</span><span class=" string">" from the north."</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container-red">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+MyClass.java:3: error: ';' expected
+String txt = "We are the so-called "Vikings" from the north.";
+                                ^
+MyClass.java:3: error: ';' expected
+String txt = "We are the so-called "Vikings" from the north.";
+                                        ^
+2 errors
+error: compilation failed
+                </pre>
+            </div>
+            <p id="normal">The solution to avoid this problem, is to use the <b>backslash escape character</b>.</p>
+            <p id="question" class ="mb-0 text-danger" >What does a backslash do in Java?</p>
+            <p id="answer">The backslash (<code class="code_span_operator" >\</code>) escape character turns special characters into string characters:</p>
+            <table class="all_table_element">
+                <tbody>
+                    <tr>
+                        <th width="35%">Escape character</th>
+                        <th>Result</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>\'</td>
+                        <td>'</td>
+                        <td>Single quote</td>
+                    </tr>
+                    <tr>
+                        <td>\"</td>
+                        <td>"</td>
+                        <td>Double quote</td>
+                    </tr>
+                    <tr>
+                        <td>\\</td>
+                        <td>\</td>
+                        <td>Backslash</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="normal">The sequence <code class="code_span_operator" >\"</code> inserts a double quote in a string:</p>
+             <!-- example -->
+             <div class="example-code-container">
+                 <h3 class="example-title">Example</h3>
+                 <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"We are the so-called \"Vikings\" from the north."</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">)</span><span class=" punctuation">;</span>    
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+             </pre>
+             </div>
+             <div class="result-code-container">
+                 <h3 class="result-title">Result</h3>
+                 <pre class="pre-result-code">
+We are the so-called "Vikings" from the north.
+                 </pre>
+             </div>
+             <p id="normal">The sequence <code class="code_span_operator" >\'</code>  inserts a single quote in a string:</p>
+             <!-- example -->
+             <div class="example-code-container">
+                 <h3 class="example-title">Example</h3>
+                 <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"It\'s alright."</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">)</span><span class=" punctuation">;</span>    
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                 </pre>
+             </div>
+             <div class="result-code-container">
+                 <h3 class="result-title">Result</h3>
+                 <pre class="pre-result-code">
+It's alright.
+                 </pre>
+             </div>
+             <p id="normal">The sequence <code class="code_span_operator" >\\</code>  inserts a single backslash in a string:</p>
+            <!-- example -->
+            
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> txt <span class=" operator">=</span> <span class=" string">"The character \\ is called backslash."</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>txt<span class=" punctuation">)</span><span class=" punctuation">;</span>    
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+The character \ is called backslash.
+                </pre>
+            </div>
+            <p id="normal">Six other escape sequences are valid in Java:</p>
+            <table class="all_table_element">
+                <tbody>
+                    <tr>
+                        <th width="25%">Code</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>\n</td>
+                        <td>New Line</td>
+                    </tr>
+                    <tr>
+                        <td>\r</td>
+                        <td>Carriage Return</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Tab</td>
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>Backspace</td>
+                    </tr>
+                    <tr>
+                        <td>\f</td>
+                        <td>Form Feed</td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+      </section>
+      <hr class="bg-dark" />
+    <!-- part_7 -->
+    <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle">Adding Numbers and Strings</h2>
+          <div class="note-container">
+              <p id="normal">Java uses the <code class="code_span_operator" >+</code> operator for both addition and concatenation.</p>
+              <p id="normal">Numbers are added. Strings are concatenated.</p>
+          </div>
+          <p id="normal">If you add two numbers, the result will be a number:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> x <span class=" operator">=</span> <span class=" number">10</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-int">int</span> y <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-int">int</span> z <span class=" operator">=</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>      <span class=" comment">// z will be 30 (an integer/number)</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>z<span class=" punctuation">)</span><span class=" punctuation">;</span>  
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+30
+              </pre>
+          </div>
+          <p id="normal">If you add two strings, the result will be a string concatenation:</p>
+          <!-- example -->
+          
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> x <span class=" operator">=</span> <span class=" string">"10"</span><span class=" punctuation">;</span>
+        <span class=" class-name">String</span> y <span class=" operator">=</span> <span class=" string">"20"</span><span class=" punctuation">;</span>
+        <span class=" class-name">String</span> z <span class=" operator">=</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>   <span class=" comment">// z will be 1020 (a String)</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>z<span class=" punctuation">)</span><span class=" punctuation">;</span>  
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+          </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+1020
+              </pre>
+          </div>
+          <p id="normal">If you add a number and a string, the result will be a string concatenation:</p>
+          <!-- example -->
+          <hr class="hr-example">
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" class-name">String</span> x <span class=" operator">=</span> <span class=" string">"10"</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-int">int</span> y <span class=" operator">=</span> <span class=" number">20</span><span class=" punctuation">;</span>
+        <span class=" class-name">String</span> z <span class=" operator">=</span> x <span class=" operator">+</span> y<span class=" punctuation">;</span>   <span class=" comment">// z will be 1020 (a String)</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>z<span class=" punctuation">)</span><span class=" punctuation">;</span>  
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+1020
+              </pre>
+          </div>
+        </div>
+      </section>
+      <hr class="bg-dark" />
+      <!-- part_8 -->
+      <section class="bg-sliver">
+        <div class="container-flued p-5">
+          <h2 class="subtitle">Complete String Reference</h2>
+          <p id="normal">For a complete reference of String methods, go to our Java String <a href="java_ref_string" target="_blank">Methods Reference</a>.</p>
+          <p id="normal">The reference contains descriptions and examples of all string methods.</p>
+
+          </div>
+      </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_operators" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_math" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

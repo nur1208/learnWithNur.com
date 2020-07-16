@@ -1,0 +1,151 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java While Loop</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java While Loop</h1>
+        <div>
+          <a href="java_switch" class="btn btn-danger"> < Previous</a>
+
+          <a href="java_for_loop" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Loops</h2>
+            <p id="question" class ="mb-0 text-danger" >what are loops?</p>
+            <p id="answer">Loops can execute a block of code as long as a specified condition is reached.</p>
+            <p id="normal">Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Java While Loop</h2>
+          <p id="question" class ="mb-0 text-danger" >what are loops?</p>
+          <p id="answer">Loops can execute a block of code as long as a specified condition is reached.</p>
+          <!-- Syntax -->
+        
+          <div class="example-code-container">
+              <h3 class="example-title">Syntax</h3>
+              <pre class="pre-example-code">
+<span class=" keyword keyword-while">while</span> <span class=" punctuation">(</span><em>condition</em><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+    <span class=" comment">// code block to be executed</span></i><span class=" comment"></span>
+<span class=" punctuation">}</span>
+              </pre>
+          </div>
+          <!-- example -->
+        
+          <div class="example-code-container">
+              <h3 class="example-title">Example</h3>
+              <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-while">while</span> <span class=" punctuation">(</span>i <span class=" operator">&lt;</span> <span class=" number">5</span><span class=" punctuation">)</span> <span class=" punctuation">{</span>
+            <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+            i<span class=" operator">++</span><span class=" punctuation">;</span>
+        <span class=" punctuation">}</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+              </pre>
+          </div>
+          <div class="result-code-container">
+              <h3 class="result-title">Result</h3>
+              <pre class="pre-result-code">
+0
+1
+2
+3
+4
+              </pre>
+          </div>
+          <div class="note-container">
+              <p id="normal"><b>Note</b>: Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+          </div>
+          
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>The Do/While Loop</h2>
+        <p id="question" class="mb-0 text-danger">what is Do/While loop?</p>
+        <p id="answer">The <code class="code_span_keyword" >Do/While</code> loop is a variant of the <code class="code_span_keyword" >While</code> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+      <!-- Syntax -->
+      <hr class="hr-example">
+      <div class="example-code-container">
+          <h3 class="example-title">Syntax</h3>
+          <pre class="pre-example-code">
+<span class=" keyword keyword-do">do</span> <span class=" punctuation">{</span>
+<span class=" comment">// code block to be executed</span>
+<span class=" punctuation">}</span>
+<span class=" keyword keyword-while">while</span> <span class=" punctuation">(</span><em>condition</em><span class=" punctuation">)</span><span class=" punctuation">;</span>
+          </pre>
+      </div>
+      <P id="normal">The example below uses a <code class="code_span_keyword" >Do/While</code> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</P>
+      <!-- example -->
+      <hr class="hr-example">
+      <div class="example-code-container">
+          <h3 class="example-title">Example</h3>
+          <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-int">int</span> i <span class=" operator">=</span> <span class=" number">0</span><span class=" punctuation">;</span><span class=" keyword keyword-do">
+            do</span> <span class=" punctuation">{</span>
+                <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>i<span class=" punctuation">)</span><span class=" punctuation">;</span>
+                i<span class=" operator">++</span><span class=" punctuation">;</span>
+            <span class=" punctuation">}</span>
+            <span class=" keyword keyword-while">while</span> <span class=" punctuation">(</span>i <span class=" operator">&lt;</span> <span class=" number">5</span><span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+          </pre>
+      </div>
+      <div class="result-code-container">
+        <h3 class="result-title">Result</h3>
+        <pre class="pre-result-code">
+0
+1
+2
+3
+4
+        </pre>
+    </div>
+    <div class="note-container">
+        <p id="normal">Do not forget to increase the variable used in the condition, otherwise the loop will never end!</p>
+    </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_switch" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_for_loop" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,171 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java interface Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java interface Keyword</h1>
+        <div>
+            <a href="ref_keyword_int" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_long" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+        <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <p id="normal">An <code class="code_span_keyword" >interface</code> is an abstract "class" that is used to group related methods with "empty" bodies:</p>
+            <p id="normal">To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the <code class="code_span_keyword" >implements</code> keyword (instead of <code class="code_span_keyword" >extends</code>). The body of the interface method is provided by the "implement" class:</p>
+            <pre class="pre-example-code">
+<span class="token keyword">interface</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method (does not have a body)</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">Pig</span> <span class="token keyword">implements</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"The pig says: wee wee"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Zzz"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword">class</span> <span class="token class-name">MyMainClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Pig</span> myPig <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Pig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myPig<span class="token punctuation">.</span><span class="token function">animalSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myPig<span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+The pig says: wee wee
+Zzz
+            </pre>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a interface keyword?</p>
+            <p id="normal">The <code class="code_span_keyword" >interface</code> keyword is used to declare a special type of class that only contains abstract methods.</p>
+            <p id="normal">To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the <code class="code_span_keyword" >implements</code> keyword (instead of <code class="code_span_keyword" >extends</code>). The body of the interface method is provided by the "implement" class.</p>
+            <div class="note-container">
+            <h3>Notes on Interfaces:</h3>
+            <ul>
+                <li>It <strong>cannot</strong> be used to create objects (in the example above, 
+                it is not possible to create an "Animal" object in the MyMainClass)</li>
+                    <li>Interface methods does not have a body - the 
+                body is provided by the "implement" class</li>
+                    <li>On implementation of an interface, you must override all of its methods</li>
+                    <li>Interface methods are by default <code class="code_span_keyword" >abstract</code> and 
+                        <code class="code_span_keyword" >public</code></li>
+                    <li>Interface attributes are by default <code class="code_span_keyword" >public</code>, 
+                    <code class="code_span_keyword" >static</code> and <code class="code_span_keyword" >final</code></li>
+                    <li>An interface cannot contain a constructor (as it cannot be used to create objects)</li>
+                </ul>
+                <h3>Why And When To Use Interfaces?</h3>
+                <p id="normal">To achieve security - hide certain details and only show the important details of an object (interface).</p>
+                <p id="normal">Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be achieved with interfaces, because the class can implement multiple interfaces. Note: To implement multiple interfaces, separate them with a comma (see example below).</p>
+            </div>
+           
+            
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Multiple Interfaces</h2>
+            <p id="normal">To implement multiple interfaces, separate them with a comma:</p>
+            <!-- example -->
+        
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">FirstInterface</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">SecondInterface</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// interface method</span>
+<span class="token punctuation">}</span>
+    
+<span class="token comment">// DemoClass "implements" FirstInterface and SecondInterface</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">DemoClass</span> <span class="token keyword keyword-implements">implements</span><strong> <span class="token class-name">FirstInterface</span><span class="token punctuation">,</span> <span class="token class-name">SecondInterface</span></strong><span class="token class-name"></span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Some text.."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Some other text..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+    
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyMainClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">DemoClass</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">DemoClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myObj<span class="token punctuation">.</span><span class="token function">myMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myObj<span class="token punctuation">.</span><span class="token function">myOtherMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Some text...
+Some other text...
+            </pre>
+        </div>
+        
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_4 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal" >Read more about interfaces in our <a href="java_interface">Java Interface Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="ref_keyword_int" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_long" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

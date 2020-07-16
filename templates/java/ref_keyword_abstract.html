@@ -1,0 +1,117 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java abstract Keyword</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java abstract Keyword</h1>
+        <div>
+            <a href="java_ref_keyword" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_boolean" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java abstract Keyword</h2>
+            <!-- example -->
+            <hr class="hr-example">
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <p class="p-answer" >An <code class="code_span_keyword" >abstract</code> method belongs to an <code class="code_span_keyword" >abstract</code>  class, and it does not have a body. The body is provided by the subclass:</p>
+                <pre class="pre-example-code">
+<span class="token comment">// Code from filename: Person.java</span>
+<span class="token comment">// abstract class</span>
+<span class="keyword" >abstract class</span> <span class="class-name" >Person</span> <span class="punctuation" >{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token class-name">String</span> fname <span class="token operator">=</span> <span class="token string">"John"</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> age <span class="token operator">=</span> <span class="token number">24</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-abstract"><strong>abstract</strong></span> <span class="token keyword keyword-void">void</span> <span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// abstract method</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Subclass (inherit from Person)</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Student</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-int">int</span> graduationYear <span class="token operator">=</span> <span class="token number">2018</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// the body of the abstract method is provided here</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Studying all day long"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// End code from filename: Person.java</span>
+
+<span class="token comment">// Code from filename: MyClass.java</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-static">static</span> <span class="token keyword keyword-void">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// create an object of the Student class (which inherits attributes and methods from Person)</span>
+        <span class="token class-name">Student</span> myObj <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Name: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>fname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Age: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Graduation Year: "</span> <span class="token operator">+</span> myObj<span class="token punctuation">.</span>graduationYear<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        myObj<span class="token punctuation">.</span><span class="token function">study</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// call abstract method</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+                </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+Name: John
+Age: 24
+Graduation Year: 2018
+Studying all day long
+                </pre>
+            </div>
+        </div>
+      </div>
+    </section>
+       
+    <hr class="bg-danger" />
+        <!-- part_2 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+       
+            <h2 class = "subtitle" >Definition and Usage</h2>
+            <p id="question" class ="mb-0 text-danger">what is a abstract keyword?</p>
+            <p id="answer">The <code class="code_span_keyword" >abstract</code> keyword is a non-access modifier, used for classes and methods.</p>
+            <p id="question" class ="mb-0 text-danger">what is an abstract class?</p>
+            <p id="answer">The <code class="code_span_keyword" >Class</code> An abstract class is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</p>
+                <p id="question" class ="mb-0 text-danger">what is an abstract method?</p>
+            <p id="answer">The <code class="code_span_keyword" >Method</code> An abstract method can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</p>
+            
+        </div>
+    </section>
+    <hr class="bg-danger" />
+        <!-- part_3 -->
+        <section class="bg-sliver">
+            <div class="container-flued p-5">
+
+            <h2 class = "subtitle" >Related Pages</h2>
+            <p id = "normal" >Read more about modifiers in our <a href="java_modifiers.asp">Java Modifiers Tutorial</a>.</p>
+        </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <hr class="bg-danger" />
+        <div>
+            <a href="java_ref_keyword" class="btn btn-danger"> < Previous</a>
+
+            <a href="ref_keyword_boolean" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,465 @@
+{% extends 'main-page.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Java Data Types</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content%}
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h1 class="main-title">Java Data Types</h1>
+        <div>
+            <a href="java_variables" class="btn btn-danger"> < Previous</a>
+
+            <a href="java_type_casting" class="btn btn-danger next" style="float: right;">
+              Next ></a
+            >
+          </div>
+        <hr class="bg-danger" />
+        <!-- part_1 -->
+        <div>
+            <h2 class = "subtitle" >Java Data Types</h2>
+            <p id="normal">As explained in the previous chapter, a variable in Java must be a specified data type:</p>
+            <div class="example-code-container">
+                <h3 class="example-title">Example</h3>
+                <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class="type">int</span> myNum <span class="operator">=</span> <span class="number">5</span><span class=" punctuation">;</span>                        <span class=" comment">// Integer (whole number)</span>
+        <span class="type">float</span> myFloatNum <span class="operator">=</span> <span class="number">5.99f</span><span class="punctuation">;</span>                 <span class=" comment">// Floating point number</span>
+        <span class="type">char</span> myLetter <span class="operator">=</span> <span class="string">'D'</span><span class="punctuation">;</span>                  <span class=" comment">// Character</span>
+        <span class="type">boolean</span> myBool <span class="operator">=</span> <span class="boolean">true</span><span class=" punctuation">;</span>                <span class=" comment">// Boolean</span>
+        <span class=" class-name">String</span> myText <span class=" operator">=</span> <span class=" string">"Hello"</span><span class=" punctuation">;</span>              <span class=" comment">// String</span>
+
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>         
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myFloatNum<span class=" punctuation">)</span><span class=" punctuation">;</span>    
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myLetter<span class=" punctuation">)</span><span class=" punctuation">;</span>      
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myBool<span class=" punctuation">)</span><span class=" punctuation">;</span>        
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myText<span class=" punctuation">)</span><span class=" punctuation">;</span>        
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+            </div>
+            <div class="result-code-container">
+                <h3 class="result-title">Result</h3>
+                <pre class="pre-result-code">
+5
+5.99
+D
+true
+Hello
+                </pre>
+            </div>
+            <p id="question" class= "mb-0 text-danger">What are the different types of data type?</p>
+            <p id="answer" class="mb-0" >Data types are divided into two groups:</p>
+            <ul id="answer">
+                <li>Primitive data types - includes <code class = "code_span_type">byte</code>, <code class = "code_span_type">short</code>, <code class = "code_span_type">int</code>, <code class = "code_span_type">long</code>, <code class = "code_span_type">float</code>, <code class = "code_span_type">double</code>, <code class = "code_span_type">boolean</code> and <code class = "code_span_type">char</code></li>
+                <li>Non-primitive data types - such as <a target="_blank" href="#">String</a>, <a target="_blank" href="#">Arrays</a> and <a target="_blank" href="#">Classes</a> (you will learn more about these in a later chapter)</li>
+            </ul>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_2 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+          <h2 class = "subtitle" >Primitive Data Types</h2>
+          <p id="question" class="mb-0 text-danger">What are Java primitive types?</p>
+          <p id="answer">A primitive data types specifies the size and type of variable values, and they have no additional methods.</p>
+          <p id="normal">There are eight primitive data types in Java:</p>
+          <div class="table_container">
+            <table class="all_table_element">
+                <tbody>
+                    <tr>
+                        <th style="width: 20%;">Data Type</th>
+                        <th style="width:17%;">Size</th>
+                        <th style="width: 63%;" >Description</th>
+                    </tr>
+                    <tr>
+                        <td>byte</td>
+                        <td>1 byte</td>
+                        <td>Stores whole number from -128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>2 bytes</td>
+                        <td>Stores whole numbers from -32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>4 bytes</td>
+                        <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>8 bytes</td>
+                        <td>Stores whole numbers from -9,223,372,036,854,775,808 to 
+                        9,223,372,036,854,775,807</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>4 bytes</td>
+                        <td>Stores fractional numbers. Sufficient for 
+                        storing 6 to 7 decimal digits</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 bytes</td>
+                        <td>Stores fractional numbers. Sufficient for 
+                        storing 15 decimal digits</td>
+                    </tr>
+                    <tr>
+                        <td>boolean</td>
+                        <td>1 bit</td>
+                        <td>Stores true or false values</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>2 bytes</td>
+                        <td>Stores a single character/letter or ASCII values</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_3 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Numbers</h2>
+        <p id="normal">Primitive number types are divided into two groups:<br>
+            <b>Integer types</b> stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are <code class="code_span_type" >byte</code>, <code class="code_span_type" >short</code>, <code class="code_span_type" >int</code> and <code class="code_span_type" >long</code>. Which type you should use, depends on the numeric value<br>
+            <b>Floating point types</b> represents numbers with a fractional part, containing one or more decimals. There are two types: <code class="code_span_type" >float</code> and <code class="code_span_type" >double</code>.
+        </p>
+        <div class="note-container" >
+            <p id="normal">Even though there are many numeric types in Java, the most used for numbers are <code class="code_span_type" >int</code> (for whole numbers) and <code class="code_span_type" >double</code> (for floating point numbers). However, we will describe them all as you continue to read.</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_4 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Integer Types</h2>
+        <h3>Byte</h3>
+        <p id="question" class="mb-0 text-danger">What is the use of byte in Java?</p>
+        <p id="answer">The <code class="code_span_type" >byte</code> data type can store whole numbers from -128 to 127. This can be used instead of <code class="code_span_type" >int</code> or other integer types to save memory when you are certain that the value will be within -128 and 127:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-byte">byte</span> myNum <span class=" operator">=</span> <span class=" number">100</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+100
+            </pre>
+        </div>
+        <h3>Short</h3>
+        <p id="question" class="mb-0 text-danger">What is the use of short in Java?</p>
+        <p id="answer">The <code class="code_span_type" >short</code> data type can store whole numbers from -32768 to 32767:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-short">short</span> myNum <span class=" operator">=</span> <span class=" number">5000</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+5000
+            </pre>
+        </div>
+        <h3>int</h3>
+        <p id="question" class="mb-0 text-danger">What is the use of int in Java?</p>
+        <p id="answer">The <code class="code_span_type" >int</code> data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the <code class="code_span_type" > int</code> data type is the preferred data type when we create variables with a numeric value.</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-short">int</span> myNum <span class=" operator">=</span> <span class=" number">100000</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+100000
+            </pre>
+        </div>
+        <h3>Long</h3>
+        <p id="question" class="mb-0 text-danger">What is the use of long in Java?</p>
+        <p id="answer">The <code class="code_span_type" >long</code > data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an "L":</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-short">long</span> myNum <span class=" operator">=</span> <span class=" number">15000000000L</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+15000000000
+            </pre>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_5 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Floating Point Types</h2>
+        <p id="question" class ="mb-0 text-danger">What is floating point used for?</p>
+        <p id="answer">You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.</p>
+        <h3>Float</h3>
+        <p id="question" class ="mb-0 text-danger">What is a float in Java?</p>
+        <p id="answer">The <code class="code_span_type" >float data</code> type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end the value with an "f":</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-short">float</span> myNum <span class=" operator">=</span> <span class=" number">5.75f</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+5.75
+            </pre>
+        </div>
+        <h3>Double</h3>
+        <p id="question" class ="mb-0 text-danger">What is a double in Java?</p>
+        <p id="answer">The <code class="code_span_type" >double</code> data type can store fractional numbers from 1.7e−308 to 1.7e+308. Note that you should end the value with a "d":</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-short">dobule</span> myNum <span class=" operator">=</span> <span class=" number">19.99d</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myNum<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+19.99
+            </pre>
+        </div>
+        <div class="note-container">
+            <P id="normal" >The <b>precision</b> of a floating point value indicates how many digits the value can have after the decimal point. The precision of <code class="code_span_type">float</code> is only six or seven decimal digits, while <code class="code_span_type">double</code> variables have a precision of about 15 digits. Therefore it is safer to use <code class="code_span_type">double</code> for most calculations.</P>
+        </div>
+        <h3>Scientific Numbers</h3>
+        <p id="question" class ="mb-0 text-danger">What is Scientific Numbers in Java?</p>
+        <p id="answer">A floating point number can also be a scientific number with an "e" to indicate the power of 10:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-float">float</span> f1 <span class=" operator">=</span> <span class=" number">35e3f</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-double">double</span> d1 <span class=" operator">=</span> <span class=" number">12E4d</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>f1<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>d1<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+35000.0
+120000.0
+            </pre>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_6 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Booleans</h2>
+        <p id="question" class="mb-0  text-danger" >what is boolean?</p>
+        <p id="answer">A boolean data type is declared with the <code class = "code_span_type">boolean</code> keyword and can only take the values <code class="code_span_boolean">true</code> or <code class="code_span_boolean">false</code>:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-boolean">boolean</span> isJavaFun <span class=" operator">=</span> <span class=" boolean">true</span><span class=" punctuation">;</span>
+        <span class=" keyword keyword-boolean">boolean</span> isFishTasty <span class=" operator">=</span> <span class=" boolean">false</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>isJavaFun<span class=" punctuation">)</span><span class=" punctuation">;</span>     
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>isFishTasty<span class=" punctuation">)</span><span class=" punctuation">;</span>   
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+        </pre>
+        </div>
+        <div class="result-code-container">
+        <h3 class="result-title">Result</h3>
+        <pre class="pre-result-code">
+true
+false
+        </pre>
+        </div>
+        <p id="question" class="mb-0  text-danger" >What is boolean used for?</p>
+        <p id="answer">Boolean values are mostly used for conditional testing, which you will learn more about in a later chapter.</p>
+      </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_7 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Characters</h2>
+        <p id="question" class="mb-0 text-danger">What is char used for?</p>
+        <p id="answer">The <code class="code_span_type">char</code> data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-char">char</span> myGrade <span class=" operator">=</span> <span class=" string">'B'</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>myGrade<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+B
+            </pre>
+        </div>
+        <p id="normal">Alternatively, you can use ASCII values to display certain characters:</p>
+        <!-- example -->
+        <hr class="hr-example">
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="keyword">public class</span> <span class="class-name">MyClass</span> <span class="punctuation">{</span>
+    <span class="keyword">public static void</span> <span class="function">main</span> <span class="punctuation">(</span><span class="class-name">String</span> <span class="punctuation">[]</span> args<span class="punctuation">)</span><span class="punctuation">{</span>
+        <span class=" keyword keyword-char">char</span> a <span class=" operator">=</span> <span class=" number">65</span><span class=" punctuation">,</span> b <span class=" operator">=</span> <span class=" number">66</span><span class=" punctuation">,</span> c <span class=" operator">=</span> <span class=" number">67</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>a<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>b<span class=" punctuation">)</span><span class=" punctuation">;</span>
+        <span class=" class-name">System</span><span class=" punctuation">.</span>out<span class=" punctuation">.</span><span class=" function">println</span><span class=" punctuation">(</span>c<span class=" punctuation">)</span><span class=" punctuation">;</span>
+    <span class="punctuation">}</span>
+<span class="punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+a
+b
+c
+            </pre>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_8 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Strings</h2>
+        <p id="question" class="mb-0 text-danger">What is String used for?</p>
+        <p id="answer">The <code class="code_span_class_name">String</code> data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:</p>
+        <!-- example -->
+        <div class="example-code-container">
+            <h3 class="example-title">Example</h3>
+            <pre class="pre-example-code">
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> greeting <span class="token operator">=</span> <span class="token string">"Hello World"</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>greeting<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+            </pre>
+        </div>
+        <div class="result-code-container">
+            <h3 class="result-title">Result</h3>
+            <pre class="pre-result-code">
+Hello World
+            </pre>
+        </div>
+        <div class="note-container">
+            <p id="normal">The String type is so much used and integrated in Java, that some call it "the special ninth type".</p>
+            <p id="normal">A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used to perform certain operations on strings. Don't worry if you don't understand the term "object" just yet. We will learn more about strings and objects in a later chapter.</p>
+        </div>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <!-- part_9 -->
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Non-Primitive Data Types</h2>
+        <p id="normal">The Non-primitive data types are called reference types because they refer to objects.</p>
+        <p id="normal">The main difference between primitive and non-primitive data types are:</p>
+        <ul>
+            <li>Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and 
+            is not defined by Java (except for <code class="code_span_class_name">String</code>).</li>
+            <li>Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.</li>
+            <li>A primitive type has always a value, while non-primitive types can be <code class="code_span_boolean">null</code>.</li>
+            <li>A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.</li>
+            <li>The size of a primitive type depends on the data type, while non-primitive types have all the same size.</li>
+        </ul>
+        <p id="normal">Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter.</p>
+    </div>
+    </section>
+    <hr class="bg-dark" />
+    <section class="bg-sliver">
+      <div class="container-flued p-5">
+        <h2>Java Exercises</h2>
+        <p id="normal">Test Yourself With Exercises</p>
+        <a class="btn btn-danger" href="exercises">Go to Exercises</a>
+        <hr class="bg-danger" />
+        <div>
+          <a href="java_variables" class="btn btn-danger"> < Previous</a>
+
+          <a href="java_type_casting" class="btn btn-danger next" style="float: right;">
+            Next ></a
+          >
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>
